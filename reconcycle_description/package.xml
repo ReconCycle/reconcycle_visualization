@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>reconcycle_description</name>
+  <version>1.2.7</version>
+  <description>
+      Descriptions of the ReconCycle system
+  </description>
+
+  <author>Timotej Gaspar</author>
+  <maintainer email="timotej.gaspar@ijs.si">Timotej Gaspar</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">http://reconcycle.eu</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz</exec_depend>
+  <exec_depend>urdf</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+  <export>
+  </export>
+</package>

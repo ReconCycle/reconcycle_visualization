@@ -1,0 +1,17 @@
+<package>
+  <name>reconcycle_visualization</name>
+  <version>0.1.0</version>
+  <description>
+    The reconcycle_visualization meta package.
+  </description>
+  <author email="timotej.gaspar@ijs.si">Timotej Gaspar</author>
+  <maintainer email="timotej.gaspar@ijs.si">Timotej Gaspar</maintainer>
+  <maintainer email="rok.pahic@ijs.si">Rok Pahic</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>

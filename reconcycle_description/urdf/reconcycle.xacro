@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="reconcycle" >
+    <link name="world"/>
+
+    <!-- Usefull parameters -->
+    <xacro:arg name="table_width" default="0.600"/>
+    <xacro:arg name="table_height" default="0.805"/>
+
+
+    <!-- Reconcycle surface -->
+    <xacro:include filename="$(find reconcycle_description)/urdf/table_module.xacro" />
+
+    <!-- Central table -->
+    <xacro:arg name="table_0_name" default="table_rob_1"/>
+    <xacro:arg name="table_1_name" default="table_cutting"/>
+    <xacro:arg name="table_2_name" default="table_tools"/>
+    <xacro:arg name="table_3_name" default="table_fixture"/>
+    <xacro:arg name="table_4_name" default="table_output"/>
+    <xacro:arg name="table_5_name" default="table_rob_2"/>
+    <xacro:arg name="table_6_name" default="table_parts"/>
+    <xacro:table_module table_id="$(arg table_0_name)" connected_to="world" xyz="0 0 $(arg table_height)"/>
+    <xacro:table_module table_id="$(arg table_1_name)" connected_to="$(arg table_0_name)" xyz="0 -$(arg table_width) 0"/>
+    <xacro:table_module table_id="$(arg table_2_name)" connected_to="$(arg table_0_name)" xyz="0 $(arg table_width) 0"/>
+    <xacro:table_module table_id="$(arg table_3_name)" connected_to="$(arg table_0_name)" xyz="-$(arg table_width) 0 0"/>
+    <xacro:table_module table_id="$(arg table_4_name)" connected_to="$(arg table_3_name)" xyz="0 -$(arg table_width) 0"/>
+    <xacro:table_module table_id="$(arg table_5_name)" connected_to="$(arg table_3_name)" xyz="0 $(arg table_width) 0"/>
+    <xacro:table_module table_id="$(arg table_6_name)" connected_to="$(arg table_5_name)" xyz="-$(arg table_width) 0 0"/>
+  
+    <!-- Panda robot -->
+    <xacro:include filename="$(find franka_panda_description)/robots/panda_arm.xacro"/>
+    <xacro:arg name="table_surf_thickness" default="0.02"/>
+    <xacro:arg name="robot_name" default="panda"/>
+    <xacro:arg name="load_gripper" default="true"/>
+    <xacro:arg name="load_gazebo" default="false"/>
+    <xacro:arg name="in_gazebo" default="false"/>
+    <xacro:arg name="use_gazebo_control" default="false"/> 
+    <xacro:panda_arm in_gazebo="$(arg in_gazebo)" arm_id="rob_1" connected_to="$(arg table_0_name)" xyz="0 0 $(arg table_surf_thickness)"/>
+    <xacro:panda_arm in_gazebo="$(arg in_gazebo)" arm_id="rob_2" connected_to="$(arg table_5_name)" xyz="0 0 $(arg table_surf_thickness)"/>
+
+</robot>

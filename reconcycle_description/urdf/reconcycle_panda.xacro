@@ -15,6 +15,9 @@
     <!-- Call the macro -->
     <xacro:panda_robot load_gazebo="$(arg load_gazebo)" robot_name="$(arg robot_name)" connected_to="$(arg robot_name)"/>
     
+    <!-- Attach the flange to the robot -->
+    <xacro:flange flange_id="$(arg robot_name)_flange" connected_to="$(arg robot_name)_link8"/>
+
     <!-- Attach the tool exchange to the robot -->
-    <xacro:tc_robot_side tc_id="$(arg robot_name)_tc_robot" connected_to="$(arg robot_name)_link8"/>
+    <xacro:tc_robot_side tc_id="$(arg robot_name)_tc_robot" connected_to="$(arg robot_name)_flange" xyz="0 0 ${flange_thickness}"/>
 </robot>

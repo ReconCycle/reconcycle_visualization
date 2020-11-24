@@ -23,4 +23,8 @@
     <xacro:table_module table_id="$(arg table_4_name)" connected_to="$(arg table_3_name)" xyz="0 -${table_width} 0"/>
     <xacro:table_module table_id="$(arg table_5_name)" connected_to="$(arg table_3_name)" xyz="0 ${table_width} 0"/>
     <xacro:table_module table_id="$(arg table_6_name)" connected_to="$(arg table_5_name)" xyz="-${table_width} 0 0"/>
+
+
+    <xacro:vise_setup connected_to="$(arg table_3_name)" xyz="0 0 0"/>
+
 </robot>

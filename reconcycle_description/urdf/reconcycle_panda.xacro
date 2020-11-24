@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda" >
+    <xacro:arg name="robot_name" default="panda"/>
+    <xacro:arg name="load_gazebo" default="false"/>
+    <xacro:arg name="connected_to" default=""/>
+    <!-- Load the usefull reconcycle defaults -->
+    <xacro:include filename="$(find reconcycle_description)/urdf/reconcycle_defaults.xacro" />
+
+    <!-- Load the reconcycle panda macro  -->
+    <xacro:include filename="$(find reconcycle_description)/urdf/panda_arm.xacro"/>
+    
+    <!-- Create a default world link but it's not called world -->
+    <link name="$(arg robot_name)" />
+    
+    <!-- Call the macro -->
+    <xacro:panda_robot load_gazebo="$(arg load_gazebo)" robot_name="$(arg robot_name)" connected_to="$(arg robot_name)"/>
+    
+    <!-- Attach the tool exchange to the robot -->
+    <xacro:tc_robot_side tc_id="$(arg robot_name)_tc_robot" connected_to="$(arg robot_name)_link8"/>
+</robot>

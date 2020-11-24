@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda">
+<xacro:macro name="panda_robot" params="robot_name:='panda' load_gazebo:='false' use_gazebo_control:='false' connected_to:=''">
+
+  <!-- <xacro:arg name="robot_name" default="panda"/> -->
+  <!-- <xacro:arg name="load_gazebo" default="false"/> -->
+  <!-- <xacro:arg name="use_gazebo_control" default="false"/> -->
+  <!-- <xacro:arg name="connected_to" default=""/> -->
+  
+  <xacro:include filename="$(find franka_panda_description)/robots/panda_arm.xacro"/>
+
+  <xacro:if value="${load_gazebo}">  
+    <xacro:include filename="$(find franka_panda_description)/robots/panda.gazebo.xacro"/>
+    <xacro:include filename="$(find franka_panda_description)/robots/panda.transmission.xacro"/>
+    
+    <xacro:panda_arm arm_id="${robot_name}" in_gazebo="true"  connected_to="${connected_to}"/>
+    <xacro:panda_gazebo robot_name="${robot_name}" load_gripper="false"/>
+    <xacro:panda_transmission robot_name="${robot_name}" use_gazebo_control="${use_gazebo_control}" load_gripper="false"/>
+  </xacro:if>
+
+  <xacro:unless value="${load_gazebo}">  
+    <xacro:panda_arm arm_id="${robot_name}" connected_to="${connected_to}"/>
+  </xacro:unless>
+</xacro:macro>
+</robot>

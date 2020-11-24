@@ -1,0 +1,75 @@
+<?xml version='1.0'?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="defaults">
+<!-- Usefull constants -->
+<xacro:property name="table_width" value="0.600" />
+<xacro:property name="table_height" value="0.805" />
+<xacro:arg name="table_surf_thickness" default="0.02"/>
+
+<xacro:macro name="tc_tool_side" params="tc_id:='tc_tool_1' connected_to:='' xyz:='0 0 0' rpy='0 0 0'">
+
+    <!--  If connected_to is not provided we don't do anything -->
+    <xacro:unless value="${not connected_to}">
+        <joint name="${tc_id}_joint_${connected_to}" type="fixed">
+            <parent link="${connected_to}"/>
+            <child link="${tc_id}"/>
+            <origin rpy="${rpy}" xyz="${xyz}"/>
+        </joint>
+
+        <!-- The tool changer -->
+        <link name="${tc_id}">
+            <visual>
+                <origin rpy="$0 0 0" xyz=" 0 0 0 "/>
+                <geometry>
+                    <mesh filename="package://reconcycle_description/meshes/tc_tool_side.obj" scale="0.001 0.001 0.001"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin rpy="${pi/2} 0 0" xyz="0.0 0.0 0"/>
+                <geometry>
+                    <mesh filename="package://reconcycle_description/meshes/tc_tool_side.obj" scale ="0.001 0.001 0.001"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <mass value="0.100"/>
+                <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+            </inertial>
+        </link>
+    </xacro:unless>
+</xacro:macro>
+
+<xacro:macro name="tc_robot_side" params="tc_id:='tc_robot_1' connected_to:='' xyz:='0 0 0' rpy='0 0 0'">
+
+    <!--  If connected_to is not provided we don't do anything -->
+    <xacro:unless value="${not connected_to}">
+        <joint name="${tc_id}_joint_${connected_to}" type="fixed">
+            <parent link="${connected_to}"/>
+            <child link="${tc_id}"/>
+            <origin rpy="${rpy}" xyz="${xyz}"/>
+            <dynamics damping="1"/>
+        </joint>
+
+        <!-- The tool changer -->
+        <link name="${tc_id}">
+            <visual>
+                <origin rpy="${-pi/2} 0 0" xyz=" 0 0 0 "/>
+                <geometry>
+                    <mesh filename="package://reconcycle_description/meshes/tc_robot_side.obj" scale="0.001 0.001 0.001"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin rpy="${-pi/2} 0 0" xyz="0.0 0.0 0"/>
+                <geometry>
+                    <mesh filename="package://reconcycle_description/meshes/tc_robot_side.obj" scale ="0.001 0.001 0.001"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <mass value="0.160"/>
+                <inertia ixx="0.160" ixy="0.0" ixz="0.0" iyy="0.160" iyz="0.0" izz="0.160"/>
+            </inertial>
+        </link>
+    </xacro:unless>
+</xacro:macro>
+
+</robot>

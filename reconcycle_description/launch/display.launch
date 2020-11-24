@@ -1,13 +1,31 @@
 <launch>
+  <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}] [${node}]: ${message}"/>
 
   <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/urdf.rviz" />
-  <arg name="model" default="$(find reconcycle_description)/urdf/reconcycle.xacro"/>
+  <arg name="robot_model" default="$(find reconcycle_description)/urdf/reconcycle_panda.xacro"/>
+  <arg name="layout" default="hca_layout.xacro"/>
+  <arg name="robot_absent" default="false"/>
+  <arg name="robot_gazebo" default="false"/>
+  <arg name="rviz" default="true"/>
+  <param name="/use_sim_time" value="false" />
+  <group ns='table'>
+      <param name="robot_description" command="$(find xacro)/xacro --inorder $(find reconcycle_description)/urdf/$(arg layout)"/>
+      <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  </group>
 
-  <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model)" />
+  <group ns='panda_1'>
+    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg robot_model) robot_name:=panda_1"/>
+    <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    <node name="panda_1_to_table" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 table_rob_1 panda_1_link0 100"/>
+  </group>
+  <group ns='panda_2'>
+    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg robot_model) robot_name:=panda_2"/>
+    <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    <node name="panda_2_to_table" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 table_rob_2 panda_2_link0 100"/>
+  </group>
 
-  <!-- <node if="$(arg gui)" name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" /> -->
-  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+  <node if="$(arg rviz)" name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
 
 </launch>

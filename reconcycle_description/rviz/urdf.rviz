@@ -7,8 +7,8 @@ Panels:
         - /Global Options1
         - /Status1
         - /Grid1
-        - /RobotModel1
         - /TF1
+        - /Panda 11
       Splitter Ratio: 0.5
     Tree Height: 584
   - Class: rviz/Selection
@@ -63,56 +63,177 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        panda_link0:
+        table_cutting:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        panda_link1:
+        table_cutting_pnp_connector_1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        panda_link2:
+        table_cutting_pnp_connector_2:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        panda_link3:
+        table_cutting_pnp_connector_3:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        panda_link4:
+        table_cutting_pnp_connector_4:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        panda_link5:
+        table_fixture:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        panda_link6:
+        table_fixture_pnp_connector_1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        panda_link7:
+        table_fixture_pnp_connector_2:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        panda_link8:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        table:
+        table_fixture_pnp_connector_3:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        table_pnp_connector_1:
+        table_fixture_pnp_connector_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_output:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_output_pnp_connector_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_output_pnp_connector_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_output_pnp_connector_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_output_pnp_connector_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_parts:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_parts_pnp_connector_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_parts_pnp_connector_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_parts_pnp_connector_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_parts_pnp_connector_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_rob_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_rob_1_pnp_connector_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_rob_1_pnp_connector_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_rob_1_pnp_connector_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_rob_1_pnp_connector_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_rob_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_rob_2_pnp_connector_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_rob_2_pnp_connector_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_rob_2_pnp_connector_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_rob_2_pnp_connector_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_tools:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_tools_pnp_connector_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_tools_pnp_connector_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_tools_pnp_connector_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        table_tools_pnp_connector_4:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -121,8 +242,8 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-      Name: RobotModel
-      Robot Description: robot_description
+      Name: Working Surfaces
+      Robot Description: table/robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: true
@@ -132,27 +253,117 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
-        panda_link0:
+        panda_1:
           Value: true
-        panda_link1:
+        panda_1_link0:
           Value: true
-        panda_link2:
+        panda_1_link1:
           Value: true
-        panda_link3:
+        panda_1_link2:
           Value: true
-        panda_link4:
+        panda_1_link3:
           Value: true
-        panda_link5:
+        panda_1_link4:
           Value: true
-        panda_link6:
+        panda_1_link5:
           Value: true
-        panda_link7:
+        panda_1_link6:
           Value: true
-        panda_link8:
+        panda_1_link7:
           Value: true
-        table:
+        panda_1_link8:
           Value: true
-        table_pnp_connector_1:
+        panda_2:
+          Value: true
+        panda_2_link0:
+          Value: true
+        panda_2_link1:
+          Value: true
+        panda_2_link2:
+          Value: true
+        panda_2_link3:
+          Value: true
+        panda_2_link4:
+          Value: true
+        panda_2_link5:
+          Value: true
+        panda_2_link6:
+          Value: true
+        panda_2_link7:
+          Value: true
+        panda_2_link8:
+          Value: true
+        table_cutting:
+          Value: true
+        table_cutting_pnp_connector_1:
+          Value: true
+        table_cutting_pnp_connector_2:
+          Value: true
+        table_cutting_pnp_connector_3:
+          Value: true
+        table_cutting_pnp_connector_4:
+          Value: true
+        table_fixture:
+          Value: true
+        table_fixture_pnp_connector_1:
+          Value: true
+        table_fixture_pnp_connector_2:
+          Value: true
+        table_fixture_pnp_connector_3:
+          Value: true
+        table_fixture_pnp_connector_4:
+          Value: true
+        table_output:
+          Value: true
+        table_output_pnp_connector_1:
+          Value: true
+        table_output_pnp_connector_2:
+          Value: true
+        table_output_pnp_connector_3:
+          Value: true
+        table_output_pnp_connector_4:
+          Value: true
+        table_parts:
+          Value: true
+        table_parts_pnp_connector_1:
+          Value: true
+        table_parts_pnp_connector_2:
+          Value: true
+        table_parts_pnp_connector_3:
+          Value: true
+        table_parts_pnp_connector_4:
+          Value: true
+        table_rob_1:
+          Value: true
+        table_rob_1_pnp_connector_1:
+          Value: true
+        table_rob_1_pnp_connector_2:
+          Value: true
+        table_rob_1_pnp_connector_3:
+          Value: true
+        table_rob_1_pnp_connector_4:
+          Value: true
+        table_rob_2:
+          Value: true
+        table_rob_2_pnp_connector_1:
+          Value: true
+        table_rob_2_pnp_connector_2:
+          Value: true
+        table_rob_2_pnp_connector_3:
+          Value: true
+        table_rob_2_pnp_connector_4:
+          Value: true
+        table_tools:
+          Value: true
+        table_tools_pnp_connector_1:
+          Value: true
+        table_tools_pnp_connector_2:
+          Value: true
+        table_tools_pnp_connector_3:
+          Value: true
+        table_tools_pnp_connector_4:
+          Value: true
+        tc_robot:
           Value: true
         world:
           Value: true
@@ -163,21 +374,230 @@ Visualization Manager:
       Show Names: true
       Tree:
         world:
-          table:
-            panda_link0:
-              panda_link1:
-                panda_link2:
-                  panda_link3:
-                    panda_link4:
-                      panda_link5:
-                        panda_link6:
-                          panda_link7:
-                            panda_link8:
+          table_rob_1:
+            panda_1_link0:
+              panda_1_link1:
+                panda_1_link2:
+                  panda_1_link3:
+                    panda_1_link4:
+                      panda_1_link5:
+                        panda_1_link6:
+                          panda_1_link7:
+                            panda_1_link8:
                               {}
-            table_pnp_connector_1:
+            table_cutting:
+              table_cutting_pnp_connector_1:
+                {}
+              table_cutting_pnp_connector_2:
+                {}
+              table_cutting_pnp_connector_3:
+                {}
+              table_cutting_pnp_connector_4:
+                {}
+            table_fixture:
+              table_fixture_pnp_connector_1:
+                {}
+              table_fixture_pnp_connector_2:
+                {}
+              table_fixture_pnp_connector_3:
+                {}
+              table_fixture_pnp_connector_4:
+                {}
+              table_output:
+                table_output_pnp_connector_1:
+                  {}
+                table_output_pnp_connector_2:
+                  {}
+                table_output_pnp_connector_3:
+                  {}
+                table_output_pnp_connector_4:
+                  {}
+              table_rob_2:
+                panda_2_link0:
+                  panda_2_link1:
+                    panda_2_link2:
+                      panda_2_link3:
+                        panda_2_link4:
+                          panda_2_link5:
+                            panda_2_link6:
+                              panda_2_link7:
+                                panda_2_link8:
+                                  tc_robot:
+                                    {}
+                table_parts:
+                  table_parts_pnp_connector_1:
+                    {}
+                  table_parts_pnp_connector_2:
+                    {}
+                  table_parts_pnp_connector_3:
+                    {}
+                  table_parts_pnp_connector_4:
+                    {}
+                table_rob_2_pnp_connector_1:
+                  {}
+                table_rob_2_pnp_connector_2:
+                  {}
+                table_rob_2_pnp_connector_3:
+                  {}
+                table_rob_2_pnp_connector_4:
+                  {}
+            table_rob_1_pnp_connector_1:
               {}
+            table_rob_1_pnp_connector_2:
+              {}
+            table_rob_1_pnp_connector_3:
+              {}
+            table_rob_1_pnp_connector_4:
+              {}
+            table_tools:
+              table_tools_pnp_connector_1:
+                {}
+              table_tools_pnp_connector_2:
+                {}
+              table_tools_pnp_connector_3:
+                {}
+              table_tools_pnp_connector_4:
+                {}
       Update Interval: 0
       Value: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        panda_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        panda_1_link0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_1_link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_1_link2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_1_link3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_1_link4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_1_link5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_1_link6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_1_link7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_1_link8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        tc_robot:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: Panda 1
+      Robot Description: panda_1/robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        panda_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        panda_2_link0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_2_link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_2_link2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_2_link3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_2_link4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_2_link5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_2_link6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_2_link7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_2_link8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        tc_robot:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: Panda 2
+      Robot Description: panda_2/robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
   Enabled: true
   Global Options:
     Background Color: 18; 0; 74
@@ -210,18 +630,18 @@ Visualization Manager:
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.0540558659
-        Y: 0.262356192
-        Z: 0.0224432796
+        X: -0.144894004
+        Y: 0.45700416
+        Z: 0.499932349
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.325397044
+      Pitch: 0.780396998
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.87176514
+      Yaw: 5.346766
     Saved: ~
 Window Geometry:
   Displays:

@@ -1,0 +1,43 @@
+<launch>
+  <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}] [${node}]: ${message}"/>
+  <arg name="initX" default="0" />
+  <arg name="initY" default="0" />
+
+  <arg name="ns" default="panda"/>
+  <arg name="gui" default="false"/>
+
+  <!-- Define initial joint values -->
+  <arg name="initial_joint_states"
+    default=" -J $(arg ns)::$(arg ns)_joint1 0.000
+              -J $(arg ns)::$(arg ns)_joint2 -0.785
+              -J $(arg ns)::$(arg ns)_joint3 0.0
+              -J $(arg ns)::$(arg ns)_joint4 -2.356
+              -J $(arg ns)::$(arg ns)_joint5 0.0
+              -J $(arg ns)::$(arg ns)_joint6 1.57
+              -J $(arg ns)::$(arg ns)_joint7 0.785"/>
+  
+  <!-- <param name="/arm/root_name" value="panda_link0" /> -->
+  <!-- <param name="/arm/tip_name" value="panda_link8" /> -->
+  <!-- <param name="/arm/gravity_tip_name" value="panda_link8" />  -->
+  
+  <!--  Robot details - not sure what this does tbh-->
+  <rosparam command="load" file="$(find reconcycle_description)/conf/robot_details.yaml"/>
+
+  <!-- See this: https://answers.ros.org/question/264359/starting-a-controller-in-the-same-namespace-as-the-controller_manager/ -->
+  <group ns="$(arg ns)">
+    <rosparam command="load" file="$(find joint_state_controller)/joint_state_controller.yaml" ns="/$(arg ns)"/>
+    
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find reconcycle_description)/urdf/reconcycle_panda.xacro robot_name:=$(arg ns) load_gazebo:=true"/>
+    <node name="robot_spawner" pkg="gazebo_ros" type="spawn_model"
+     args="
+     -x $(arg initX) -y $(arg initY)
+     -param robot_description 
+     -urdf -model $(arg ns)"/>
+     
+    <!-- Spawn joit state controller that publishes to topic joint_state -->
+    <node name="joint_state_controller_spawner" pkg="controller_manager" type="spawner" output="screen"
+       args="--namespace=/$(arg ns) 
+       joint_state_controller" />
+  </group>
+
+</launch>

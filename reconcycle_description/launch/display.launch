@@ -7,6 +7,8 @@
   <arg name="robot_absent" default="false"/>
   <arg name="robot_gazebo" default="false"/>
   <arg name="rviz" default="true"/>
+  
+
   <param name="/use_sim_time" value="false" />
   <group ns='table'>
       <param name="robot_description" command="$(find xacro)/xacro --inorder $(find reconcycle_description)/urdf/$(arg layout)"/>
@@ -25,6 +27,15 @@
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
     <node name="panda_2_to_table" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 table_rob_2 panda_2_link0 100"/>
   </group>
+
+  <arg name="hand_model" default="$(find qb_hand_description)/urdf/qbhand.urdf.xacro"/>
+  <group ns='qb_hand'>
+    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg hand_model)"/>
+    <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    <node name="hand_to_robot" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 panda_1_link8 qbhand_base_link 100"/>
+  </group>
+
 
   <node if="$(arg rviz)" name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
 

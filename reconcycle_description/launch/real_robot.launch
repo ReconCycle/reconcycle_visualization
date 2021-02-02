@@ -4,6 +4,7 @@
 
   <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/urdf2.rviz" />
   <arg name="robot_model" default="$(find reconcycle_description)/urdf/reconcycle_panda.xacro"/>
+  <arg name="hand_model" default="$(find qb_hand_description)/urdf/qbhand.urdf.xacro"/>
   <arg name="layout" default="actual_layout.xacro"/>
   <arg name="robot_absent" default="false"/>
   <arg name="robot_gazebo" default="false"/>
@@ -24,6 +25,18 @@
     
     
   </group>
+
+
+  <group ns='qb_hand'>
+    
+    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg hand_model) robot_name:=panda"/>
+    <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+    
+    
+  </group>
+
+
 
   <node if="$(arg rviz)" name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
 

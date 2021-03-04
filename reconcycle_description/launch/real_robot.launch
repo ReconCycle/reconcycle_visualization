@@ -15,11 +15,11 @@
       <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
   </group>
 
-  <node name="panda_1_to_table" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 table_rob_1 panda_1 10"/>
+  <node name="panda_1_to_table" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 table_rob_1 panda_super/panda 10"/>
 
   <group ns='panda_1'>
     
-    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg robot_model) robot_name:=panda_1"/>
+    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg robot_model) robot_name:=panda_super/panda"/>
     <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
     <node if="$(arg robot_absent)" name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
     

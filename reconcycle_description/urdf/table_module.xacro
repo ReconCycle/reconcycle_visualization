@@ -20,13 +20,13 @@
         <visual>
             <origin rpy="${pi/2} 0 0" xyz=" 0 0 0 "/>
             <geometry>
-                <mesh filename="package://reconcycle_description/meshes/table.obj" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://reconcycle_description/meshes/table.dae" scale="0.001 0.001 0.001"/>
             </geometry>
         </visual>
         <collision>
             <origin rpy="${pi/2} 0 0" xyz="0.0 0.0 0"/>
             <geometry>
-                <mesh filename="package://reconcycle_description/meshes/table.obj" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://reconcycle_description/meshes/table.dae" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
         <inertial>
@@ -41,13 +41,13 @@
         <visual>
             <origin rpy="${pi/2} 0 ${pi/2}" xyz=" 0 0 0 "/>
             <geometry>
-                <mesh filename="package://reconcycle_description/meshes/pnp.obj" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://reconcycle_description/meshes/pnp.dae" scale="0.001 0.001 0.001"/>
             </geometry>
         </visual>
         <collision>
             <origin rpy="${pi/2} 0 ${pi/2}" xyz=" 0 0 0 "/>
             <geometry>
-                <mesh filename="package://reconcycle_description/meshes/pnp.obj" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://reconcycle_description/meshes/pnp.dae" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
@@ -60,13 +60,13 @@
         <visual>
             <origin rpy="${pi/2} 0 ${pi/2}" xyz=" 0 0 0 "/>
             <geometry>
-                <mesh filename="package://reconcycle_description/meshes/pnp.obj" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://reconcycle_description/meshes/pnp.dae" scale="0.001 0.001 0.001"/>
             </geometry>
         </visual>
         <collision>
             <origin rpy="${pi/2} 0 ${pi/2}" xyz=" 0 0 0 "/>
             <geometry>
-                <mesh filename="package://reconcycle_description/meshes/pnp.obj" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://reconcycle_description/meshes/pnp.dae" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
@@ -79,13 +79,13 @@
         <visual>
             <origin rpy="${pi/2} 0 ${pi/2}" xyz=" 0 0 0 "/>
             <geometry>
-                <mesh filename="package://reconcycle_description/meshes/pnp.obj" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://reconcycle_description/meshes/pnp.dae" scale="0.001 0.001 0.001"/>
             </geometry>
         </visual>
         <collision>
             <origin rpy="${pi/2} 0 ${pi/2}" xyz=" 0 0 0 "/>
             <geometry>
-                <mesh filename="package://reconcycle_description/meshes/pnp.obj" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://reconcycle_description/meshes/pnp.dae" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
@@ -98,13 +98,13 @@
         <visual>
             <origin rpy="${pi/2} 0 ${pi/2}" xyz=" 0 0 0 "/>
             <geometry>
-                <mesh filename="package://reconcycle_description/meshes/pnp.obj" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://reconcycle_description/meshes/pnp.dae" scale="0.001 0.001 0.001"/>
             </geometry>
         </visual>
         <collision>
             <origin rpy="${pi/2} 0 ${pi/2}" xyz=" 0 0 0 "/>
             <geometry>
-                <mesh filename="package://reconcycle_description/meshes/pnp.obj" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://reconcycle_description/meshes/pnp.dae" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>

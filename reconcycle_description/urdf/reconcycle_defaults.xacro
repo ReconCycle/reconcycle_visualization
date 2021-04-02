@@ -21,13 +21,13 @@
             <visual>
                 <origin rpy="$0 0 0" xyz=" 0 0 0 "/>
                 <geometry>
-                    <mesh filename="package://reconcycle_description/meshes/tc_tool_side.obj" scale="0.001 0.001 0.001"/>
+                    <mesh filename="package://reconcycle_description/meshes/tc_tool_side.dae" scale="0.001 0.001 0.001"/>
                 </geometry>
             </visual>
             <collision>
                 <origin rpy="${pi/2} 0 0" xyz="0.0 0.0 0"/>
                 <geometry>
-                    <mesh filename="package://reconcycle_description/meshes/tc_tool_side.obj" scale ="0.001 0.001 0.001"/>
+                    <mesh filename="package://reconcycle_description/meshes/tc_tool_side.dae" scale ="0.001 0.001 0.001"/>
                 </geometry>
             </collision>
             <inertial>
@@ -55,13 +55,13 @@
             <visual>
                 <origin rpy="${-pi/2} 0 0" xyz=" 0 0 0 "/>
                 <geometry>
-                    <mesh filename="package://reconcycle_description/meshes/tc_robot_side.obj" scale="0.001 0.001 0.001"/>
+                    <mesh filename="package://reconcycle_description/meshes/tc_robot_side.dae" scale="0.001 0.001 0.001"/>
                 </geometry>
             </visual>
             <collision>
                 <origin rpy="${-pi/2} 0 0" xyz="0.0 0.0 0"/>
                 <geometry>
-                    <mesh filename="package://reconcycle_description/meshes/tc_robot_side.obj" scale ="0.001 0.001 0.001"/>
+                    <mesh filename="package://reconcycle_description/meshes/tc_robot_side.dae" scale ="0.001 0.001 0.001"/>
                 </geometry>
             </collision>
             <inertial>
@@ -90,13 +90,13 @@
             <visual>
                 <origin rpy="${pi/2} 0 0" xyz=" 0 0 0 "/>
                 <geometry>
-                    <mesh filename="package://reconcycle_description/meshes/flange.obj" scale="0.001 0.001 0.001"/>
+                    <mesh filename="package://reconcycle_description/meshes/flange.dae" scale="0.001 0.001 0.001"/>
                 </geometry>
             </visual>
             <collision>
                 <origin rpy="${pi/2} 0 0" xyz="0.0 0.0 0"/>
                 <geometry>
-                    <mesh filename="package://reconcycle_description/meshes/flange.obj" scale ="0.001 0.001 0.001"/>
+                    <mesh filename="package://reconcycle_description/meshes/flange.dae" scale ="0.001 0.001 0.001"/>
                 </geometry>
             </collision>
             <inertial>
@@ -124,13 +124,13 @@
             <visual>
                 <origin rpy="${pi/2} 0 0" xyz=" 0 0 0 "/>
                 <geometry>
-                    <mesh filename="package://reconcycle_description/meshes/vise_setup.obj" scale="0.001 0.001 0.001"/>
+                    <mesh filename="package://reconcycle_description/meshes/vise_setup.dae" scale="0.001 0.001 0.001"/>
                 </geometry>
             </visual>
             <collision>
                 <origin rpy="${pi/2} 0 0" xyz="0.0 0.0 0"/>
                 <geometry>
-                    <mesh filename="package://reconcycle_description/meshes/vise_setup.obj" scale ="0.001 0.001 0.001"/>
+                    <mesh filename="package://reconcycle_description/meshes/vise_setup.dae" scale ="0.001 0.001 0.001"/>
                 </geometry>
             </collision>
             <inertial>

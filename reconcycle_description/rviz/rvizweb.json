@@ -1,0 +1,39 @@
+{
+  "globalOptions": {
+    "background": "#cfe5ef",
+    "colladaLoader": "collada2",
+    "fixedFrame": "/world",
+    "colladaServer": "http://localhost:8001/",
+    "url": "ws://localhost:9090",
+    "videoServer": "http://localhost:9999"
+  },
+  "sidebarOpened": true,
+  "displays": [
+    {
+      "isShown": true,
+      "name": "Robot model",
+      "options": {
+        "param": "panda_2/robot_description",
+        "tfPrefix": "panda_2"
+      },
+      "type": "urdf"
+    },
+    {
+      "isShown": true,
+      "name": "Robot model",
+      "options": {
+        "param": "panda_1/robot_description",
+        "tfPrefix": "panda_1"
+      },
+      "type": "urdf"
+    },
+    {
+      "isShown": true,
+      "name": "Robot model",
+      "options": {
+        "param": "table/robot_description"
+      },
+      "type": "urdf"
+    }
+  ]
+}

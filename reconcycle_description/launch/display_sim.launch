@@ -1,27 +1,30 @@
 <launch>
   <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}] [${node}]: ${message}"/>
 
-  <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/urdf.rviz" />
+  <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/qbhandurdf.rviz" />
   <arg name="robot_model" default="$(find franka_panda_description)/robots/panda_arm_hand.urdf.xacro"/>
   <arg name="robot_model_reconcycle" default="$(find franka_panda_description)/robots/panda_arm_hand.urdf.xacro"/>
   <arg name="layout" default="hca_layout.xacro"/>
   <arg name="robot_gazebo" default="false"/>
+  <arg name="robot_absent" default="true"/>
   <arg name="rviz" default="true"/>
 
   <param name="/use_sim_time" value="true" />
 
+  <!-- reconcycle tables -->
   <group ns='table'>
     <param name="robot_description" command="$(find xacro)/xacro --inorder $(find reconcycle_description)/urdf/$(arg layout)"/>
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
   </group>
 
-  <!-- <arg name="hand_model" default="$(find qb_hand_description)/urdf/qbhand.urdf.xacro"/>
+  <!-- qb hand to panda_1/panda_link8 -->
+  <arg name="hand_model" default="$(find qb_hand_description)/urdf/qbhand.urdf.xacro"/>
   <group ns='qb_hand'>
     <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg hand_model)"/>
     <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-    <node name="hand_to_robot" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 panda_1_link8 root_link 100"/>
-  </group> -->
+    <node name="hand_to_robot" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 panda_1/panda_link8 root_link 100"/>
+  </group> 
 
 
   <!-- robot_description is loaded to parameter server by the launch file for simulation/real controllers -->

@@ -13,16 +13,16 @@
     <xacro:arg name="table_1_name" default="table_cutting"/>
     <xacro:arg name="table_2_name" default="table_tools"/>
     <xacro:arg name="table_3_name" default="table_fixture"/>
-    <xacro:arg name="table_4_name" default="table_output"/>
+    <!--<xacro:arg name="table_4_name" default="table_output"/>-->
     <xacro:arg name="table_5_name" default="table_rob_2"/>
-    <!-- <xacro:arg name="table_6_name" default="table_parts"/> -->
+     <xacro:arg name="table_6_name" default="table_parts"/> 
     <xacro:table_module table_id="$(arg table_0_name)" connected_to="world" xyz="0 0 ${table_height}" rpy="0 0 0"/>
     <xacro:table_module table_id="$(arg table_1_name)" connected_to="$(arg table_0_name)" xyz="0 -${table_width} 0" rpy="0 0 0"/>
     <xacro:table_module table_id="$(arg table_2_name)" connected_to="$(arg table_0_name)" xyz="0 ${table_width} 0" rpy="0 0 0"/>
-    <xacro:table_module table_id="$(arg table_3_name)" connected_to="$(arg table_0_name)" xyz="${table_width} 0 0" rpy="0 0 0"/>
-    <xacro:table_module table_id="$(arg table_4_name)" connected_to="$(arg table_3_name)" xyz="0 -${table_width} 0" rpy="0 0 0"/>
-    <xacro:table_module table_id="$(arg table_5_name)" connected_to="$(arg table_3_name)" xyz="0 -${table_width} 0" rpy="0 0 -1.57"/>
-    <!-- <xacro:table_module table_id="$(arg table_6_name)" connected_to="$(arg table_5_name)" xyz="-${table_width} 0 0"/>-->
+    <xacro:table_module table_id="$(arg table_3_name)" connected_to="$(arg table_0_name)" xyz="${table_width} 0 0" rpy="0 0 1.57"/>
+    <!--<xacro:table_module table_id="$(arg table_4_name)" connected_to="$(arg table_3_name)" xyz="0 -${table_width} 0" rpy="0 0 0"/>-->
+    <xacro:table_module table_id="$(arg table_5_name)" connected_to="$(arg table_3_name)" xyz="${table_width} 0  0" rpy="0 0 3.14"/>
+    <xacro:table_module table_id="$(arg table_6_name)" connected_to="$(arg table_5_name)" xyz="0 ${table_width} 0"  rpy="0 0 0"/>
 
 
     <xacro:vise_setup connected_to="$(arg table_3_name)" xyz="0 0 0"/>

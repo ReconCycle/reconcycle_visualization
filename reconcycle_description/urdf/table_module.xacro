@@ -1,13 +1,13 @@
 <?xml version='1.0'?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="table_module">
-<xacro:macro name="table_module" params="table_id:='table' connected_to:='' xyz:=''">
+<xacro:macro name="table_module" params="table_id:='table' connected_to:='' xyz:='' rpy:=''">
 
     <xacro:unless value="${not connected_to}">
       <joint name="${table_id}_joint_${connected_to}" type="fixed">
         <parent link="${connected_to}"/>
         <child link="${table_id}"/>
         <xacro:unless value="${not xyz}">
-            <origin rpy="0 0 0" xyz="${xyz}"/>
+            <origin rpy="${rpy}" xyz="${xyz}"/>
         </xacro:unless>
         <xacro:if value="${not xyz}">
             <origin rpy="0 0 0" xyz="0 0 0"/>

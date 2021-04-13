@@ -19,9 +19,9 @@
     <xacro:table_module table_id="$(arg table_0_name)" connected_to="world" xyz="0 0 ${table_height}" rpy="0 0 0"/>
     <xacro:table_module table_id="$(arg table_1_name)" connected_to="$(arg table_0_name)" xyz="0 -${table_width} 0" rpy="0 0 0"/>
     <xacro:table_module table_id="$(arg table_2_name)" connected_to="$(arg table_0_name)" xyz="0 ${table_width} 0" rpy="0 0 0"/>
-    <xacro:table_module table_id="$(arg table_3_name)" connected_to="$(arg table_0_name)" xyz="-${table_width} 0 0" rpy="0 0 0"/>
+    <xacro:table_module table_id="$(arg table_3_name)" connected_to="$(arg table_0_name)" xyz="${table_width} 0 0" rpy="0 0 0"/>
     <xacro:table_module table_id="$(arg table_4_name)" connected_to="$(arg table_3_name)" xyz="0 -${table_width} 0" rpy="0 0 0"/>
-    <xacro:table_module table_id="$(arg table_5_name)" connected_to="$(arg table_3_name)" xyz="0 ${table_width} 0" rpy="0 0 1.57"/>
+    <xacro:table_module table_id="$(arg table_5_name)" connected_to="$(arg table_3_name)" xyz="0 -${table_width} 0" rpy="0 0 -1.57"/>
     <!-- <xacro:table_module table_id="$(arg table_6_name)" connected_to="$(arg table_5_name)" xyz="-${table_width} 0 0"/>-->
 
 

@@ -44,8 +44,9 @@
     <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg hand_model)"/>
     <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
     <node if="$(arg robot_absent)" name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-    <node name="hand_to_robot" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 panda_1/panda_link8 qbhand_base_link 100"/>
-    
+    <node name="hand_to_robot" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 panda_1/panda_link8 root_link 100"/>
+    <node name="hand_to_hand" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 troot_link qbhand_base_link 100"/>
+
   </group>
 
 

@@ -2,7 +2,7 @@
   <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}] [${node}]: ${message}"/>
   
 
-  <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/urdf2.rviz" />
+  <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/urdf.rviz" />
   <arg name="robot_model" default="$(find reconcycle_description)/urdf/reconcycle_panda.xacro"/>
   <arg name="hand_model" default="$(find qb_hand_description)/urdf/qbhand.urdf.xacro"/>
   <arg name="layout" default="actual_layout.xacro"/>
@@ -10,20 +10,30 @@
   <arg name="robot_gazebo" default="false"/>
   <arg name="rviz" default="true"/>
   <param name="/use_sim_time" value="false" />
+
+
+
   <group ns='table'>
       <param name="robot_description" command="$(find xacro)/xacro --inorder $(find reconcycle_description)/urdf/$(arg layout)"/>
       <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
   </group>
 
-  <node name="panda_1_to_table" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 table_rob_1 panda_super/panda 10"/>
+
 
   <group ns='panda_1'>
     
-    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg robot_model) robot_name:=panda_super/panda"/>
-    <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
-    <node if="$(arg robot_absent)" name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
     
     
+    <node name="panda_1_to_table" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 table_rob_1 panda_1/panda 10"/>
+  </group>
+
+
+
+  <group ns='panda_2'>
+    
+    
+    
+    <node name="panda_2_to_table" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 table_rob_1 panda_2/panda 10"/>
   </group>
 
 

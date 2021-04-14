@@ -23,17 +23,17 @@
     <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg hand_model)"/>
     <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-    <node name="hand_to_robot" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 panda_1/panda_link8 root_link 100"/>
+    <node name="hand_to_robot" pkg="tf" type="static_transform_publisher" args="0 0 0 0.7 0 0 panda_1/panda_link8 root_link 100"/>
   </group> 
 
 
   <!-- robot_description is loaded to parameter server by the launch file for simulation/real controllers -->
   <group ns='panda_1'>
-    <node name="panda_1_to_table" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 table_rob_1 panda_1/world 100"/>
+    <node name="panda_1_to_table" pkg="tf" type="static_transform_publisher" args="0 0 0.02 -3.14 0 0 table_rob_2 panda_1/world 100"/>
   </group>
 
   <group ns='panda_2'>
-    <node name="panda_2_to_table" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 table_rob_2 panda_2/world 100"/>
+    <node name="panda_2_to_table" pkg="tf" type="static_transform_publisher" args="0 0 0.02 -3.14 0 0 table_rob_1 panda_2/world 100"/>
   </group>
 
   <node if="$(arg rviz)" name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />

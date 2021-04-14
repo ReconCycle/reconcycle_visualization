@@ -3,7 +3,8 @@
     <link name="world"/>
 
     <!-- Usefull parameters -->
-    <xacro:include filename="$(find reconcycle_description)/urdf/reconcycle_defaults.xacro" />
+    <!-- <xacro:include filename="$(find reconcycle_description)/urdf/reconcycle_defaults.xacro" /> -->
+    <xacro:include filename="$(find reconcycle_description)/urdf/reconcycle_default_models.xacro" />
 
     <!-- Reconcycle table -->
     <xacro:include filename="$(find reconcycle_description)/urdf/table_module.xacro" />
@@ -25,6 +26,8 @@
     <xacro:table_module table_id="$(arg table_6_name)" connected_to="$(arg table_5_name)" xyz="0 ${table_width} 0" rpy="0 0 0"/>
 
 
-    <xacro:vise_setup connected_to="$(arg table_3_name)" xyz="0 0 0"/>
+    <xacro:vise_setup_v2 connected_to="$(arg table_3_name)" xyz="0 0 0"/>
+    <xacro:cutter_model connected_to="$(arg table_6_name)" xyz="0 0 0" />
+    <xacro:tool_model connected_to="$(arg table_2_name)" xyz="0 0 0" />
 
 </robot>

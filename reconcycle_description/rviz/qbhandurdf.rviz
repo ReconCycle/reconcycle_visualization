@@ -62,6 +62,11 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        cutter:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         table_cutting:
           Alpha: 1
           Show Axes: false
@@ -108,31 +113,6 @@ Visualization Manager:
           Show Trail: false
           Value: true
         table_fixture_pnp_connector_4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_output:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_output_pnp_connector_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_output_pnp_connector_2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_output_pnp_connector_3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_output_pnp_connector_4:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -237,6 +217,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        tool:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         vise:
           Alpha: 1
           Show Axes: false
@@ -257,6 +242,8 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
+        cutter:
+          Value: true
         panda_1/panda_hand:
           Value: true
         panda_1/panda_leftfinger:
@@ -403,16 +390,6 @@ Visualization Manager:
           Value: true
         table_fixture_pnp_connector_4:
           Value: true
-        table_output:
-          Value: true
-        table_output_pnp_connector_1:
-          Value: true
-        table_output_pnp_connector_2:
-          Value: true
-        table_output_pnp_connector_3:
-          Value: true
-        table_output_pnp_connector_4:
-          Value: true
         table_parts:
           Value: true
         table_parts_pnp_connector_1:
@@ -452,6 +429,8 @@ Visualization Manager:
         table_tools_pnp_connector_3:
           Value: true
         table_tools_pnp_connector_4:
+          Value: true
+        tool:
           Value: true
         vise:
           Value: true
@@ -541,15 +520,6 @@ Visualization Manager:
                 {}
               table_fixture_pnp_connector_4:
                 {}
-              table_output:
-                table_output_pnp_connector_1:
-                  {}
-                table_output_pnp_connector_2:
-                  {}
-                table_output_pnp_connector_3:
-                  {}
-                table_output_pnp_connector_4:
-                  {}
               table_rob_2:
                 panda_2/world:
                   panda_2/panda_link0:
@@ -567,6 +537,8 @@ Visualization Manager:
                                       panda_2/panda_rightfinger:
                                         {}
                 table_parts:
+                  cutter:
+                    {}
                   table_parts_pnp_connector_1:
                     {}
                   table_parts_pnp_connector_2:
@@ -601,6 +573,8 @@ Visualization Manager:
               table_tools_pnp_connector_3:
                 {}
               table_tools_pnp_connector_4:
+                {}
+              tool:
                 {}
       Update Interval: 0
       Value: true
@@ -972,7 +946,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.54455805
+      Distance: 4.97984838
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
@@ -987,10 +961,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.785398185
+      Pitch: 0.7703982
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.785398185
+      Yaw: 2.15539813
     Saved: ~
 Window Geometry:
   Displays:
@@ -1008,5 +982,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1600
-  X: 0
-  Y: 0
+  X: -2
+  Y: -2

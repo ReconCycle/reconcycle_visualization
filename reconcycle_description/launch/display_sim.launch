@@ -19,11 +19,21 @@
 
   <!-- qb hand to panda_1/panda_link8 -->
   <arg name="hand_model" default="$(find qb_hand_description)/urdf/qbhand.urdf.xacro"/>
-  <group ns='qb_hand'>
+  <group ns='qb_hand_1'>
     <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg hand_model)"/>
+    <param name="tf_prefix" value="hand_1"/>
     <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-    <node name="hand_to_robot" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 panda_1/panda_link8 root_link 100"/>
+    <node name="hand_to_robot" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 panda_1/panda_link8 hand_1/root_link 100"/>
+  </group> 
+  
+  <!-- qb hand to panda_2/panda_link8 -->
+  <group ns='qb_hand_2'>
+    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg hand_model)"/>
+    <param name="tf_prefix" value="hand_2"/>
+    <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    <node name="hand_to_robot" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 panda_2/panda_link8 hand_2/root_link 100"/>
   </group> 
 
 

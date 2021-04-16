@@ -13,7 +13,7 @@
     </collision>
     <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <mass value="20"/>
-        <inertia ixx="20" ixy="0.0" ixz="0.0" iyy="20" iyz="0.0" izz="20"/>
+        <mass value="0.2"/>
+        <inertia ixx="2" ixy="0.0" ixz="0.0" iyy="2" iyz="0.0" izz="2"/>
     </inertial>
 </link>

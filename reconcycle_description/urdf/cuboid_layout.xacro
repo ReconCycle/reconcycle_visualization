@@ -1,0 +1,19 @@
+<link name="cuboid">
+    <visual>
+        <origin rpy="0 0 0" xyz=" 0 0 0 "/>
+        <geometry>
+            <mesh filename="package://reconcycle_description/meshes/cuboid.obj" scale="0.001 0.001 0.001"/>
+        </geometry>
+    </visual>
+    <collision>
+        <origin rpy="0 0 0" xyz="0.0 0.0 0"/>
+        <geometry>
+            <mesh filename="package://reconcycle_description/meshes/cuboid.obj" scale="0.001 0.001 0.001"/>
+        </geometry>
+    </collision>
+    <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="20"/>
+        <inertia ixx="20" ixy="0.0" ixz="0.0" iyy="20" iyz="0.0" izz="20"/>
+    </inertial>
+</link>

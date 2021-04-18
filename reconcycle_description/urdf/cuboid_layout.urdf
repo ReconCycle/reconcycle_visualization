@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="cuboid">      
-    <link name="cuboid">
+<robot name="cuboid">    
+    <link name="cuboid_link">
         <visual>
             <origin rpy="0 0 0" xyz=" 0 0 0 "/>
             <geometry>

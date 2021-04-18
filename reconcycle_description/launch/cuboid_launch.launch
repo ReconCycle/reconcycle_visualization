@@ -1,0 +1,3 @@
+<launch>
+<param name="cuboid_object/robot_description" textfile="$(find reconcycle_description)/urdf/cuboid_layout.urdf"/>
+</launch>

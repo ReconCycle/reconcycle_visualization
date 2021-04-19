@@ -1,3 +1,7 @@
 <launch>
-<param name="cuboid_object/robot_description" textfile="$(find reconcycle_description)/urdf/cuboid_layout.urdf"/>
+    <group ns="cuboid_object">
+        <!-- <param name="robot_description" textfile="$(find reconcycle_description)/urdf/cuboid_layout.urdf"/> -->
+        <param name="robot_description" command="$(find xacro)/xacro --inorder $(find reconcycle_description)/urdf/cuboid_layout.xacro"/>
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+    </group>
 </launch>

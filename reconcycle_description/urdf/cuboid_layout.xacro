@@ -4,13 +4,13 @@
         <visual>
             <origin rpy="0 0 0" xyz=" 0 0 0 "/>
             <geometry>
-                <mesh filename="package://reconcycle_description/meshes/cuboid.obj" scale="1 1 1"/>
+                <mesh filename="package://reconcycle_description/meshes/cuboid.obj" scale="0.01 0.01 0.01"/>
             </geometry>
         </visual>
         <collision>
             <origin rpy="0 0 0" xyz="0.0 0.0 0"/>
             <geometry>
-                <mesh filename="package://reconcycle_description/meshes/cuboid.obj" scale="1 1 1"/>
+                <mesh filename="package://reconcycle_description/meshes/cuboid.obj" scale="0.01 0.01 0.01"/>
             </geometry>
         </collision>
         <inertial>

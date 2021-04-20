@@ -1,16 +1,21 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="cuboid">      
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="cuboid">    
+    <material name="red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+    </material>
+
     <link name="cuboid_link">
         <visual>
             <origin rpy="0 0 0" xyz=" 0 0 0 "/>
             <geometry>
-                <mesh filename="package://reconcycle_description/meshes/cuboid.obj" scale="1 1 1"/>
+                <mesh filename="package://reconcycle_description/meshes/cuboid.stl" scale="0.01 0.01 0.01"/>
             </geometry>
+            <material name="red"/>
         </visual>
         <collision>
             <origin rpy="0 0 0" xyz="0.0 0.0 0"/>
             <geometry>
-                <mesh filename="package://reconcycle_description/meshes/cuboid.obj" scale="1 1 1"/>
+                <mesh filename="package://reconcycle_description/meshes/cuboid.stl" scale="0.01 0.01 0.01"/>
             </geometry>
         </collision>
         <inertial>

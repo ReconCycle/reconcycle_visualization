@@ -6,10 +6,14 @@ Panels:
       Expanded:
         - /Global Options1
         - /TF1
+        - /TF1/Frames1
         - /Panda 11
         - /Panda 21
         - /qbHand1
         - /RobotModel1
+        - /RobotModel1/Links1
+        - /Marker1
+        - /Marker1/Status1
       Splitter Ratio: 0.5
     Tree Height: 628
   - Class: rviz/Selection
@@ -444,7 +448,7 @@ Visualization Manager:
       Name: TF
       Show Arrows: false
       Show Axes: false
-      Show Names: true
+      Show Names: false
       Tree:
         world:
           table_rob_1:
@@ -948,6 +952,14 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: visualization_marker
+      Name: Marker
+      Namespaces:
+        "": true
+      Queue Size: 100
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 206; 225; 255
@@ -973,25 +985,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.14768457
+      Distance: 1.80238485
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.242456883
-        Y: 0.0036290884
-        Z: 0.426466256
+        X: -0.314608485
+        Y: -0.110633567
+        Z: 0.927534163
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.640398145
+      Pitch: 0.610398054
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.9803977
+      Yaw: 3.73039722
     Saved: ~
 Window Geometry:
   Displays:

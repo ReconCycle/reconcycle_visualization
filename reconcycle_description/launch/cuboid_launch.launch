@@ -1,7 +1,18 @@
 <launch>
-    <group ns="cuboid_object">
-        <!-- <param name="robot_description" textfile="$(find reconcycle_description)/urdf/cuboid_layout.urdf"/> -->
-        <param name="robot_description" command="$(find xacro)/xacro --inorder $(find reconcycle_description)/urdf/cuboid_layout.xacro"/>
+    <group ns="remote_control">
+        <param name="robot_description" command="$(find xacro)/xacro --inorder $(find reconcycle_description)/urdf/remote_control.xacro"/>
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+    </group>
+    <group ns="battery">
+        <param name="robot_description" command="$(find xacro)/xacro --inorder $(find reconcycle_description)/urdf/battery.xacro"/>
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+    </group>
+    <group ns="pcb">
+        <param name="robot_description" command="$(find xacro)/xacro --inorder $(find reconcycle_description)/urdf/pcb.xacro"/>
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+    </group>
+    <group ns="internals">
+        <param name="robot_description" command="$(find xacro)/xacro --inorder $(find reconcycle_description)/urdf/internals.xacro"/>
         <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
     </group>
 </launch>

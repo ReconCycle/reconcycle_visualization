@@ -5,6 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
+        - /TF1
         - /TF1/Frames1
       Splitter Ratio: 0.5
     Tree Height: 628
@@ -55,6 +56,8 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        base_table:
+          Value: true
         cutter:
           Value: false
         panda_1/panda_hand:
@@ -252,10 +255,12 @@ Visualization Manager:
       Marker Scale: 0.5
       Name: TF
       Show Arrows: false
-      Show Axes: false
+      Show Axes: true
       Show Names: false
       Tree:
         world:
+          base_table:
+            {}
           table_rob_1:
             panda_1/world:
               panda_1/panda_link0:
@@ -391,6 +396,14 @@ Visualization Manager:
                 {}
       Update Interval: 0
       Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: visualization_marker
+      Name: Marker
+      Namespaces:
+        base_table_ns: true
+      Queue Size: 100
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 206; 225; 255
@@ -416,25 +429,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 4.65297079
+      Distance: 3.75333381
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.267481804
-        Y: -0.0770320594
-        Z: 1.02787101
+        X: 0.670671403
+        Y: 0.334230036
+        Z: 0.466303468
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.579796433
+      Pitch: 0.439796418
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.63039637
+      Yaw: 5.33039284
     Saved: ~
 Window Geometry:
   Displays:
@@ -452,5 +465,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1600
-  X: -2
-  Y: -2
+  X: -1
+  Y: -1

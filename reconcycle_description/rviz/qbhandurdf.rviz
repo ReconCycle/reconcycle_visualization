@@ -8,7 +8,10 @@ Panels:
         - /Panda 11
         - /Panda 21
         - /qbHand11
-        - /qbHand21
+        - /tc_robot_side1
+        - /m11
+        - /m21
+        - /m31
       Splitter Ratio: 0.5
     Tree Height: 628
   - Class: rviz/Selection
@@ -319,80 +322,6 @@ Visualization Manager:
           Value: true
         hand_1/root_link:
           Value: true
-        hand_2/qbhand_base_link:
-          Value: true
-        hand_2/qbhand_index_distal_link:
-          Value: true
-        hand_2/qbhand_index_distal_virtual_link:
-          Value: true
-        hand_2/qbhand_index_knuckle_link:
-          Value: true
-        hand_2/qbhand_index_middle_link:
-          Value: true
-        hand_2/qbhand_index_middle_virtual_link:
-          Value: true
-        hand_2/qbhand_index_proximal_link:
-          Value: true
-        hand_2/qbhand_index_proximal_virtual_link:
-          Value: true
-        hand_2/qbhand_little_distal_link:
-          Value: true
-        hand_2/qbhand_little_distal_virtual_link:
-          Value: true
-        hand_2/qbhand_little_knuckle_link:
-          Value: true
-        hand_2/qbhand_little_middle_link:
-          Value: true
-        hand_2/qbhand_little_middle_virtual_link:
-          Value: true
-        hand_2/qbhand_little_proximal_link:
-          Value: true
-        hand_2/qbhand_little_proximal_virtual_link:
-          Value: true
-        hand_2/qbhand_middle_distal_link:
-          Value: true
-        hand_2/qbhand_middle_distal_virtual_link:
-          Value: true
-        hand_2/qbhand_middle_knuckle_link:
-          Value: true
-        hand_2/qbhand_middle_middle_link:
-          Value: true
-        hand_2/qbhand_middle_middle_virtual_link:
-          Value: true
-        hand_2/qbhand_middle_proximal_link:
-          Value: true
-        hand_2/qbhand_middle_proximal_virtual_link:
-          Value: true
-        hand_2/qbhand_palm_link:
-          Value: true
-        hand_2/qbhand_ring_distal_link:
-          Value: true
-        hand_2/qbhand_ring_distal_virtual_link:
-          Value: true
-        hand_2/qbhand_ring_knuckle_link:
-          Value: true
-        hand_2/qbhand_ring_middle_link:
-          Value: true
-        hand_2/qbhand_ring_middle_virtual_link:
-          Value: true
-        hand_2/qbhand_ring_proximal_link:
-          Value: true
-        hand_2/qbhand_ring_proximal_virtual_link:
-          Value: true
-        hand_2/qbhand_tendon_virtual_link:
-          Value: true
-        hand_2/qbhand_thumb_distal_link:
-          Value: true
-        hand_2/qbhand_thumb_distal_virtual_link:
-          Value: true
-        hand_2/qbhand_thumb_knuckle_link:
-          Value: true
-        hand_2/qbhand_thumb_proximal_link:
-          Value: true
-        hand_2/qbhand_thumb_proximal_virtual_link:
-          Value: true
-        hand_2/root_link:
-          Value: true
         panda_1/panda_hand:
           Value: true
         panda_1/panda_leftfinger:
@@ -505,6 +434,8 @@ Visualization Manager:
           Value: true
         table_tools_pnp_connector_4:
           Value: true
+        tc_robot:
+          Value: true
         tool:
           Value: true
         vise:
@@ -606,54 +537,13 @@ Visualization Manager:
                               panda_2/panda_link6:
                                 panda_2/panda_link7:
                                   panda_2/panda_link8:
-                                    hand_2/root_link:
-                                      hand_2/qbhand_base_link:
-                                        hand_2/qbhand_palm_link:
-                                          hand_2/qbhand_index_knuckle_link:
-                                            hand_2/qbhand_index_proximal_virtual_link:
-                                              hand_2/qbhand_index_proximal_link:
-                                                hand_2/qbhand_index_middle_virtual_link:
-                                                  hand_2/qbhand_index_middle_link:
-                                                    hand_2/qbhand_index_distal_virtual_link:
-                                                      hand_2/qbhand_index_distal_link:
-                                                        {}
-                                          hand_2/qbhand_little_knuckle_link:
-                                            hand_2/qbhand_little_proximal_virtual_link:
-                                              hand_2/qbhand_little_proximal_link:
-                                                hand_2/qbhand_little_middle_virtual_link:
-                                                  hand_2/qbhand_little_middle_link:
-                                                    hand_2/qbhand_little_distal_virtual_link:
-                                                      hand_2/qbhand_little_distal_link:
-                                                        {}
-                                          hand_2/qbhand_middle_knuckle_link:
-                                            hand_2/qbhand_middle_proximal_virtual_link:
-                                              hand_2/qbhand_middle_proximal_link:
-                                                hand_2/qbhand_middle_middle_virtual_link:
-                                                  hand_2/qbhand_middle_middle_link:
-                                                    hand_2/qbhand_middle_distal_virtual_link:
-                                                      hand_2/qbhand_middle_distal_link:
-                                                        {}
-                                          hand_2/qbhand_ring_knuckle_link:
-                                            hand_2/qbhand_ring_proximal_virtual_link:
-                                              hand_2/qbhand_ring_proximal_link:
-                                                hand_2/qbhand_ring_middle_virtual_link:
-                                                  hand_2/qbhand_ring_middle_link:
-                                                    hand_2/qbhand_ring_distal_virtual_link:
-                                                      hand_2/qbhand_ring_distal_link:
-                                                        {}
-                                          hand_2/qbhand_tendon_virtual_link:
-                                            {}
-                                          hand_2/qbhand_thumb_knuckle_link:
-                                            hand_2/qbhand_thumb_proximal_virtual_link:
-                                              hand_2/qbhand_thumb_proximal_link:
-                                                hand_2/qbhand_thumb_distal_virtual_link:
-                                                  hand_2/qbhand_thumb_distal_link:
-                                                    {}
                                     panda_2/panda_hand:
                                       panda_2/panda_leftfinger:
                                         {}
                                       panda_2/panda_rightfinger:
                                         {}
+                                    tc_robot:
+                                      {}
                 table_parts:
                   cutter:
                     {}
@@ -1049,178 +939,77 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        qbhand_base_link:
+        tc_robot:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        qbhand_index_distal_link:
+      Name: tc_robot_side
+      Robot Description: tc_robot/robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        screwdriver:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        qbhand_index_distal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand_index_knuckle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand_index_middle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand_index_middle_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand_index_proximal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand_index_proximal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand_little_distal_link:
+      Name: m1
+      Robot Description: screwdriver/robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        vacuumgripper:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        qbhand_little_distal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand_little_knuckle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand_little_middle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand_little_middle_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand_little_proximal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand_little_proximal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand_middle_distal_link:
+      Name: m2
+      Robot Description: vacuumgripper/robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        tool3:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        qbhand_middle_distal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand_middle_knuckle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand_middle_middle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand_middle_middle_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand_middle_proximal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand_middle_proximal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand_palm_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand_ring_distal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand_ring_distal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand_ring_knuckle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand_ring_middle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand_ring_middle_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand_ring_proximal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand_ring_proximal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand_tendon_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand_thumb_distal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand_thumb_distal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand_thumb_knuckle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand_thumb_proximal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand_thumb_proximal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        root_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-      Name: qbHand2
-      Robot Description: qb_hand_2/robot_description
-      TF Prefix: hand_2
+      Name: m3
+      Robot Description: tool3/robot_description
+      TF Prefix: ""
       Update Interval: 0
       Value: true
       Visual Enabled: true
@@ -1249,25 +1038,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 4.97984838
+      Distance: 2.89593554
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.430981189
-        Y: 0.0914180204
-        Z: 0.240107343
+        X: 0.265920907
+        Y: 0.105095871
+        Z: 0.988874733
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.7703982
+      Pitch: 0.45539856
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 2.15539813
+      Yaw: 2.69039845
     Saved: ~
 Window Geometry:
   Displays:

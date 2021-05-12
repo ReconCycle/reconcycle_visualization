@@ -374,6 +374,10 @@ Visualization Manager:
           Value: true
         panda_2/world:
           Value: true
+        parallelgripper:
+          Value: true
+        screwdriver:
+          Value: true
         table_cutting:
           Value: true
         table_cutting_pnp_connector_1:
@@ -437,6 +441,8 @@ Visualization Manager:
         tc_robot:
           Value: true
         tool:
+          Value: true
+        vacuumgripper:
           Value: true
         vise:
           Value: true
@@ -542,6 +548,8 @@ Visualization Manager:
                                         {}
                                       panda_2/panda_rightfinger:
                                         {}
+                                    screwdriver:
+                                      {}
                                     tc_robot:
                                       {}
                 table_parts:
@@ -574,6 +582,8 @@ Visualization Manager:
             table_rob_1_pnp_connector_4:
               {}
             table_tools:
+              parallelgripper:
+                {}
               table_tools_pnp_connector_1:
                 {}
               table_tools_pnp_connector_2:
@@ -583,6 +593,8 @@ Visualization Manager:
               table_tools_pnp_connector_4:
                 {}
               tool:
+                {}
+              vacuumgripper:
                 {}
       Update Interval: 0
       Value: true
@@ -1002,13 +1014,13 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        tool3:
+        parallelgripper:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
       Name: m3
-      Robot Description: tool3/robot_description
+      Robot Description: parallelgripper/robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: true
@@ -1038,25 +1050,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.89593554
+      Distance: 0.982772529
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.265920907
-        Y: 0.105095871
-        Z: 0.988874733
+        X: -0.0406100303
+        Y: 0.37037605
+        Z: 0.885489106
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.45539856
+      Pitch: 0.97539854
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 2.69039845
+      Yaw: 2.96539903
     Saved: ~
 Window Geometry:
   Displays:

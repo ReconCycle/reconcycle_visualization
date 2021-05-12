@@ -45,8 +45,8 @@
   </group>
 
   <!-- tool 3 added to rviz - change object in tool3.xacro under URDF  -->
-  <arg name="tool_model_3" default="$(find reconcycle_description)/urdf/tool3.xacro" />
-  <group ns="tool3">
+  <arg name="tool_model_3" default="$(find reconcycle_description)/urdf/parallelgripper.xacro" />
+  <group ns="parallelgripper">
     <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg tool_model_3)" />
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
     <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />

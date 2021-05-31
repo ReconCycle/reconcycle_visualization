@@ -12,6 +12,8 @@ Panels:
         - /m11
         - /m21
         - /m31
+        - /Marker1
+        - /Marker1/Namespaces1
       Splitter Ratio: 0.5
     Tree Height: 628
   - Class: rviz/Selection
@@ -246,7 +248,27 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
+        back_camera_1_tf:
+          Value: true
+        back_camera_2_tf:
+          Value: true
+        battery_camera_1_tf:
+          Value: true
+        battery_camera_2_tf:
+          Value: true
+        camera_1/object/front_camera_1_tf:
+          Value: true
+        camera_1_tf:
+          Value: true
+        camera_1_tf/front_camera_1_tf:
+          Value: true
+        camera_2_tf:
+          Value: true
         cutter:
+          Value: true
+        cvisualization_marker/camera_1/object:
+          Value: true
+        front_camera_1_tf:
           Value: true
         hand_1/qbhand_base_link:
           Value: true
@@ -322,6 +344,10 @@ Visualization Manager:
           Value: true
         hand_1/root_link:
           Value: true
+        internals_camera_2_tf:
+          Value: true
+        map:
+          Value: true
         panda_1/panda_hand:
           Value: true
         panda_1/panda_leftfinger:
@@ -376,7 +402,15 @@ Visualization Manager:
           Value: true
         parallelgripper:
           Value: true
+        pcb_camera_2_tf:
+          Value: true
         screwdriver:
+          Value: true
+        side1_camera_1_tf:
+          Value: true
+        side1_camera_2_tf:
+          Value: true
+        side2_camera_1_tf:
           Value: true
         table_cutting:
           Value: true
@@ -446,6 +480,8 @@ Visualization Manager:
           Value: true
         vise:
           Value: true
+        visualization_marker/cafront_camera_1_tf:
+          Value: true
         world:
           Value: true
       Marker Scale: 0.5
@@ -457,6 +493,17 @@ Visualization Manager:
         world:
           table_rob_1:
             panda_1/world:
+              camera_1_tf:
+                back_camera_1_tf:
+                  {}
+                battery_camera_1_tf:
+                  {}
+                front_camera_1_tf:
+                  {}
+                side1_camera_1_tf:
+                  {}
+                side2_camera_1_tf:
+                  {}
               panda_1/panda_link0:
                 panda_1/panda_link1:
                   panda_1/panda_link2:
@@ -466,6 +513,12 @@ Visualization Manager:
                           panda_1/panda_link6:
                             panda_1/panda_link7:
                               panda_1/panda_link8:
+                                camera_1/object/front_camera_1_tf:
+                                  {}
+                                camera_1_tf/front_camera_1_tf:
+                                  {}
+                                cvisualization_marker/camera_1/object:
+                                  {}
                                 hand_1/root_link:
                                   hand_1/qbhand_base_link:
                                     hand_1/qbhand_palm_link:
@@ -514,6 +567,8 @@ Visualization Manager:
                                     {}
                                   panda_1/panda_rightfinger:
                                     {}
+                                visualization_marker/cafront_camera_1_tf:
+                                  {}
             table_cutting:
               table_cutting_pnp_connector_1:
                 {}
@@ -534,6 +589,17 @@ Visualization Manager:
                 {}
               table_rob_2:
                 panda_2/world:
+                  camera_2_tf:
+                    back_camera_2_tf:
+                      {}
+                    battery_camera_2_tf:
+                      {}
+                    internals_camera_2_tf:
+                      {}
+                    pcb_camera_2_tf:
+                      {}
+                    side1_camera_2_tf:
+                      {}
                   panda_2/panda_link0:
                     panda_2/panda_link1:
                       panda_2/panda_link2:
@@ -1025,6 +1091,18 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: visualization_marker
+      Name: Marker
+      Namespaces:
+        /camera_1/object: true
+        /camera_1/text: true
+        /camera_2/object: true
+        /camera_2/text: true
+        screwdriver: true
+      Queue Size: 100
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 206; 225; 255
@@ -1050,25 +1128,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.982772529
+      Distance: 4.80291939
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.0406100303
-        Y: 0.37037605
-        Z: 0.885489106
+        X: -0.234633163
+        Y: 0.505348206
+        Z: 0.427110016
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.97539854
+      Pitch: 0.5603984
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 2.96539903
+      Yaw: 5.24039936
     Saved: ~
 Window Geometry:
   Displays:
@@ -1086,5 +1164,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1600
-  X: -2
-  Y: -2
+  X: 0
+  Y: 0

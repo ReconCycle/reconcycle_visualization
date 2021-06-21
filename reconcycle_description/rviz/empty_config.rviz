@@ -186,6 +186,10 @@ Visualization Manager:
           Value: false
         root_link:
           Value: false
+        table_1:
+          Value: true
+        table_2:
+          Value: true
         table_cutting:
           Value: false
         table_cutting_pnp_connector_1:
@@ -260,7 +264,9 @@ Visualization Manager:
       Tree:
         world:
           base_table:
-            {}
+            table_1:
+              table_2:
+                {}
           table_rob_1:
             panda_1/world:
               panda_1/panda_link0:
@@ -401,7 +407,9 @@ Visualization Manager:
       Marker Topic: visualization_marker
       Name: Marker
       Namespaces:
-        base_table_ns: true
+        base_table: true
+        table_1: true
+        table_2: true
       Queue Size: 100
       Value: true
   Enabled: true
@@ -429,25 +437,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.75333381
+      Distance: 2.44887877
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.670671403
-        Y: 0.334230036
-        Z: 0.466303468
+        X: 0.431854188
+        Y: 0.102330938
+        Z: 0.312850833
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.439796418
+      Pitch: 0.759796083
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.33039284
+      Yaw: 4.70038939
     Saved: ~
 Window Geometry:
   Displays:
@@ -465,5 +473,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1600
-  X: -1
-  Y: -1
+  X: -2
+  Y: -2

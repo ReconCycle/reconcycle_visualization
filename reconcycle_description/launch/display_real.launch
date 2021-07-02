@@ -2,7 +2,7 @@
   <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}] [${node}]: ${message}"/>
   
 
-  <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/urdf.rviz" />
+  <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/qbhandurdf.rviz" />
   <arg name="robot_model" default="$(find reconcycle_description)/urdf/reconcycle_panda.xacro"/>
   <arg name="hand_model" default="$(find qb_hand_description)/urdf/qbhand.urdf.xacro"/>
   <arg name="layout" default="actual_layout.xacro"/>

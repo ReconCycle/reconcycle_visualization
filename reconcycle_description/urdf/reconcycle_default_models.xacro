@@ -244,4 +244,140 @@
     </xacro:unless>
 </xacro:macro>
 
+<xacro:macro name="tool_frame_1" params="tool_id:='tool_frame_1' connected_to:='' xyz:='0.0 0.0 0.0' rpy='0 0 0'">
+
+    <!--  If connected_to is not provided we don't do anything -->
+    <xacro:unless value="${not connected_to}">
+        <joint name="${tool_id}_joint_${connected_to}" type="fixed">
+            <parent link="${connected_to}"/>
+            <child link="${tool_id}"/>
+            <origin rpy="${rpy}" xyz="${xyz}"/>
+            <dynamics damping="1"/>
+        </joint>
+
+        <!-- The vise -->
+        <link name="${tool_id}">
+            <visual>
+                <origin rpy="${pi/2} 0 0" xyz=" 0 0 0 "/>
+                <geometry>
+                    <mesh filename="package://reconcycle_description/meshes/EmptyCubeFrame.obj" scale="0.001 0.001 0.001"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin rpy="${pi/2} 0 0" xyz="0.0 0.0 0"/>
+                <geometry>
+                    <mesh filename="package://reconcycle_description/meshes/EmptyCubeFrame.obj" scale ="0.001 0.001 0.001"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <mass value="3"/>
+                <inertia ixx="3.0" ixy="0.0" ixz="0.0" iyy="3.0" iyz="0.0" izz="3.0"/>
+            </inertial>
+        </link>
+    </xacro:unless>
+</xacro:macro>
+
+<xacro:macro name="tool_frame_2" params="tool_id:='tool_frame_2' connected_to:='' xyz:='0.0 0.0 0.0' rpy='0 0 0'">
+
+    <!--  If connected_to is not provided we don't do anything -->
+    <xacro:unless value="${not connected_to}">
+        <joint name="${tool_id}_joint_${connected_to}" type="fixed">
+            <parent link="${connected_to}"/>
+            <child link="${tool_id}"/>
+            <origin rpy="${rpy}" xyz="${xyz}"/>
+            <dynamics damping="1"/>
+        </joint>
+
+        <!-- The vise -->
+        <link name="${tool_id}">
+            <visual>
+                <origin rpy="${pi/2} 0 0" xyz=" 0 0 0 "/>
+                <geometry>
+                    <mesh filename="package://reconcycle_description/meshes/EmptyCubeFrame.obj" scale="0.001 0.001 0.001"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin rpy="${pi/2} 0 0" xyz="0.0 0.0 0"/>
+                <geometry>
+                    <mesh filename="package://reconcycle_description/meshes/EmptyCubeFrame.obj" scale ="0.001 0.001 0.001"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <mass value="3"/>
+                <inertia ixx="3.0" ixy="0.0" ixz="0.0" iyy="3.0" iyz="0.0" izz="3.0"/>
+            </inertial>
+        </link>
+    </xacro:unless>
+</xacro:macro>
+
+<xacro:macro name="tool_frame_3" params="tool_id:='tool_frame_3' connected_to:='' xyz:='0.0 0.0 0.0' rpy='0 0 0'">
+
+    <!--  If connected_to is not provided we don't do anything -->
+    <xacro:unless value="${not connected_to}">
+        <joint name="${tool_id}_joint_${connected_to}" type="fixed">
+            <parent link="${connected_to}"/>
+            <child link="${tool_id}"/>
+            <origin rpy="${rpy}" xyz="${xyz}"/>
+            <dynamics damping="1"/>
+        </joint>
+
+        <!-- The vise -->
+        <link name="${tool_id}">
+            <visual>
+                <origin rpy="${pi/2} 0 0" xyz=" 0 0 0 "/>
+                <geometry>
+                    <mesh filename="package://reconcycle_description/meshes/EmptyCubeFrame.obj" scale="0.001 0.001 0.001"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin rpy="${pi/2} 0 0" xyz="0.0 0.0 0"/>
+                <geometry>
+                    <mesh filename="package://reconcycle_description/meshes/EmptyCubeFrame.obj" scale ="0.001 0.001 0.001"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <mass value="3"/>
+                <inertia ixx="3.0" ixy="0.0" ixz="0.0" iyy="3.0" iyz="0.0" izz="3.0"/>
+            </inertial>
+        </link>
+    </xacro:unless>
+</xacro:macro>
+
+<xacro:macro name="tool_frame_4" params="tool_id:='tool_frame_4' connected_to:='' xyz:='0.0 0.0 0.0' rpy='0 0 0'">
+
+    <!--  If connected_to is not provided we don't do anything -->
+    <xacro:unless value="${not connected_to}">
+        <joint name="${tool_id}_joint_${connected_to}" type="fixed">
+            <parent link="${connected_to}"/>
+            <child link="${tool_id}"/>
+            <origin rpy="${rpy}" xyz="${xyz}"/>
+            <dynamics damping="1"/>
+        </joint>
+
+        <!-- The vise -->
+        <link name="${tool_id}">
+            <visual>
+                <origin rpy="${pi/2} 0 0" xyz=" 0 0 0 "/>
+                <geometry>
+                    <mesh filename="package://reconcycle_description/meshes/EmptyCubeFrame.obj" scale="0.001 0.001 0.001"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin rpy="${pi/2} 0 0" xyz="0.0 0.0 0"/>
+                <geometry>
+                    <mesh filename="package://reconcycle_description/meshes/EmptyCubeFrame.obj" scale ="0.001 0.001 0.001"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <mass value="3"/>
+                <inertia ixx="3.0" ixy="0.0" ixz="0.0" iyy="3.0" iyz="0.0" izz="3.0"/>
+            </inertial>
+        </link>
+    </xacro:unless>
+</xacro:macro>
+
 </robot>

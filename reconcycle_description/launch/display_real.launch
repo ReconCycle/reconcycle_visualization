@@ -2,7 +2,7 @@
   <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}] [${node}]: ${message}"/>
   
 
-  <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/urdf.rviz" />
+  <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/qbhandurdf.rviz" />
   <arg name="robot_model" default="$(find reconcycle_description)/urdf/reconcycle_panda.xacro"/>
   <arg name="hand_model" default="$(find qb_hand_description)/urdf/qbhand.urdf.xacro"/>
   <arg name="layout" default="actual_layout.xacro"/>
@@ -13,10 +13,7 @@
 
 
 
-  <group ns='table'>
-      <param name="robot_description" command="$(find xacro)/xacro --inorder $(find reconcycle_description)/urdf/$(arg layout)"/>
-      <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-  </group>
+
 
 
 
@@ -39,6 +36,50 @@
   </group>
 
 
+  
+ <!-- reconcycle tables -->
+  <group ns='table'>
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find reconcycle_description)/urdf/$(arg layout)"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  </group>
+
+
+  <!-- screwdriver added to rviz - change object in tool1.xacro under URDF  -->
+  <arg name="tool_model_1" default="$(find reconcycle_description)/urdf/screwdriver.xacro" />
+  <group ns="screwdriver">
+    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg tool_model_1)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  </group>
+
+  <!-- vacuumgripper added to rviz - change object in tool2.xacro under URDF  -->
+  <arg name="tool_model_2" default="$(find reconcycle_description)/urdf/vacuumgripper.xacro" />
+  <group ns="vacuumgripper">
+    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg tool_model_2)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  </group>
+
+  <!-- tool 3 added to rviz - change object in tool3.xacro under URDF  -->
+  <arg name="tool_model_3" default="$(find reconcycle_description)/urdf/parallelgripper.xacro" />
+  <group ns="parallelgripper">
+    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg tool_model_3)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  </group>
+
+  <!-- tc_robot_side static -->
+  <arg name="tc_robot_side" default="$(find reconcycle_description)/urdf/tc_robot_side.xacro" />
+  <group ns="tc_robot">
+    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg tc_robot_side)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    <node name="tc_to_panda_2" pkg="tf" type="static_transform_publisher" args="0 0 0 -0.785 3.14159 0 panda_2/panda_link8 tc_robot 100"/>
+  </group>
+  
+  
+  
+  
   <group ns='qb_hand1'>
     
     <!--<param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg hand_model)"/>-->

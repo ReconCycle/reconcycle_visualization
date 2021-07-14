@@ -28,30 +28,35 @@
     <node name="hand_to_robot" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 panda_1/panda_link8 hand_1/root_link 100"/>
   </group> 
 
-  <!-- screwdriver added to rviz - change object in tool1.xacro under URDF  -->
-  <arg name="tool_model_1" default="$(find reconcycle_description)/urdf/screwdriver.xacro" />
-  <group ns="screwdriver">
-    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg tool_model_1)" />
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-    <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <!-- tools added to rviz - under URDF  -->
+  <arg name="tool_model_screwdriver" default="$(find reconcycle_description)/urdf/screwdriver.xacro" />
+  <arg name="tool_model_vacuumgripper" default="$(find reconcycle_description)/urdf/vacuumgripper.xacro" />
+  <arg name="tool_model_parallelgripper" default="$(find reconcycle_description)/urdf/parallelgripper.xacro" />
+  <group ns="tools">
+    <param unless="$(arg robot_gazebo)" name="screwdriver" command="$(find xacro)/xacro $(arg tool_model_screwdriver)" />
+    <param unless="$(arg robot_gazebo)" name="vacuumgripper" command="$(find xacro)/xacro $(arg tool_model_vacuumgripper)" />
+    <param unless="$(arg robot_gazebo)" name="parallelgripper" command="$(find xacro)/xacro $(arg tool_model_parallelgripper)" />
+    <node name="screwdriver" pkg="reconcycle_simulation" type="tool_changer_rviz.py" args="--tool 'screwdriver' --frame 'panda_2/panda_link8'" output="screen" />
+    <node name="vacuumgripper" pkg="reconcycle_simulation" type="tool_changer_rviz.py" args="--tool 'vacuumgripper' --frame 'table_tools'" output="screen" />
+    <node name="parallelgripper" pkg="reconcycle_simulation" type="tool_changer_rviz.py" args="--tool 'parallelgripper' --frame 'table_tools'" output="screen" />
   </group>
-
-  <!-- vacuumgripper added to rviz - change object in tool2.xacro under URDF  -->
-  <arg name="tool_model_2" default="$(find reconcycle_description)/urdf/vacuumgripper.xacro" />
-  <group ns="vacuumgripper">
-    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg tool_model_2)" />
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-    <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  
+  <!-- vacuumgripper added to rviz - change object in tool2.xacro under URDF  
+  <arg name="tool_model_vacuumgripper" default="$(find reconcycle_description)/urdf/vacuumgripper.xacro" />
+  <group ns="tools">
+    <param unless="$(arg robot_gazebo)" name="vacuumgripper" command="$(find xacro)/xacro $(arg tool_model_vacuumgripper)" />
+    <node name="vacuumgripper" pkg="reconcycle_simulation" type="vacuumgripper_change_service.py" />
   </group>
-
-  <!-- tool 3 added to rviz - change object in tool3.xacro under URDF  -->
+  -->
+<!--
+  <!- - tool 3 added to rviz - change object in tool3.xacro under URDF  - ->
   <arg name="tool_model_3" default="$(find reconcycle_description)/urdf/parallelgripper.xacro" />
   <group ns="parallelgripper">
     <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg tool_model_3)" />
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
     <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
   </group>
-
+ -->
   <!-- tc_robot_side static -->
   <arg name="tc_robot_side" default="$(find reconcycle_description)/urdf/tc_robot_side.xacro" />
   <group ns="tc_robot">

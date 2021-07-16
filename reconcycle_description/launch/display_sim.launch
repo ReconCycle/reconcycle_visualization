@@ -41,22 +41,6 @@
     <node name="parallelgripper" pkg="reconcycle_simulation" type="tool_changer_rviz.py" args="--tool 'parallelgripper' --frame 'tool_frame_3' --Tmatrix '[0 0 0 0 0 0]'" output="screen" />
   </group>
   
-  <!-- vacuumgripper added to rviz - change object in tool2.xacro under URDF  
-  <arg name="tool_model_vacuumgripper" default="$(find reconcycle_description)/urdf/vacuumgripper.xacro" />
-  <group ns="tools">
-    <param unless="$(arg robot_gazebo)" name="vacuumgripper" command="$(find xacro)/xacro $(arg tool_model_vacuumgripper)" />
-    <node name="vacuumgripper" pkg="reconcycle_simulation" type="vacuumgripper_change_service.py" />
-  </group>
-  -->
-<!--
-  <!- - tool 3 added to rviz - change object in tool3.xacro under URDF  - ->
-  <arg name="tool_model_3" default="$(find reconcycle_description)/urdf/parallelgripper.xacro" />
-  <group ns="parallelgripper">
-    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg tool_model_3)" />
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-    <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
-  </group>
- -->
   <!-- tc_robot_side static -->
   <arg name="tc_robot_side" default="$(find reconcycle_description)/urdf/tc_robot_side.xacro" />
   <group ns="tc_robot">

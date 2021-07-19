@@ -36,9 +36,9 @@
     <param unless="$(arg robot_gazebo)" name="screwdriver" command="$(find xacro)/xacro $(arg tool_model_screwdriver)" />
     <param unless="$(arg robot_gazebo)" name="vacuumgripper" command="$(find xacro)/xacro $(arg tool_model_vacuumgripper)" />
     <param unless="$(arg robot_gazebo)" name="parallelgripper" command="$(find xacro)/xacro $(arg tool_model_parallelgripper)" />
-    <node name="screwdriver" pkg="reconcycle_simulation" type="tool_changer_rviz.py" args="--tool 'screwdriver' --frame 'tool_frame_1' --Tmatrix '[0 0 0 0 0 0]'" output="screen" />
-    <node name="vacuumgripper" pkg="reconcycle_simulation" type="tool_changer_rviz.py" args="--tool 'vacuumgripper' --frame 'tool_frame_2' --Tmatrix '[0 0 0 0 0 0]'" output="screen" />
-    <node name="parallelgripper" pkg="reconcycle_simulation" type="tool_changer_rviz.py" args="--tool 'parallelgripper' --frame 'tool_frame_3' --Tmatrix '[0 0 0 0 0 0]'" output="screen" />
+    <node name="screwdriver" pkg="reconcycle_simulation" type="tool_changer_rviz.py" args="--tool 'screwdriver' --frame 'tool_frame_1' --Tmatrix 0 0 0 0 0 0" output="screen" />
+    <node name="vacuumgripper" pkg="reconcycle_simulation" type="tool_changer_rviz.py" args="--tool 'vacuumgripper' --frame 'tool_frame_2' --Tmatrix 0 0 0 0 0 0" output="screen" />
+    <node name="parallelgripper" pkg="reconcycle_simulation" type="tool_changer_rviz.py" args="--tool 'parallelgripper' --frame 'tool_frame_3' --Tmatrix 0 0 0 0 0 0" output="screen" />
   </group>
   
   <!-- tc_robot_side static -->

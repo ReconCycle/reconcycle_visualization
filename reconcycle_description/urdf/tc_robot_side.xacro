@@ -2,13 +2,13 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="defaults">
     <link name="tc_robot">
         <visual>
-            <origin rpy="1.57 0 0" xyz=" 0 0 0 "/>
+            <origin rpy="1.57 0 -0.802664626" xyz=" 0 0 0 "/>
             <geometry>
                 <mesh filename="package://reconcycle_description/meshes/tc_robot_side.obj" scale="0.001 0.001 0.001"/>
             </geometry>
         </visual>
         <collision>
-            <origin rpy="1.57 0 0" xyz="0.0 0.0 0"/>
+            <origin rpy="1.57 0 -0.802664626" xyz="0.0 0.0 0"/>
             <geometry>
                 <mesh filename="package://reconcycle_description/meshes/tc_robot_side.obj" scale ="0.001 0.001 0.001"/>
             </geometry>

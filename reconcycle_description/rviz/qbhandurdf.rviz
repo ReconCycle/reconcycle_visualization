@@ -8,7 +8,7 @@ Panels:
         - /Panda 11
         - /Panda 21
         - /qbHand11
-        - /tc_robot_side1
+        - /Tool Holder1
         - /Screwdriver1
         - /Vacuumgripper1
         - /Parallelgripper1
@@ -228,6 +228,22 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        tool_frame_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        tool_frame_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        tool_frame_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        tool_frame_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         vise:
           Alpha: 1
           Show Axes: false
@@ -444,6 +460,14 @@ Visualization Manager:
           Value: true
         tool:
           Value: true
+        tool_frame_1:
+          Value: true
+        tool_frame_2:
+          Value: true
+        tool_frame_3:
+          Value: true
+        tool_frame_4:
+          Value: true
         vacuumgripper:
           Value: true
         vise:
@@ -550,8 +574,6 @@ Visualization Manager:
                                         {}
                                       panda_2/panda_rightfinger:
                                         {}
-                                    screwdriver:
-                                      {}
                                     tc_robot:
                                       {}
                 table_parts:
@@ -584,8 +606,6 @@ Visualization Manager:
             table_rob_1_pnp_connector_4:
               {}
             table_tools:
-              parallelgripper:
-                {}
               table_tools_pnp_connector_1:
                 {}
               table_tools_pnp_connector_2:
@@ -596,7 +616,16 @@ Visualization Manager:
                 {}
               tool:
                 {}
-              vacuumgripper:
+              tool_frame_1:
+                screwdriver:
+                  {}
+              tool_frame_2:
+                vacuumgripper:
+                  {}
+              tool_frame_3:
+                parallelgripper:
+                  {}
+              tool_frame_4:
                 {}
       Update Interval: 0
       Value: true
@@ -958,8 +987,8 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-      Name: tc_robot_side
-      Robot Description: tc_robot/robot_description
+      Name: Tool Holder
+      Robot Description: toolholder/tool_holder_on_panda
       TF Prefix: ""
       Update Interval: 0
       Value: true

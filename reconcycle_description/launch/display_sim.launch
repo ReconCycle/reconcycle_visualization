@@ -40,6 +40,11 @@
     <node name="vacuumgripper" pkg="reconcycle_description" type="tool_changer_rviz.py" args="--tool 'vacuumgripper' --frame 'tool_frame_2' --Tmatrix 0 0 0 0 0 0" output="screen" />
     <node name="parallelgripper" pkg="reconcycle_description" type="tool_changer_rviz.py" args="--tool 'parallelgripper' --frame 'tool_frame_3' --Tmatrix 0 0 0 0 0 0" output="screen" />
   </group>
+
+  <!-- TF marker frame changer service, attaching visualized object to qb_hand -->
+  <group ns="object_to_qbhand_frame_changer">
+    <node name="visualized_object_service" pkg="reconcycle_description" type="visualized_object_service.py" output="screen" />
+  </group>
   
   <!-- tc_robot_side static -->
   <arg name="tc_robot_side" default="$(find reconcycle_description)/urdf/tc_robot_side.xacro" />

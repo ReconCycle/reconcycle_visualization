@@ -66,6 +66,9 @@ class FixedTFBroadcaster:
             self.matrix = list(T_data.matrix)
             for i in range(len(self.matrix)):
                 self.matrix[i] = float(self.matrix[i])
+
+            # transform degress to radians
+            self.matrix[3:] = np.deg2rad(self.matrix[3:])
                 
             self.matrix[3:] = tf.transformations.quaternion_from_euler(self.matrix[3], self.matrix[4], self.matrix[5])
             return True, "Transform changed to {} !".format(self.matrix)

@@ -1,96 +1,62 @@
 <launch>
   <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}] [${node}]: ${message}"/>
   
-
-  <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/qbhandurdf.rviz" />
+  <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/hca.rviz" />
   <arg name="robot_model" default="$(find reconcycle_description)/urdf/reconcycle_panda.xacro"/>
   <arg name="hand_model" default="$(find qb_hand_description)/urdf/qbhand.urdf.xacro"/>
-  <arg name="layout" default="actual_layout.xacro"/>
+  <arg name="layout" default="emo_layout.xacro"/>
   <arg name="robot_absent" default="false"/>
   <arg name="robot_gazebo" default="false"/>
   <arg name="rviz" default="true"/>
   <param name="/use_sim_time" value="false" />
 
-
-
-
-
-
-
-  <group ns='panda_1'>
-    
-    
-        <node name="panda_1_to_table" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 table_rob_1 panda_1/world 10"/>
-        <node name="panda_1_to_link" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 panda_1/world panda_1/panda_link0 10"/>
-  </group>
-
-
-
-  <group ns='panda_2'>
-    
-    
-    
-    <node name="panda_2_to_table" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 table_rob_2 panda_2/world 10"/>
-            <node name="panda_2_to_link" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 panda_2/world panda_2/panda_link0 10"/>
-
-  </group>
-
-
-  
  <!-- reconcycle tables -->
   <group ns='table'>
-    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find reconcycle_description)/urdf/$(arg layout)"/>
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find reconcycle_description)/layouts/$(arg layout)"/>
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
   </group>
+  
+  <!-- robots -->
+  <group ns='panda_1'>
+      <node name="table_to_panda_1" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 table_rob_1 panda_1/panda_link0 100"/>
+      <node name="panda_1_link8_fix" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 panda_1/panda_link8 panda_1_link8 100"/>
+      <node name="panda_1_EE_fix" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 panda_1_EE panda_1/panda_EE 100"/>
+  </group>
 
+  <!-- <group ns='panda_2'>
+      <node name="table_to_panda_2" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 table_rob_2 panda_2/panda_link0 100"/>
+  </group> -->
 
+  <group ns='qb_hand1'>
+    <node name="softhand_to_panda_1" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 panda_1/panda_1_tc_robot root_link 100"/>
+  </group>
+   
   <!-- screwdriver added to rviz - change object in tool1.xacro under URDF  -->
   <arg name="tool_model_1" default="$(find reconcycle_description)/urdf/screwdriver.xacro" />
   <group ns="screwdriver">
-    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg tool_model_1)" />
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-    <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
   </group>
 
   <!-- vacuumgripper added to rviz - change object in tool2.xacro under URDF  -->
   <arg name="tool_model_2" default="$(find reconcycle_description)/urdf/vacuumgripper.xacro" />
   <group ns="vacuumgripper">
-    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg tool_model_2)" />
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-    <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
   </group>
 
   <!-- tool 3 added to rviz - change object in tool3.xacro under URDF  -->
   <arg name="tool_model_3" default="$(find reconcycle_description)/urdf/parallelgripper.xacro" />
   <group ns="parallelgripper">
-    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg tool_model_3)" />
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-    <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
   </group>
 
   <!-- tc_robot_side static -->
   <arg name="tc_robot_side" default="$(find reconcycle_description)/urdf/tc_robot_side.xacro" />
   <group ns="tc_robot">
-    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg tc_robot_side)" />
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-    <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
-    <node name="tc_to_panda_2" pkg="tf" type="static_transform_publisher" args="0 0 0 -0.785 3.14159 0 panda_2/panda_link8 tc_robot 100"/>
-  </group>
-  
-  
-  
-  
-  <group ns='qb_hand1'>
-    
-    <!--<param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg hand_model)"/>-->
-    <!--<node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />-->
-    <!--<node if="$(arg robot_absent)" name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />-->
-    <node name="hand_to_robot" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 panda_1/panda_link8 root_link 100"/>
-    <node name="hand_to_hand" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 root_link qbhand1_base_link 100"/>
-
+    <node name="tc_to_panda_2" pkg="tf" type="static_transform_publisher" args="0 0 0 -0.785 3.14159 0 panda_1/panda_link8 panda_1/panda_1_tc_robot 100"/>
   </group>
 
-
+  
 
   <node if="$(arg rviz)" name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
 

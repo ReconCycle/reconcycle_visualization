@@ -1,6 +1,7 @@
 <?xml version='1.0'?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="defaults">
-    <link name="tc_robot">
+<xacro:macro name = "tc_robot" param="tc_id:='tc_robot' connected_to:='panda_link8'" >
+    <link name="${tc_id}">
         <visual>
             <origin rpy="1.57 0 -0.802664626" xyz=" 0 0 0 "/>
             <geometry>
@@ -19,4 +20,9 @@
             <inertia ixx="3.0" ixy="0.0" ixz="0.0" iyy="3.0" iyz="0.0" izz="3.0"/>
         </inertial>
     </link>
+    <joint name="${tc_id}" type="fixed">
+        <parent link="${connected_to}"/>
+        <child link="${tc_id}"/>
+    </joint>
+</xacro:macro>
 </robot>

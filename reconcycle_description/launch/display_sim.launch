@@ -3,7 +3,7 @@
 
   <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/qbhandurdf.rviz" />
   <arg name="robot_model" default="$(find franka_panda_description)/robots/panda_arm_hand.urdf.xacro"/>
-  <arg name="robot_model_reconcycle" default="$(find franka_panda_description)/robots/panda_arm_hand.urdf.xacro"/>
+  <arg name="robot_model_reconcycle" default="$(find reconcycle_description)/urdf/reconcycle_panda.xacro"/>
   <arg name="layout" default="hca_layout.xacro"/>
   <arg name="robot_gazebo" default="false"/>
   <arg name="robot_absent" default="true"/>
@@ -13,7 +13,7 @@
 
   <!-- reconcycle tables -->
   <group ns='table'>
-    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find reconcycle_description)/urdf/$(arg layout)"/>
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find reconcycle_description)/layouts/$(arg layout)"/>
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
   </group>
 
@@ -21,11 +21,11 @@
   <arg name="hand_model" default="$(find qb_hand_description)/urdf/qbhand.urdf.xacro"/>
   <group ns='qb_hand_1'>
     <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg hand_model)"/>
-    <param name="tf_prefix" value="hand_1"/>
+    <!-- <param name="tf_prefix" value="hand_1"/> -->
     <!-- <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
     <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-    <node name="hand_to_robot" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 panda_1/panda_link8 hand_1/root_link 100"/>
+    <node name="hand_to_robot" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 panda_1/panda_link8 root_link 100"/>
   </group> 
 
   <!-- tools added to rviz - under URDF  -->
@@ -47,7 +47,7 @@
   </group>
   
   <!-- tc_robot_side static -->
-  <arg name="tc_robot_side" default="$(find reconcycle_description)/urdf/tc_robot_side.xacro" />
+  <arg name="tc_robot_side" default="$(find reconcycle_description)/urdf/tc_nonmacro.xacro" />
   <group ns="toolholder">
     <param unless="$(arg robot_gazebo)" name="tool_holder_on_panda" command="$(find xacro)/xacro $(arg tc_robot_side)" />
     <node name="tc_to_panda_2" pkg="tf" type="static_transform_publisher" args="0 0 0 -0.785 3.14159 0 panda_2/panda_link8 tc_robot 100"/>

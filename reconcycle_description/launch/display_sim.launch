@@ -25,7 +25,7 @@
     <!-- <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
     <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-    <node name="hand_to_robot" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 panda_1/panda_link8 root_link 100"/>
+    <node name="hand_to_robot" pkg="tf" type="static_transform_publisher" args="0.0045 0.0144 0.14 3.14 3.14 0 soft_hand_adaptor root_link 100"/>
   </group> 
 
   <!-- tools added to rviz - under URDF  -->
@@ -46,12 +46,28 @@
     <node name="visualized_object_service" pkg="reconcycle_description" type="visualized_object_service.py" output="screen" />
   </group>
   
-  <!-- tc_robot_side static -->
-  <arg name="tc_robot_side" default="$(find reconcycle_description)/urdf/tc_nonmacro.xacro" />
+
+  <!-- tc_robot_side_panda1 static -->
+  <arg name="tc_robot_side_1" default="$(find reconcycle_description)/urdf/tc_nonmacro_panda1.xacro" />
   <group ns="toolholder">
-    <param unless="$(arg robot_gazebo)" name="tool_holder_on_panda" command="$(find xacro)/xacro $(arg tc_robot_side)" />
-    <node name="tc_to_panda_2" pkg="tf" type="static_transform_publisher" args="0 0 0 -0.785 3.14159 0 panda_2/panda_link8 tc_robot 100"/>
+    <param unless="$(arg robot_gazebo)" name="tool_holder_on_panda1" command="$(find xacro)/xacro $(arg tc_robot_side_1)" />
+    <node name="tc_to_panda_1" pkg="tf" type="static_transform_publisher" args="0 0 0 -0.785 3.14159 0 panda_1/panda_link8 tc_robot_panda1 100"/>
   </group>
+
+  <!-- tc_robot_side_panda2 static -->
+  <arg name="tc_robot_side_2" default="$(find reconcycle_description)/urdf/tc_nonmacro_panda2.xacro" />
+  <group ns="toolholder">
+    <param unless="$(arg robot_gazebo)" name="tool_holder_on_panda2" command="$(find xacro)/xacro $(arg tc_robot_side_2)" />
+    <node name="tc_to_panda_2" pkg="tf" type="static_transform_publisher" args="0 0 0 -0.785 3.14159 0 panda_2/panda_link8 tc_robot_panda2 100"/>
+  </group>
+
+  <!-- soft hand adaptor with TC -->
+  <arg name="soft_hand_adaptor_TC" default="$(find reconcycle_description)/urdf/Soft_hand_adaptor.xacro" />
+  <group ns="adaptor">
+    <param unless="$(arg robot_gazebo)" name="soft_hand_adaptor" command="$(find xacro)/xacro $(arg soft_hand_adaptor_TC)" />
+    <node name="soft_hand_adaptor" pkg="tf" type="static_transform_publisher" args="-0.1897 -0.00434 -0.09 1.57 0 1.57 tc_robot_panda1 soft_hand_adaptor 100"/>
+  </group>
+
 
   <!-- robot_description is loaded to parameter server by the launch file for simulation/real controllers -->
   <group ns='panda_1'>

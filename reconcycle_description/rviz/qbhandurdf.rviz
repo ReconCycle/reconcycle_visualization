@@ -8,10 +8,7 @@ Panels:
         - /Panda 11
         - /Panda 21
         - /qbHand11
-        - /Tool Holder1
-        - /Screwdriver1
-        - /Vacuumgripper1
-        - /Parallelgripper1
+        - /Soft hand adaptor1
         - /Marker1
         - /Marker1/Namespaces1
       Splitter Ratio: 0.5
@@ -400,9 +397,9 @@ Visualization Manager:
           Value: true
         screwdriver:
           Value: true
-        table_cutting:
+        soft_hand_adaptor:
           Value: true
-        table_cutting1:
+        table_cutting:
           Value: true
         table_cutting_pnp_connector_1:
           Value: true
@@ -414,8 +411,6 @@ Visualization Manager:
           Value: true
         table_fixture:
           Value: true
-        table_fixture1:
-          Value: true
         table_fixture_pnp_connector_1:
           Value: true
         table_fixture_pnp_connector_2:
@@ -425,8 +420,6 @@ Visualization Manager:
         table_fixture_pnp_connector_4:
           Value: true
         table_parts:
-          Value: true
-        table_parts1:
           Value: true
         table_parts_pnp_connector_1:
           Value: true
@@ -438,8 +431,6 @@ Visualization Manager:
           Value: true
         table_rob_1:
           Value: true
-        table_rob_11:
-          Value: true
         table_rob_1_pnp_connector_1:
           Value: true
         table_rob_1_pnp_connector_2:
@@ -449,8 +440,6 @@ Visualization Manager:
         table_rob_1_pnp_connector_4:
           Value: true
         table_rob_2:
-          Value: true
-        table_rob_22:
           Value: true
         table_rob_2_pnp_connector_1:
           Value: true
@@ -462,8 +451,6 @@ Visualization Manager:
           Value: true
         table_tools:
           Value: true
-        table_tools1:
-          Value: true
         table_tools_pnp_connector_1:
           Value: true
         table_tools_pnp_connector_2:
@@ -472,7 +459,9 @@ Visualization Manager:
           Value: true
         table_tools_pnp_connector_4:
           Value: true
-        tc_robot:
+        tc_robot_panda1:
+          Value: true
+        tc_robot_panda2:
           Value: true
         tool:
           Value: true
@@ -513,49 +502,51 @@ Visualization Manager:
                                     {}
                                   panda_1/panda_rightfinger:
                                     {}
-                                root_link:
-                                  qbhand_base_link:
-                                    qbhand_palm_link:
-                                      qbhand_index_knuckle_link:
-                                        qbhand_index_proximal_virtual_link:
-                                          qbhand_index_proximal_link:
-                                            qbhand_index_middle_virtual_link:
-                                              qbhand_index_middle_link:
-                                                qbhand_index_distal_virtual_link:
-                                                  qbhand_index_distal_link:
+                                tc_robot_panda1:
+                                  soft_hand_adaptor:
+                                    root_link:
+                                      qbhand_base_link:
+                                        qbhand_palm_link:
+                                          qbhand_index_knuckle_link:
+                                            qbhand_index_proximal_virtual_link:
+                                              qbhand_index_proximal_link:
+                                                qbhand_index_middle_virtual_link:
+                                                  qbhand_index_middle_link:
+                                                    qbhand_index_distal_virtual_link:
+                                                      qbhand_index_distal_link:
+                                                        {}
+                                          qbhand_little_knuckle_link:
+                                            qbhand_little_proximal_virtual_link:
+                                              qbhand_little_proximal_link:
+                                                qbhand_little_middle_virtual_link:
+                                                  qbhand_little_middle_link:
+                                                    qbhand_little_distal_virtual_link:
+                                                      qbhand_little_distal_link:
+                                                        {}
+                                          qbhand_middle_knuckle_link:
+                                            qbhand_middle_proximal_virtual_link:
+                                              qbhand_middle_proximal_link:
+                                                qbhand_middle_middle_virtual_link:
+                                                  qbhand_middle_middle_link:
+                                                    qbhand_middle_distal_virtual_link:
+                                                      qbhand_middle_distal_link:
+                                                        {}
+                                          qbhand_ring_knuckle_link:
+                                            qbhand_ring_proximal_virtual_link:
+                                              qbhand_ring_proximal_link:
+                                                qbhand_ring_middle_virtual_link:
+                                                  qbhand_ring_middle_link:
+                                                    qbhand_ring_distal_virtual_link:
+                                                      qbhand_ring_distal_link:
+                                                        {}
+                                          qbhand_tendon_virtual_link:
+                                            {}
+                                          qbhand_thumb_knuckle_link:
+                                            qbhand_thumb_proximal_virtual_link:
+                                              qbhand_thumb_proximal_link:
+                                                qbhand_thumb_distal_virtual_link:
+                                                  qbhand_thumb_distal_link:
                                                     {}
-                                      qbhand_little_knuckle_link:
-                                        qbhand_little_proximal_virtual_link:
-                                          qbhand_little_proximal_link:
-                                            qbhand_little_middle_virtual_link:
-                                              qbhand_little_middle_link:
-                                                qbhand_little_distal_virtual_link:
-                                                  qbhand_little_distal_link:
-                                                    {}
-                                      qbhand_middle_knuckle_link:
-                                        qbhand_middle_proximal_virtual_link:
-                                          qbhand_middle_proximal_link:
-                                            qbhand_middle_middle_virtual_link:
-                                              qbhand_middle_middle_link:
-                                                qbhand_middle_distal_virtual_link:
-                                                  qbhand_middle_distal_link:
-                                                    {}
-                                      qbhand_ring_knuckle_link:
-                                        qbhand_ring_proximal_virtual_link:
-                                          qbhand_ring_proximal_link:
-                                            qbhand_ring_middle_virtual_link:
-                                              qbhand_ring_middle_link:
-                                                qbhand_ring_distal_virtual_link:
-                                                  qbhand_ring_distal_link:
-                                                    {}
-                                      qbhand_tendon_virtual_link:
-                                        {}
-                                      qbhand_thumb_knuckle_link:
-                                        qbhand_thumb_proximal_virtual_link:
-                                          qbhand_thumb_proximal_link:
-                                            qbhand_thumb_distal_virtual_link:
-                                              qbhand_thumb_distal_link:
-                                                {}
             table_cutting:
               table_cutting_pnp_connector_1:
                 {}
@@ -590,7 +581,7 @@ Visualization Manager:
                                         {}
                                       panda_2/panda_rightfinger:
                                         {}
-                                    tc_robot:
+                                    tc_robot_panda2:
                                       {}
                 table_parts:
                   cutter:
@@ -643,15 +634,6 @@ Visualization Manager:
                   {}
               tool_frame_4:
                 {}
-          table_rob_11:
-            table_fixture1:
-              table_rob_22:
-                table_cutting1:
-                  {}
-            table_parts1:
-              {}
-            table_tools1:
-              {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -1007,13 +989,55 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        tc_robot:
+        tc_robot_panda1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-      Name: Tool Holder
-      Robot Description: toolholder/tool_holder_on_panda
+      Name: Tool Holder Panda1
+      Robot Description: toolholder/tool_holder_on_panda1
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        tc_robot_panda2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: Tool Holder Panda2
+      Robot Description: toolholder/tool_holder_on_panda2
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        soft_hand_adaptor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: Soft hand adaptor
+      Robot Description: adaptor/soft_hand_adaptor
       TF Prefix: ""
       Update Interval: 0
       Value: true
@@ -1114,25 +1138,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 4.80291939
+      Distance: 1.24150264
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.234633163
-        Y: 0.505348206
-        Z: 0.427110016
+        X: 1.01433802
+        Y: -0.639755011
+        Z: 1.708565
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.545398414
+      Pitch: 0.6853984
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.44539881
+      Yaw: 5.61221552
     Saved: ~
 Window Geometry:
   Displays:

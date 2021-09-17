@@ -3,8 +3,7 @@
     <link name="world"/>
 
     <!-- Usefull parameters -->
-    <!-- <xacro:include filename="$(find reconcycle_description)/urdf/reconcycle_defaults.xacro" /> -->
-    <xacro:include filename="$(find reconcycle_description)/urdf/reconcycle_default_models.xacro" />
+    <xacro:include filename="$(find reconcycle_description)/urdf/reconcycle_defaults.xacro" /> 
 
     <!-- Reconcycle table -->
     <xacro:include filename="$(find reconcycle_description)/urdf/table_module.xacro" />

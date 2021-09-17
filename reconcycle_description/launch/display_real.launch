@@ -1,7 +1,7 @@
 <launch>
   <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}] [${node}]: ${message}"/>
   
-  <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/hca.rviz" />
+  <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/emo2021.rviz" />
   <arg name="robot_model" default="$(find reconcycle_description)/urdf/reconcycle_panda.xacro"/>
   <arg name="hand_model" default="$(find qb_hand_description)/urdf/qbhand.urdf.xacro"/>
   <arg name="layout" default="emo_layout.xacro"/>
@@ -27,38 +27,45 @@
       <node name="table_to_panda_2" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 table_rob_2 panda_2/panda_link0 100"/>
   </group> -->
 
-  <group ns='qb_hand1'>
-    <node name="softhand_to_panda_1" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 panda_1/panda_1_tc_robot root_link 100"/>
-  </group>
-   
-  <!-- screwdriver added to rviz - change object in tool1.xacro under URDF  -->
-  <arg name="tool_model_1" default="$(find reconcycle_description)/urdf/screwdriver.xacro" />
-  <group ns="screwdriver">
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-  </group>
-
-  <!-- vacuumgripper added to rviz - change object in tool2.xacro under URDF  -->
-  <arg name="tool_model_2" default="$(find reconcycle_description)/urdf/vacuumgripper.xacro" />
-  <group ns="vacuumgripper">
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-  </group>
-
-  <!-- tool 3 added to rviz - change object in tool3.xacro under URDF  -->
-  <arg name="tool_model_3" default="$(find reconcycle_description)/urdf/parallelgripper.xacro" />
-  <group ns="parallelgripper">
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-  </group>
-
-  <!-- tc_robot_side static -->
-  <arg name="tc_robot_side" default="$(find reconcycle_description)/urdf/tc_robot_side.xacro" />
-  <group ns="tc_robot">
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-    <node name="tc_to_panda_2" pkg="tf" type="static_transform_publisher" args="0 0 0 -0.785 3.14159 0 panda_1/panda_link8 panda_1/panda_1_tc_robot 100"/>
-  </group>
 
   
 
+  <!-- TODO: vrzi v pandin xarco: tc_robot_side static
+  <arg name="tc_robot_side" default="$(find reconcycle_description)/urdf/tc_robot_side.xacro" />
+  <group ns="tc_robot_1">
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  </group> -->
+    <node name="tc_to_panda_1" pkg="tf" type="static_transform_publisher" args="0 0 0 -0.785 3.14159 0 panda_1/panda_link8 panda_1_tc_robot 100"/>
+
+  <!-- soft hand adaptor with TC -->
+  <arg name="soft_hand_adaptor_TC" default="$(find reconcycle_description)/urdf/Soft_hand_adaptor.xacro" />
+  <group ns="adaptor">
+    <param name="adaptor_description" command="$(find xacro)/xacro $(arg soft_hand_adaptor_TC)" />
+    <node name="soft_hand_adaptor_to_tc" pkg="tf" type="static_transform_publisher" args="-0.1897 -0.00434 -0.09 1.57 0 1.57 panda_1_tc_robot soft_hand_adaptor 100"/>
+  </group>
+
+  <group ns='qbhand1'>
+    <node name="softhand_to_adaptor" pkg="tf" type="static_transform_publisher" args="0.0045 0.0144 0.14 3.14 3.14 0 soft_hand_adaptor root_link 100"/>
+  </group>
+  
+  
   <node if="$(arg rviz)" name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+
+
+  <!-- tools added to rviz - under URDF  -->
+  <arg name="tool_model_screwdriver" default="$(find reconcycle_description)/urdf/screwdriver.xacro" />
+  <arg name="tool_model_vacuumgripper" default="$(find reconcycle_description)/urdf/vacuumgripper.xacro" />
+  <arg name="tool_model_parallelgripper" default="$(find reconcycle_description)/urdf/parallelgripper.xacro" />
+  <group ns="tools">
+    <param unless="$(arg robot_gazebo)" name="screwdriver" command="$(find xacro)/xacro $(arg tool_model_screwdriver)" />
+    <param unless="$(arg robot_gazebo)" name="vacuumgripper" command="$(find xacro)/xacro $(arg tool_model_vacuumgripper)" />
+    <param unless="$(arg robot_gazebo)" name="parallelgripper" command="$(find xacro)/xacro $(arg tool_model_parallelgripper)" />
+    <node name="screwdriver" pkg="reconcycle_description" type="tool_changer_rviz.py" args="--tool 'screwdriver' --frame 'tool_frame_1' --Tmatrix 0 0 0 0 0 0" output="screen" />
+    <node name="vacuumgripper" pkg="reconcycle_description" type="tool_changer_rviz.py" args="--tool 'vacuumgripper' --frame 'tool_frame_2' --Tmatrix 0 0 0 0 0 0" output="screen" />
+    <node name="parallelgripper" pkg="reconcycle_description" type="tool_changer_rviz.py" args="--tool 'parallelgripper' --frame 'tool_frame_3' --Tmatrix 0 0 0 0 0 0" output="screen" />
+  </group>
+
+
 
 </launch>
 

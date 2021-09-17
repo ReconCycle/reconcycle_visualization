@@ -7,11 +7,11 @@
   <!-- <xacro:arg name="use_gazebo_control" default="false"/> -->
   <!-- <xacro:arg name="connected_to" default=""/> -->
   
-  <xacro:include filename="$(find franka_panda_description)/robots/panda_arm.xacro"/>
+  <xacro:include filename="$(find franka_description)/robots/panda_arm.xacro"/>
 
   <xacro:if value="${load_gazebo}">  
-    <xacro:include filename="$(find franka_panda_description)/robots/panda.gazebo.xacro"/>
-    <xacro:include filename="$(find franka_panda_description)/robots/panda.transmission.xacro"/>
+    <xacro:include filename="$(find franka_description)/robots/panda.gazebo.xacro"/>
+    <xacro:include filename="$(find franka_description)/robots/panda.transmission.xacro"/>
     
     <xacro:panda_arm arm_id="${robot_name}" in_gazebo="true"  connected_to="${connected_to}"/>
     <xacro:panda_gazebo robot_name="${robot_name}" load_gripper="false"/>

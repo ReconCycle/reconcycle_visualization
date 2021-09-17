@@ -1,16 +1,12 @@
 Panels:
   - Class: rviz/Displays
-    Help Height: 78
+    Help Height: 87
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /Global Options1
-        - /Panda 11
-        - /Panda 21
-        - /qbHand1
-        - /qbHand1/Status1
-      Splitter Ratio: 0.5
-    Tree Height: 584
+        - /Marker1/Namespaces1
+      Splitter Ratio: 0.5807228684425354
+    Tree Height: 343
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -19,7 +15,7 @@ Panels:
       - /2D Nav Goal1
       - /Publish Point1
     Name: Tool Properties
-    Splitter Ratio: 0.588679016
+    Splitter Ratio: 0.5886790156364441
   - Class: rviz/Views
     Expanded:
       - /Current View1
@@ -30,29 +26,13 @@ Panels:
     Name: Time
     SyncMode: 0
     SyncSource: ""
+Preferences:
+  PromptSaveOnExit: true
 Toolbars:
   toolButtonStyle: 2
 Visualization Manager:
   Class: ""
   Displays:
-    - Alpha: 0.5
-      Cell Size: 0.100000001
-      Class: rviz/Grid
-      Color: 160; 160; 164
-      Enabled: false
-      Line Style:
-        Line Width: 0.0299999993
-        Value: Lines
-      Name: Grid
-      Normal Cell Count: 0
-      Offset:
-        X: 0
-        Y: 0
-        Z: 0
-      Plane: XY
-      Plane Cell Count: 10
-      Reference Frame: <Fixed Frame>
-      Value: false
     - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
@@ -113,56 +93,6 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        table_output:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_output_pnp_connector_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_output_pnp_connector_2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_output_pnp_connector_3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_output_pnp_connector_4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_parts:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_parts_pnp_connector_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_parts_pnp_connector_2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_parts_pnp_connector_3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_parts_pnp_connector_4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         table_rob_1:
           Alpha: 1
           Show Axes: false
@@ -184,56 +114,6 @@ Visualization Manager:
           Show Trail: false
           Value: true
         table_rob_1_pnp_connector_4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_rob_2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_rob_2_pnp_connector_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_rob_2_pnp_connector_2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_rob_2_pnp_connector_3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_rob_2_pnp_connector_4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_tools:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_tools_pnp_connector_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_tools_pnp_connector_2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_tools_pnp_connector_3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        table_tools_pnp_connector_4:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -258,6 +138,14 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
+        battery_vision_table_zero:
+          Value: true
+        hca_back_vision_table_zero:
+          Value: true
+        hca_front_vision_table_zero:
+          Value: true
+        panda_1/panda_EE:
+          Value: true
         panda_1/panda_link0:
           Value: true
         panda_1/panda_link1:
@@ -276,33 +164,13 @@ Visualization Manager:
           Value: true
         panda_1/panda_link8:
           Value: true
-        panda_1/world:
+        panda_1_EE:
           Value: true
-        panda_2/panda_link0:
+        panda_1_K:
           Value: true
-        panda_2/panda_link1:
+        panda_1_link8:
           Value: true
-        panda_2/panda_link2:
-          Value: true
-        panda_2/panda_link3:
-          Value: true
-        panda_2/panda_link4:
-          Value: true
-        panda_2/panda_link5:
-          Value: true
-        panda_2/panda_link6:
-          Value: true
-        panda_2/panda_link7:
-          Value: true
-        panda_2/panda_link8:
-          Value: true
-        panda_2/world:
-          Value: true
-        panda_EE:
-          Value: true
-        panda_K:
-          Value: true
-        panda_link8:
+        panda_1_tc_robot:
           Value: true
         qbhand1_base_link:
           Value: true
@@ -377,6 +245,8 @@ Visualization Manager:
         qbhand1_thumb_proximal_virtual_link:
           Value: true
         root_link:
+          Value: true
+        soft_hand_adaptor:
           Value: true
         table_cutting:
           Value: true
@@ -398,26 +268,6 @@ Visualization Manager:
           Value: true
         table_fixture_pnp_connector_4:
           Value: true
-        table_output:
-          Value: true
-        table_output_pnp_connector_1:
-          Value: true
-        table_output_pnp_connector_2:
-          Value: true
-        table_output_pnp_connector_3:
-          Value: true
-        table_output_pnp_connector_4:
-          Value: true
-        table_parts:
-          Value: true
-        table_parts_pnp_connector_1:
-          Value: true
-        table_parts_pnp_connector_2:
-          Value: true
-        table_parts_pnp_connector_3:
-          Value: true
-        table_parts_pnp_connector_4:
-          Value: true
         table_rob_1:
           Value: true
         table_rob_1_pnp_connector_1:
@@ -428,27 +278,11 @@ Visualization Manager:
           Value: true
         table_rob_1_pnp_connector_4:
           Value: true
-        table_rob_2:
-          Value: true
-        table_rob_2_pnp_connector_1:
-          Value: true
-        table_rob_2_pnp_connector_2:
-          Value: true
-        table_rob_2_pnp_connector_3:
-          Value: true
-        table_rob_2_pnp_connector_4:
-          Value: true
-        table_tools:
-          Value: true
-        table_tools_pnp_connector_1:
-          Value: true
-        table_tools_pnp_connector_2:
-          Value: true
-        table_tools_pnp_connector_3:
-          Value: true
-        table_tools_pnp_connector_4:
-          Value: true
         vise:
+          Value: true
+        vision_table_calib:
+          Value: true
+        vision_table_zero:
           Value: true
         world:
           Value: true
@@ -460,59 +294,74 @@ Visualization Manager:
       Tree:
         world:
           table_rob_1:
-            panda_1/world:
-              panda_1/panda_link0:
-                panda_1/panda_link1:
-                  panda_1/panda_link2:
-                    panda_1/panda_link3:
-                      panda_1/panda_link4:
-                        panda_1/panda_link5:
-                          panda_1/panda_link6:
-                            panda_1/panda_link7:
-                              panda_1/panda_link8:
-                                root_link:
-                                  qbhand1_base_link:
-                                    qbhand1_palm_link:
-                                      qbhand1_index_knuckle_link:
-                                        qbhand1_index_proximal_virtual_link:
-                                          qbhand1_index_proximal_link:
-                                            qbhand1_index_middle_virtual_link:
-                                              qbhand1_index_middle_link:
-                                                qbhand1_index_distal_virtual_link:
-                                                  qbhand1_index_distal_link:
-                                                    {}
-                                      qbhand1_little_knuckle_link:
-                                        qbhand1_little_proximal_virtual_link:
-                                          qbhand1_little_proximal_link:
-                                            qbhand1_little_middle_virtual_link:
-                                              qbhand1_little_middle_link:
-                                                qbhand1_little_distal_virtual_link:
-                                                  qbhand1_little_distal_link:
-                                                    {}
-                                      qbhand1_middle_knuckle_link:
-                                        qbhand1_middle_proximal_virtual_link:
-                                          qbhand1_middle_proximal_link:
-                                            qbhand1_middle_middle_virtual_link:
-                                              qbhand1_middle_middle_link:
-                                                qbhand1_middle_distal_virtual_link:
-                                                  qbhand1_middle_distal_link:
-                                                    {}
-                                      qbhand1_ring_knuckle_link:
-                                        qbhand1_ring_proximal_virtual_link:
-                                          qbhand1_ring_proximal_link:
-                                            qbhand1_ring_middle_virtual_link:
-                                              qbhand1_ring_middle_link:
-                                                qbhand1_ring_distal_virtual_link:
-                                                  qbhand1_ring_distal_link:
-                                                    {}
-                                      qbhand1_tendon_virtual_link:
-                                        {}
-                                      qbhand1_thumb_knuckle_link:
-                                        qbhand1_thumb_proximal_virtual_link:
-                                          qbhand1_thumb_proximal_link:
-                                            qbhand1_thumb_distal_virtual_link:
-                                              qbhand1_thumb_distal_link:
-                                                {}
+            panda_1/panda_link0:
+              panda_1/panda_link1:
+                panda_1/panda_link2:
+                  panda_1/panda_link3:
+                    panda_1/panda_link4:
+                      panda_1/panda_link5:
+                        panda_1/panda_link6:
+                          panda_1/panda_link7:
+                            panda_1/panda_link8:
+                              panda_1_link8:
+                                panda_1_EE:
+                                  panda_1/panda_EE:
+                                    {}
+                                  panda_1_K:
+                                    {}
+                              panda_1_tc_robot:
+                                soft_hand_adaptor:
+                                  root_link:
+                                    qbhand1_base_link:
+                                      qbhand1_palm_link:
+                                        qbhand1_index_knuckle_link:
+                                          qbhand1_index_proximal_virtual_link:
+                                            qbhand1_index_proximal_link:
+                                              qbhand1_index_middle_virtual_link:
+                                                qbhand1_index_middle_link:
+                                                  qbhand1_index_distal_virtual_link:
+                                                    qbhand1_index_distal_link:
+                                                      {}
+                                        qbhand1_little_knuckle_link:
+                                          qbhand1_little_proximal_virtual_link:
+                                            qbhand1_little_proximal_link:
+                                              qbhand1_little_middle_virtual_link:
+                                                qbhand1_little_middle_link:
+                                                  qbhand1_little_distal_virtual_link:
+                                                    qbhand1_little_distal_link:
+                                                      {}
+                                        qbhand1_middle_knuckle_link:
+                                          qbhand1_middle_proximal_virtual_link:
+                                            qbhand1_middle_proximal_link:
+                                              qbhand1_middle_middle_virtual_link:
+                                                qbhand1_middle_middle_link:
+                                                  qbhand1_middle_distal_virtual_link:
+                                                    qbhand1_middle_distal_link:
+                                                      {}
+                                        qbhand1_ring_knuckle_link:
+                                          qbhand1_ring_proximal_virtual_link:
+                                            qbhand1_ring_proximal_link:
+                                              qbhand1_ring_middle_virtual_link:
+                                                qbhand1_ring_middle_link:
+                                                  qbhand1_ring_distal_virtual_link:
+                                                    qbhand1_ring_distal_link:
+                                                      {}
+                                        qbhand1_tendon_virtual_link:
+                                          {}
+                                        qbhand1_thumb_knuckle_link:
+                                          qbhand1_thumb_proximal_virtual_link:
+                                            qbhand1_thumb_proximal_link:
+                                              qbhand1_thumb_distal_virtual_link:
+                                                qbhand1_thumb_distal_link:
+                                                  {}
+              vision_table_calib:
+                vision_table_zero:
+                  battery_vision_table_zero:
+                    {}
+                  hca_back_vision_table_zero:
+                    {}
+                  hca_front_vision_table_zero:
+                    {}
             table_cutting:
               table_cutting_pnp_connector_1:
                 {}
@@ -531,44 +380,6 @@ Visualization Manager:
                 {}
               table_fixture_pnp_connector_4:
                 {}
-              table_output:
-                table_output_pnp_connector_1:
-                  {}
-                table_output_pnp_connector_2:
-                  {}
-                table_output_pnp_connector_3:
-                  {}
-                table_output_pnp_connector_4:
-                  {}
-              table_rob_2:
-                panda_2/world:
-                  panda_2/panda_link0:
-                    panda_2/panda_link1:
-                      panda_2/panda_link2:
-                        panda_2/panda_link3:
-                          panda_2/panda_link4:
-                            panda_2/panda_link5:
-                              panda_2/panda_link6:
-                                panda_2/panda_link7:
-                                  panda_2/panda_link8:
-                                    {}
-                table_parts:
-                  table_parts_pnp_connector_1:
-                    {}
-                  table_parts_pnp_connector_2:
-                    {}
-                  table_parts_pnp_connector_3:
-                    {}
-                  table_parts_pnp_connector_4:
-                    {}
-                table_rob_2_pnp_connector_1:
-                  {}
-                table_rob_2_pnp_connector_2:
-                  {}
-                table_rob_2_pnp_connector_3:
-                  {}
-                table_rob_2_pnp_connector_4:
-                  {}
               vise:
                 {}
             table_rob_1_pnp_connector_1:
@@ -579,15 +390,6 @@ Visualization Manager:
               {}
             table_rob_1_pnp_connector_4:
               {}
-            table_tools:
-              table_tools_pnp_connector_1:
-                {}
-              table_tools_pnp_connector_2:
-                {}
-              table_tools_pnp_connector_3:
-                {}
-              table_tools_pnp_connector_4:
-                {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -600,6 +402,11 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        panda_flange:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         panda_link0:
           Alpha: 1
           Show Axes: false
@@ -641,6 +448,11 @@ Visualization Manager:
           Show Trail: false
           Value: true
         panda_link8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_tc_robot:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -661,54 +473,14 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        panda_link0:
+        soft_hand_adaptor:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        panda_link1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_link2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_link3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_link4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_link5:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_link6:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_link7:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_link8:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-      Name: Panda 2
-      Robot Description: panda_2/robot_description
-      TF Prefix: panda_2
+      Name: Adaptor
+      Robot Description: adaptor/adaptor_description
+      TF Prefix: ""
       Update Interval: 0
       Value: true
       Visual Enabled: true
@@ -745,7 +517,6 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
         qbhand1_index_middle_virtual_link:
           Alpha: 1
           Show Axes: false
@@ -777,7 +548,6 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
         qbhand1_little_middle_virtual_link:
           Alpha: 1
           Show Axes: false
@@ -786,7 +556,6 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
         qbhand1_little_proximal_virtual_link:
           Alpha: 1
           Show Axes: false
@@ -809,7 +578,6 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
         qbhand1_middle_middle_virtual_link:
           Alpha: 1
           Show Axes: false
@@ -846,7 +614,6 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
         qbhand1_ring_middle_virtual_link:
           Alpha: 1
           Show Axes: false
@@ -882,7 +649,6 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
         qbhand1_thumb_proximal_virtual_link:
           Alpha: 1
           Show Axes: false
@@ -897,6 +663,27 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: visualization_marker
+      Name: Marker
+      Namespaces:
+        /camera_1/object: true
+        /camera_1/text: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /vision_pipeline/image_color
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Vision pipeline
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 206; 225; 255
@@ -912,7 +699,10 @@ Visualization Manager:
     - Class: rviz/FocusCamera
     - Class: rviz/Measure
     - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
       Topic: /initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
     - Class: rviz/SetGoal
       Topic: /move_base_simple/goal
     - Class: rviz/PublishPoint
@@ -922,33 +712,33 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 4.17299795
+      Distance: 4.086756229400635
       Enable Stereo Rendering:
-        Stereo Eye Separation: 0.0599999987
+        Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.430981189
-        Y: 0.0914180204
-        Z: 0.240107343
+        X: 0
+        Y: 0
+        Z: 0
       Focal Shape Fixed Size: false
-      Focal Shape Size: 0.0500000007
+      Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
-      Near Clip Distance: 0.00999999978
-      Pitch: 0.745398164
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.7853981852531433
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 6.08358431
+      Yaw: 0.7853981852531433
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 882
+  Height: 926
   Hide Left Dock: false
   Hide Right Dock: true
-  QMainWindow State: 000000ff00000000fd0000000400000000000001a7000002d1fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005d00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003c000002d1000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f000002d1fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003c000002d1000000a100fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004c000000044fc0100000002fb0000000800540069006d00650100000000000004c00000026c00fffffffb0000000800540069006d0065010000000000000450000000000000000000000313000002d100000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000001d600000333fc0200000009fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000007901000003fb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c0061007900730100000044000001fb000000fd01000003fb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000001e0056006900730069006f006e00200070006900700065006c0069006e006501000002400000013700000022010000030000000100000110000002e6fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730000000044000002e6000000d301000003fb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000006400000004cfc0100000002fb0000000800540069006d0065000000000000000640000002ad01000003fb0000000800540069006d00650100000000000004500000000000000000000004690000033300000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -957,6 +747,8 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: true
-  Width: 1216
-  X: 162
-  Y: 9
+  Vision pipeline:
+    collapsed: false
+  Width: 1600
+  X: 0
+  Y: 0

@@ -59,7 +59,12 @@ class FixedTFBroadcaster:
             return False, "Tool is already on this position!"
         else:
             self.frame = tool_data.frame
-            return True, "Tool moved"
+            if ((tool_data.frame == "tool_frame_1") or (tool_data.frame == "tool_frame_2") or (tool_data.frame == "tool_frame_3") or (tool_data.frame == "tool_frame_4")):
+                self.matrix[5] = 0
+            else:
+                self.matrix[5] = 1.57
+            self.matrix[3:] = tf.transformations.quaternion_from_euler(self.matrix[3], self.matrix[4], self.matrix[5])
+        return True, "Tool moved"
         
     def change_T_matrix(self, T_data):
         try:

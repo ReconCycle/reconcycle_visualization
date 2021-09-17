@@ -19,7 +19,7 @@
     
     <!-- Attach the flange to the robot 
     <xacro:flange flange_id="$(arg robot_name)_flange" connected_to="$(arg robot_name)_link8"/>-->
-    <xacro:flange flange_id="panda_flange" connected_to="panda_link8"/>
+    <xacro:flange flange_id="$(arg robot_name)_flange" connected_to="$(arg robot_name)_link8"/>
     <!-- Attach the tool exchange to the robot -->
     <xacro:tc_robot_side tc_id="$(arg robot_name)_tc_robot" connected_to="$(arg robot_name)_flange" xyz="0 0 ${flange_thickness}"/>
 </robot>

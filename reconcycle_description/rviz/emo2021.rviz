@@ -142,9 +142,9 @@ Visualization Manager:
           Value: true
         hca_back_vision_table_zero:
           Value: true
-        hca_front_vision_table_zero:
-          Value: true
         panda_1/panda_EE:
+          Value: true
+        panda_1/panda_flange:
           Value: true
         panda_1/panda_link0:
           Value: true
@@ -164,13 +164,13 @@ Visualization Manager:
           Value: true
         panda_1/panda_link8:
           Value: true
+        panda_1/panda_tc_robot:
+          Value: true
         panda_1_EE:
           Value: true
         panda_1_K:
           Value: true
         panda_1_link8:
-          Value: true
-        panda_1_tc_robot:
           Value: true
         qbhand1_base_link:
           Value: true
@@ -303,64 +303,63 @@ Visualization Manager:
                         panda_1/panda_link6:
                           panda_1/panda_link7:
                             panda_1/panda_link8:
+                              panda_1/panda_flange:
+                                panda_1/panda_tc_robot:
+                                  soft_hand_adaptor:
+                                    root_link:
+                                      qbhand1_base_link:
+                                        qbhand1_palm_link:
+                                          qbhand1_index_knuckle_link:
+                                            qbhand1_index_proximal_virtual_link:
+                                              qbhand1_index_proximal_link:
+                                                qbhand1_index_middle_virtual_link:
+                                                  qbhand1_index_middle_link:
+                                                    qbhand1_index_distal_virtual_link:
+                                                      qbhand1_index_distal_link:
+                                                        {}
+                                          qbhand1_little_knuckle_link:
+                                            qbhand1_little_proximal_virtual_link:
+                                              qbhand1_little_proximal_link:
+                                                qbhand1_little_middle_virtual_link:
+                                                  qbhand1_little_middle_link:
+                                                    qbhand1_little_distal_virtual_link:
+                                                      qbhand1_little_distal_link:
+                                                        {}
+                                          qbhand1_middle_knuckle_link:
+                                            qbhand1_middle_proximal_virtual_link:
+                                              qbhand1_middle_proximal_link:
+                                                qbhand1_middle_middle_virtual_link:
+                                                  qbhand1_middle_middle_link:
+                                                    qbhand1_middle_distal_virtual_link:
+                                                      qbhand1_middle_distal_link:
+                                                        {}
+                                          qbhand1_ring_knuckle_link:
+                                            qbhand1_ring_proximal_virtual_link:
+                                              qbhand1_ring_proximal_link:
+                                                qbhand1_ring_middle_virtual_link:
+                                                  qbhand1_ring_middle_link:
+                                                    qbhand1_ring_distal_virtual_link:
+                                                      qbhand1_ring_distal_link:
+                                                        {}
+                                          qbhand1_tendon_virtual_link:
+                                            {}
+                                          qbhand1_thumb_knuckle_link:
+                                            qbhand1_thumb_proximal_virtual_link:
+                                              qbhand1_thumb_proximal_link:
+                                                qbhand1_thumb_distal_virtual_link:
+                                                  qbhand1_thumb_distal_link:
+                                                    {}
                               panda_1_link8:
                                 panda_1_EE:
                                   panda_1/panda_EE:
                                     {}
                                   panda_1_K:
                                     {}
-                              panda_1_tc_robot:
-                                soft_hand_adaptor:
-                                  root_link:
-                                    qbhand1_base_link:
-                                      qbhand1_palm_link:
-                                        qbhand1_index_knuckle_link:
-                                          qbhand1_index_proximal_virtual_link:
-                                            qbhand1_index_proximal_link:
-                                              qbhand1_index_middle_virtual_link:
-                                                qbhand1_index_middle_link:
-                                                  qbhand1_index_distal_virtual_link:
-                                                    qbhand1_index_distal_link:
-                                                      {}
-                                        qbhand1_little_knuckle_link:
-                                          qbhand1_little_proximal_virtual_link:
-                                            qbhand1_little_proximal_link:
-                                              qbhand1_little_middle_virtual_link:
-                                                qbhand1_little_middle_link:
-                                                  qbhand1_little_distal_virtual_link:
-                                                    qbhand1_little_distal_link:
-                                                      {}
-                                        qbhand1_middle_knuckle_link:
-                                          qbhand1_middle_proximal_virtual_link:
-                                            qbhand1_middle_proximal_link:
-                                              qbhand1_middle_middle_virtual_link:
-                                                qbhand1_middle_middle_link:
-                                                  qbhand1_middle_distal_virtual_link:
-                                                    qbhand1_middle_distal_link:
-                                                      {}
-                                        qbhand1_ring_knuckle_link:
-                                          qbhand1_ring_proximal_virtual_link:
-                                            qbhand1_ring_proximal_link:
-                                              qbhand1_ring_middle_virtual_link:
-                                                qbhand1_ring_middle_link:
-                                                  qbhand1_ring_distal_virtual_link:
-                                                    qbhand1_ring_distal_link:
-                                                      {}
-                                        qbhand1_tendon_virtual_link:
-                                          {}
-                                        qbhand1_thumb_knuckle_link:
-                                          qbhand1_thumb_proximal_virtual_link:
-                                            qbhand1_thumb_proximal_link:
-                                              qbhand1_thumb_distal_virtual_link:
-                                                qbhand1_thumb_distal_link:
-                                                  {}
               vision_table_calib:
                 vision_table_zero:
                   battery_vision_table_zero:
                     {}
                   hca_back_vision_table_zero:
-                    {}
-                  hca_front_vision_table_zero:
                     {}
             table_cutting:
               table_cutting_pnp_connector_1:
@@ -712,25 +711,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 4.086756229400635
+      Distance: 3.718111276626587
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: 0.23450525104999542
+        Y: -0.5066321492195129
+        Z: 0.5693534016609192
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.7853981852531433
+      Pitch: 0.5753978490829468
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.7853981852531433
+      Yaw: 1.1354045867919922
     Saved: ~
 Window Geometry:
   Displays:

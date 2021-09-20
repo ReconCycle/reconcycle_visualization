@@ -1,7 +1,7 @@
 <launch>
   <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}] [${node}]: ${message}"/>
 
-  <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/qbhandurdf.rviz" />
+  <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/reconcycle_sim.rviz" />
   <arg name="robot_model" default="$(find franka_panda_description)/robots/panda_arm_hand.urdf.xacro"/>
   <arg name="robot_model_reconcycle" default="$(find reconcycle_description)/urdf/reconcycle_panda.xacro"/>
   <arg name="layout" default="hca_layout.xacro"/>
@@ -45,19 +45,13 @@
   <group ns="object_to_qbhand_frame_changer">
     <node name="visualized_object_service" pkg="reconcycle_description" type="visualized_object_service.py" output="screen" />
   </group>
-  
 
-  <!-- tc_robot_side_panda1 static -->
-  <arg name="tc_robot_side_1" default="$(find reconcycle_description)/urdf/tc_nonmacro_panda1.xacro" />
-  <group ns="toolholder">
-    <param unless="$(arg robot_gazebo)" name="tool_holder_on_panda1" command="$(find xacro)/xacro $(arg tc_robot_side_1)" />
-    <node name="tc_to_panda_1" pkg="tf" type="static_transform_publisher" args="0 0 0 -0.785 3.14159 0 panda_1/panda_link8 tc_robot_panda1 100"/>
-  </group>
-
-  <!-- tc_robot_side_panda2 static -->
-  <arg name="tc_robot_side_2" default="$(find reconcycle_description)/urdf/tc_nonmacro_panda2.xacro" />
-  <group ns="toolholder">
-    <param unless="$(arg robot_gazebo)" name="tool_holder_on_panda2" command="$(find xacro)/xacro $(arg tc_robot_side_2)" />
+ <!-- tc_robot_tool -->
+  <arg name="tc_robot_simulation" default="$(find reconcycle_description)/urdf/tc_robot_sim.xacro" />
+  <group ns="toolholder" >
+    <param unless="$(arg robot_gazebo)" name="tool_holder_on_panda1" command="$(find xacro)/xacro $(arg tc_robot_simulation) tc_id:=tc_robot_panda1" />
+    <param unless="$(arg robot_gazebo)" name="tool_holder_on_panda2" command="$(find xacro)/xacro $(arg tc_robot_simulation) tc_id:=tc_robot_panda2" />
+    <node name="tc_to_panda_1" pkg="tf" type="static_transform_publisher" args="0 0 0 -0.785 3.14159 0 panda_1/panda_link8 tc_robot_panda1 100" />
     <node name="tc_to_panda_2" pkg="tf" type="static_transform_publisher" args="0 0 0 -0.785 3.14159 0 panda_2/panda_link8 tc_robot_panda2 100"/>
   </group>
 

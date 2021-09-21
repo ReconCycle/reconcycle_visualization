@@ -8,7 +8,8 @@ Panels:
         - /Panda 11
         - /Panda 21
         - /qbHand11
-        - /Soft hand adaptor1
+        - /Vise rotation1
+        - /Vise rotation1/Status1
         - /Marker1
         - /Marker1/Namespaces1
       Splitter Ratio: 0.5
@@ -245,7 +246,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        vise:
+        vise_base:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -475,7 +476,13 @@ Visualization Manager:
           Value: true
         vacuumgripper:
           Value: true
-        vise:
+        vise_base:
+          Value: true
+        vise_plate:
+          Value: true
+        vise_rotation:
+          Value: true
+        vise_slider:
           Value: true
         world:
           Value: true
@@ -602,8 +609,13 @@ Visualization Manager:
                   {}
                 table_rob_2_pnp_connector_4:
                   {}
-              vise:
-                {}
+              vise_base:
+                vise_plate:
+                  {}
+                vise_rotation:
+                  {}
+                vise_slider:
+                  {}
             table_rob_1_pnp_connector_1:
               {}
             table_rob_1_pnp_connector_2:
@@ -1105,6 +1117,69 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        vise_slider:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: Vise slider
+      Robot Description: vise_movables/vise_slider
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        vise_plate:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: Vise plate
+      Robot Description: vise_movables/vise_plate
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        vise_rotation:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: Vise rotation
+      Robot Description: vise_movables/vise_rotation
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
     - Class: rviz/Marker
       Enabled: true
       Marker Topic: visualization_marker
@@ -1138,25 +1213,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.24150264
+      Distance: 0.66486764
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.01433802
-        Y: -0.639755011
-        Z: 1.708565
+        X: 1.03090417
+        Y: -0.0203965027
+        Z: 1.25956869
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.6853984
+      Pitch: 1.08479631
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.61221552
+      Yaw: 4.95221472
     Saved: ~
 Window Geometry:
   Displays:

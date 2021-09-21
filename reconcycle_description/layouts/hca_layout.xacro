@@ -25,7 +25,7 @@
     <xacro:table_module table_id="$(arg table_6_name)" connected_to="$(arg table_5_name)" xyz="0 ${table_width} 0" rpy="0 0 0"/>
 
 
-    <xacro:vise_base connected_to="$(arg table_3_name)" xyz="0 0 0"/>
+    <xacro:vise_base connected_to="$(arg table_3_name)" xyz="0 0 0" rpy="0 0 0" />
     <xacro:cutter_model connected_to="$(arg table_6_name)" xyz="0 0 0" />
     <xacro:tool_model connected_to="$(arg table_2_name)" xyz="0 0 0" />
     <xacro:tool_frame_1 connected_to="$(arg table_2_name)" xyz="0.18 -0.036 0.355" rpy="0 3.1415 0" />

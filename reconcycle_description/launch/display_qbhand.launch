@@ -1,0 +1,10 @@
+<launch>
+  <arg name="hand_model" default="$(find qb_hand_description)/urdf/qbhand.urdf.xacro"/>
+  <arg name="robot_gazebo" defualt="false" />
+  <arg name="robot_absent" default="true" />
+  <group ns='qbhand'>
+    <param unless="$(arg robot_gazebo)" name="robot_description" command="$(find xacro)/xacro $(arg hand_model)"/>
+    <node if="$(arg robot_absent)" name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  </group> 
+</launch>

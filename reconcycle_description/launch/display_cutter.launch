@@ -1,0 +1,7 @@
+<launch>
+    <arg name="cutter_blade" default="$(find reconcycle_description)/urdf/cutter.xacro" />
+    <group ns="cutter">
+        <param name="cutter_blade" command="$(find xacro)/xacro --inorder $(arg cutter_blade)" />
+        <node name="cutter_blade" pkg="reconcycle_description" type="tool_changer_rviz.py" args="--tool 'cutter' --frame 'cutter_base' --Tmatrix 0 0.1 0.66 0 0 0" output="screen" />
+    </group>
+</launch>

@@ -45,6 +45,9 @@
   <!-- vise movable parts/tools (args: slider:=1 /plate:=1 /rotation:=1) -->
   <include file="$(find reconcycle_description)/launch/display_vise.launch" />
 
+  <!-- cutter_blade  -->
+  <include file="$(find reconcycle_description)/launch/display_cutter.launch" />
+
   <!-- robot_description is loaded to parameter server by the launch file for simulation/real controllers -->
   <group ns='panda_1'>
     <node name="panda_1_to_table" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 table_rob_1 panda_1/world 100"/>

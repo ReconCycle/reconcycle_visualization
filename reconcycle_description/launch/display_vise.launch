@@ -5,7 +5,7 @@
         <param name="vise_plate" command="$(find xacro)/xacro --inorder $(arg vise_movable_tools) plate:=1" />
         <param name="vise_rotation" command="$(find xacro)/xacro --inorder $(arg vise_movable_tools) rotation:=1" />
         <node name="vise_slider_node" pkg="reconcycle_description" type="tool_changer_rviz.py" args="--tool 'vise_slider' --frame 'vise_base' --Tmatrix -0.26 0.0015 0.024 0 0 0" output="screen" />
-        <node name="vise_plate_node" pkg="reconcycle_description" type="tool_changer_rviz.py" args="--tool 'vise_plate' --frame 'vise_base' --Tmatrix 0.05 0.05 0.019 0 0 0" output="screen" />
+        <node name="vise_plate_node" pkg="reconcycle_description" type="tool_changer_rviz.py" args="--tool 'vise_plate' --frame 'vise_base' --Tmatrix 0.05 0.14 0.019 0 0 0" output="screen" />
         <node name="vise_rotation_node" pkg="reconcycle_description" type="tool_changer_rviz.py" args="--tool 'vise_rotation' --frame 'vise_base' --Tmatrix -0.125 0.0788 0.1385 0 0 0" output="screen" />
     </group>
 </launch>

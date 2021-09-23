@@ -61,7 +61,7 @@ class FixedTFBroadcaster:
             elif trigger.trigger == False:
                 self.matrix[2] = 0.66
                 
-            return True, "Cutter: {} moved!".format(self.vise)
+            return True, "Cutter: {} moved!".format(self.cutter)
         except:
             return False, "Wrong input!"
 

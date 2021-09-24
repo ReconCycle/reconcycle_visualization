@@ -26,7 +26,7 @@ $ catkin build
 # Usage
 
 ```
-$ roslaunch reconcycle_visualization display_sim.launch
+$ roslaunch reconcycle_description display_sim.launch
 ```
 
 # Tricks and tips

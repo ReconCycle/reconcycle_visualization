@@ -1,10 +1,15 @@
 <launch>
     <arg name="tc_robot_simulation" default="$(find reconcycle_description)/urdf/tc_robot_sim.xacro" />
     <arg name="robot_gazebo" default="false" />
-    <group ns="toolholder" >
+    <arg name="group" default="toolholder" />
+    <arg name="namespace" default="True" />
+
+    <group ns="$(arg group)" >
         <param unless="$(arg robot_gazebo)" name="tool_holder_on_panda1" command="$(find xacro)/xacro $(arg tc_robot_simulation) tc_id:=tc_robot_panda1" />
         <param unless="$(arg robot_gazebo)" name="tool_holder_on_panda2" command="$(find xacro)/xacro $(arg tc_robot_simulation) tc_id:=tc_robot_panda2" />
-        <node name="tc_to_panda_1" pkg="tf" type="static_transform_publisher" args="0 0 0 -0.785 3.14159 0 panda_1/panda_link8 tc_robot_panda1 100" />
-        <node name="tc_to_panda_2" pkg="tf" type="static_transform_publisher" args="0 0 0 -0.785 3.14159 0 panda_2/panda_link8 tc_robot_panda2 100"/>
+        <node if="$(arg namespace)" name="tc_to_panda_1" pkg="tf" type="static_transform_publisher" args="0 0 0 -0.785 3.14159 0 panda_1/panda_link8 tc_robot_panda1 100" />
+        <node if="$(arg namespace)" name="tc_to_panda_2" pkg="tf" type="static_transform_publisher" args="0 0 0 -0.785 3.14159 0 panda_2/panda_link8 tc_robot_panda2 100"/>
+        <node unless="$(arg namespace)" name="tc_to_panda_1" pkg="tf" type="static_transform_publisher" args="0 0 0 -0.785 3.14159 0 panda_1_link8 tc_robot_panda1 100" />
+        <node unless="$(arg namespace)" name="tc_to_panda_2" pkg="tf" type="static_transform_publisher" args="0 0 0 -0.785 3.14159 0 panda_2_link8 tc_robot_panda2 100"/>
     </group>
 </launch>

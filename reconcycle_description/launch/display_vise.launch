@@ -1,6 +1,8 @@
 <launch>
     <arg name="vise_movable_tools" default="$(find reconcycle_description)/urdf/vise_movables_sim.xacro" />
-    <group ns="vise_movables">
+    <arg name="group" default="vise_movables" />
+
+    <group ns="$(arg group)">
         <param name="vise_slider" command="$(find xacro)/xacro --inorder $(arg vise_movable_tools) slider:=1" />
         <param name="vise_plate" command="$(find xacro)/xacro --inorder $(arg vise_movable_tools) plate:=1" />
         <param name="vise_rotation" command="$(find xacro)/xacro --inorder $(arg vise_movable_tools) rotation:=1" />

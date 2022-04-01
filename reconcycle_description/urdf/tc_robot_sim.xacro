@@ -1,6 +1,7 @@
 <?xml version='1.0'?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="defaults">
-    <link name="tc_robot_panda2">
+<xacro:arg name="tc_id" default="tc_robot_panda1" />
+    <link name="$(arg tc_id)">
         <visual>
             <origin rpy="1.57 0 -1.57" xyz=" 0 0 0 "/>
             <geometry>

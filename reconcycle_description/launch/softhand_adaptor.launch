@@ -1,6 +1,6 @@
 <launch>
 
-    <arg name="connected_to" default="panda_1_tc_robot" />
+  <arg name="connected_to" default="panda_1_tc_robot" />
 
   <!-- URDF for soft hand adaptor with TC -->
   <arg name="soft_hand_adaptor_TC" default="$(find reconcycle_description)/urdf/Soft_hand_adaptor.xacro" />

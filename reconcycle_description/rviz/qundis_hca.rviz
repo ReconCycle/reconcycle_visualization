@@ -5,7 +5,9 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Marker1/Namespaces1
+        - /Vision pipeline1
         - /Panda 21
+        - /screwdriver1
       Splitter Ratio: 0.580722868
     Tree Height: 373
   - Class: rviz/Selection
@@ -194,12 +196,6 @@ Visualization Manager:
         All Enabled: true
         cutter:
           Value: true
-        french_revolution_table:
-          Value: true
-        new/joints/push_2:
-          Value: true
-        new/pose/push:
-          Value: true
         panda_1/panda_1_flange:
           Value: true
         panda_1/panda_1_link0:
@@ -226,8 +222,6 @@ Visualization Manager:
           Value: true
         panda_1/panda_link8:
           Value: true
-        panda_1/pose/above_holder:
-          Value: true
         panda_1_EE:
           Value: true
         panda_1_K:
@@ -240,20 +234,6 @@ Visualization Manager:
           Value: true
         panda_2/panda_2_link0:
           Value: true
-        panda_2/panda_2_link1:
-          Value: true
-        panda_2/panda_2_link2:
-          Value: true
-        panda_2/panda_2_link3:
-          Value: true
-        panda_2/panda_2_link4:
-          Value: true
-        panda_2/panda_2_link5:
-          Value: true
-        panda_2/panda_2_link6:
-          Value: true
-        panda_2/panda_2_link7:
-          Value: true
         panda_2/panda_2_link8:
           Value: true
         panda_2/panda_2_tc_robot:
@@ -262,19 +242,11 @@ Visualization Manager:
           Value: true
         panda_2/panda_link8:
           Value: true
-        panda_2/pose/pin_push:
+        panda_2/realsense:
           Value: true
         panda_2_EE:
           Value: true
-        panda_2_K:
-          Value: true
-        panda_2_NE:
-          Value: true
         panda_2_link8:
-          Value: true
-        panda_EE:
-          Value: true
-        panda_link0:
           Value: true
         qbhand1_base_link:
           Value: true
@@ -352,6 +324,18 @@ Visualization Manager:
           Value: true
         qbhand_palm_link:
           Value: true
+        realsense_aligned_depth_to_color_frame:
+          Value: true
+        realsense_color_frame:
+          Value: true
+        realsense_color_optical_frame:
+          Value: true
+        realsense_depth_frame:
+          Value: true
+        realsense_depth_optical_frame:
+          Value: true
+        realsense_link:
+          Value: true
         root_link:
           Value: true
         soft_hand_adaptor:
@@ -410,21 +394,11 @@ Visualization Manager:
           Value: true
         tc_robot_panda2:
           Value: true
-        test:
-          Value: true
-        test/some_tf_pose:
-          Value: true
-        test/tf_1:
-          Value: true
-        tf_testing_2:
-          Value: true
-        tmp:
-          Value: true
-        use_case_1/test_tf:
-          Value: true
         vise:
           Value: true
         vision_table_calib:
+          Value: true
+        vision_table_zero:
           Value: true
         world:
           Value: true
@@ -437,10 +411,6 @@ Visualization Manager:
         world:
           table_rob_1:
             panda_1/panda_1_link0:
-              new/joints/push_2:
-                {}
-              new/pose/push:
-                {}
               panda_1/panda_1_link1:
                 panda_1/panda_1_link2:
                   panda_1/panda_1_link3:
@@ -505,18 +475,9 @@ Visualization Manager:
                                       {}
                                     panda_1_K:
                                       {}
-              panda_1/pose/above_holder:
-                {}
-              test:
-                {}
-              test/tf_1:
-                {}
-              tmp:
-                {}
-              use_case_1/test_tf:
-                {}
               vision_table_calib:
-                {}
+                vision_table_zero:
+                  {}
             table_fixture:
               table_fixture_pnp_connector_1:
                 {}
@@ -550,28 +511,7 @@ Visualization Manager:
                   {}
               table_rob_2:
                 panda_2/panda_2_link0:
-                  panda_2/panda_2_link1:
-                    panda_2/panda_2_link2:
-                      panda_2/panda_2_link3:
-                        panda_2/panda_2_link4:
-                          panda_2/panda_2_link5:
-                            panda_2/panda_2_link6:
-                              panda_2/panda_2_link7:
-                                panda_2/panda_2_link8:
-                                  panda_2/panda_2_flange:
-                                    panda_2/panda_2_tc_robot:
-                                      {}
-                                  panda_2_link8:
-                                    panda_2_NE:
-                                      panda_2_EE:
-                                        panda_2/panda_EE:
-                                          {}
-                                        panda_2_K:
-                                          {}
-                  panda_2/pose/pin_push:
-                    {}
-                  test/some_tf_pose:
-                    {}
+                  {}
                 table_rob_2_pnp_connector_1:
                   {}
                 table_rob_2_pnp_connector_2:
@@ -600,61 +540,6 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        panda_1_flange:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_1_link0:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_1_link1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_1_link2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_1_link3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_1_link4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_1_link5:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_1_link6:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_1_link7:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_1_link8:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_1_tc_robot:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: Panda 1
       Robot Description: panda_1/robot_description
       TF Prefix: panda_1
@@ -692,169 +577,6 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        qbhand1_base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_index_distal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_index_distal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_index_knuckle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_index_middle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_index_middle_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_index_proximal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_index_proximal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_little_distal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_little_distal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_little_knuckle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_little_middle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_little_middle_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_little_proximal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_little_proximal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_middle_distal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_middle_distal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_middle_knuckle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_middle_middle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_middle_middle_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_middle_proximal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_middle_proximal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_palm_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_ring_distal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_ring_distal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_ring_knuckle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_ring_middle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_ring_middle_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_ring_proximal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_ring_proximal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_tendon_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_thumb_distal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_thumb_distal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_thumb_knuckle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_thumb_proximal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_thumb_proximal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        root_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
       Name: qbHand
       Robot Description: qbhand1/robot_description
       TF Prefix: ""
@@ -871,7 +593,7 @@ Visualization Manager:
       Value: true
     - Class: rviz/Image
       Enabled: true
-      Image Topic: /vision_pipeline/image_color
+      Image Topic: /vision_basler/colour
       Max Value: 1
       Median window: 5
       Min Value: 0
@@ -891,64 +613,25 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        panda_2_flange:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_2_link0:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_2_link1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_2_link2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_2_link3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_2_link4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_2_link5:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_2_link6:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_2_link7:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_2_link8:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        panda_2_tc_robot:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: Panda 2
       Robot Description: panda_2/robot_description
       TF Prefix: panda_2
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+      Name: screwdriver
+      Robot Description: screwdriver/screwdriver
+      TF Prefix: ""
       Update Interval: 0
       Value: true
       Visual Enabled: true
@@ -977,7 +660,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.71811128
+      Distance: 1.79862189
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
@@ -992,10 +675,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.575397849
+      Pitch: 0.960397422
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.13540459
+      Yaw: 0.760403335
     Saved: ~
 Window Geometry:
   Displays:
@@ -1015,5 +698,5 @@ Window Geometry:
   Vision pipeline:
     collapsed: false
   Width: 1600
-  X: 59
-  Y: 52
+  X: 51
+  Y: 0

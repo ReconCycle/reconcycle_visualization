@@ -5,5 +5,6 @@
     <group ns="$(arg group)">
         <param name="cutter_blade" command="$(find xacro)/xacro --inorder $(arg cutter_blade)" />
         <node name="cutter_blade" pkg="reconcycle_description" type="cutter_mover_rviz.py" args="--cutter 'cutter' --frame 'cutter_base' --matrix 0 0.1 0.66 0 0 0" output="screen" />
+        
     </group>
 </launch>

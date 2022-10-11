@@ -1,6 +1,7 @@
 <?xml version='1.0'?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="defaults">
-    <link name="screwdriver">
+    <xacro:arg name="screwdriver_id" default="screwdriver_panda_2"/>
+    <link name="$(arg screwdriver_id">
         <visual>
             <origin rpy="1.57 0 0" xyz=" 0 0 0 "/>
             <geometry>

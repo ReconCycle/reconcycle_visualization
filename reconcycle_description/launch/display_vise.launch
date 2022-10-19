@@ -3,11 +3,16 @@
     <arg name="group" default="vise_movables" />
 
     <group ns="$(arg group)">
-        <param name="vise_slider" command="$(find xacro)/xacro --inorder $(arg vise_movable_tools) slider:=1" />
         <param name="vise_plate" command="$(find xacro)/xacro --inorder $(arg vise_movable_tools) plate:=1" />
+        <param name="vise_slider" command="$(find xacro)/xacro --inorder $(arg vise_movable_tools) slider:=0" />
         <param name="vise_rotation" command="$(find xacro)/xacro --inorder $(arg vise_movable_tools) rotation:=1" />
-        <node name="vise_slider_node" pkg="reconcycle_description" type="vise_mover_rviz.py" args="--vise 'vise_slider' --frame 'vise_base' --matrix -0.26 0.0015 0.024 0 0 0" output="screen" />
         <node name="vise_plate_node" pkg="reconcycle_description" type="vise_mover_rviz.py" args="--vise 'vise_plate' --frame 'vise_base' --matrix 0.05 0.14 0.019 0 0 0" output="screen" />
         <node name="vise_rotation_node" pkg="reconcycle_description" type="vise_mover_rviz.py" args="--vise 'vise_rotation' --frame 'vise_base' --matrix -0.125 0.0788 0.1385 0 0 0" output="screen" />
     </group>
+     
+    <!--
+    ignoring cuz we removed the slider. 
+    <node name="vise_slider_node" pkg="reconcycle_description" type="vise_mover_rviz.py" args="--vise 'vise_slider' --frame 'vise_base' --matrix -0.26 0.0015 0.024 0 0 0" output="screen" />
+    -->
+
 </launch>

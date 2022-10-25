@@ -2,8 +2,8 @@
   <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}] [${node}]: ${message}"/>
 
   <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/qbhandurdf.rviz" />
-  <arg name="robot_model" default="$(find franka_panda_description)/robots/panda_arm_hand.urdf.xacro"/>
-  <arg name="robot_model_reconcycle" default="$(find franka_panda_description)/robots/panda_arm_hand.urdf.xacro"/>
+  <arg name="robot_model" default="$(find franka_description)/robots/panda_arm_hand.urdf.xacro"/>
+  <arg name="robot_model_reconcycle" default="$(find franka_description)/robots/panda_arm_hand.urdf.xacro"/>
   <arg name="layout" default="hca_layout.xacro"/>
   <arg name="robot_gazebo" default="false"/>
   <arg name="robot_absent" default="false"/>

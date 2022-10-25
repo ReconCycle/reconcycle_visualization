@@ -60,6 +60,10 @@
     <arg name="robot_gazebo" default="$(arg robot_gazebo)" />
     <arg name="robot_absent" default="$(arg robot_absent)" />
   </include>
+  
+  <!-- VSA -->
+  <include file="$(find reconcycle_description)/launch/softclaw.launch" >
+  </include>
 
   <!-- Screwdriver 
   <include file="$(find reconcycle_description)/launch/display_screwdriver.launch" >
@@ -87,7 +91,7 @@
     <node name="vise_tfs1" pkg="tf" type="static_transform_publisher" args="0.147867 0.073126 0.181655 1.5707 0 -1.5708 vise vise/pinpush_init 100"/>
     <node name="vise_tfs2" pkg="tf" type="static_transform_publisher" args="0.119729 0.006085 0.353043 1.308997 0  3.141592 vise vise/gapdetect_init 100"/>
     <node name="vise_tfs3" pkg="tf" type="static_transform_publisher" args="0.12 0 0.144 1.57079 0  3.141592 vise vise/lowerplane 100"/>
-    <node name="vise_tfs4" pkg="tf" type="static_transform_publisher" args="0.029106 0.038106 0.167993 0.05 0 -3.11 vise vise/hcaPickupClaw 100"/>
+    <node name="vise_tfs4" pkg="tf" type="static_transform_publisher" args="0.029106 0.05 0.167993 0.05 0 -3.11 vise vise/hcaPickupClaw 100"/>
     <node name="vise_tfs5" pkg="tf" type="static_transform_publisher" args="0.030088 0.096500 0.218909 2.649854 -0.077767 -3.008803 vise vise/hcaDropHand 100"/>
     
     <node name="vise_tfs6" pkg="tf" type="static_transform_publisher" args="0 -0.15 0.2 0 0 3.14159 vise vise/hcaDropToBin 100"/>
@@ -96,6 +100,14 @@
     <node name="vise_tfs7" pkg="tf" type="static_transform_publisher" args="0.11 -0.075 0.3 1.5708 0 3.14159 vise vise/via1 100"/>
     <node name="vise_tfs8" pkg="tf" type="static_transform_publisher" args="0.2 0.1 0.3 -3.14159 0 3.14159 vise vise/via2 100"/>
     <node name="vise_tfs9" pkg="tf" type="static_transform_publisher" args="0.05 0.2 0.3 -1.5708 0 3.14159 vise vise/via3 100"/>
+    
+    <!--  Vise TFs used for positioning REALSENSE camera above it. Direct vise2Realsense and vise2EEposition so that realsense is at vise2realsense. -->
+    
+    <node name="vise_tfs10" pkg="tf" type="static_transform_publisher" args="0.09 0.098 0.524 -1.5708 0 -3.14159 vise vise/realsense 100"/>
+
+    
+    
+    
 
   </group> 
   
@@ -104,7 +116,7 @@
         <node name="cutter_tfs2" pkg="tf" type="static_transform_publisher" args="-0.11 -0.23 0.02 0 0 0 cutter cutter/plate_outedge2 100"/>
         <node name="cutter_tfs3" pkg="tf" type="static_transform_publisher" args="0.05 -0.04 0.02 0 0 0 cutter cutter/plate_inedge1 100"/>
         <node name="cutter_tfs4" pkg="tf" type="static_transform_publisher" args="-0.05 -0.18 0.02 0 0 0 cutter cutter/plate_inedge2 100"/>
-        <node name="cutter_tfs5" pkg="tf" type="static_transform_publisher" args="-0.077 -0.018 0.294 0.104 0.077651 -1.500937 cutter cutter/place_sc 100"/>
+        <node name="cutter_tfs5" pkg="tf" type="static_transform_publisher" args="-0.06 -0.018 0.279 0.104 0.077651 -1.500937 cutter cutter/place_sc 100"/>
         <node name="cutter_tfs6" pkg="tf" type="static_transform_publisher" args="0.178576 -0.216199 0.17 0.007748 0.707965 -0.705844 -0.019632 cutter cutter/drop_battery 100"/>
 
         

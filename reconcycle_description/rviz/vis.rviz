@@ -1,0 +1,982 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Status1
+        - /RobotModel1
+        - /RobotModel2
+        - /TF1
+        - /TF1/Frames1
+        - /TF1/Tree1
+        - /RobotModel8
+        - /RobotModel9
+      Splitter Ratio: 0.5029411911964417
+    Tree Height: 839
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Tool Properties
+    Expanded:
+      - /2D Pose Estimate1
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: ""
+Preferences:
+  PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: false
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: false
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pnpf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robo:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: RobotModel
+      Robot Description: /robot_desk1/robot_description
+      TF Prefix: robot_desk1
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cuttingBase:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cuttingEdge:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        entryCenter:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pickTray:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        sliderHead:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: RobotModel
+      Robot Description: /cutter/robot_description
+      TF Prefix: cutter
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        camera_desk/base:
+          Value: true
+        camera_desk/pnpf:
+          Value: true
+        camera_desk/pnpf1:
+          Value: true
+        camera_desk/pnpf2:
+          Value: true
+        camera_desk/pnpf4:
+          Value: true
+        camera_desk/pnpm1:
+          Value: true
+        camera_desk/pnpm2:
+          Value: true
+        camera_desk/pnpm3:
+          Value: true
+        camera_desk/pnpm4:
+          Value: true
+        clamp_desk/base:
+          Value: true
+        clamp_desk/pnpf:
+          Value: true
+        clamp_desk/pnpf1:
+          Value: true
+        clamp_desk/pnpf2:
+          Value: true
+        clamp_desk/pnpf4:
+          Value: true
+        clamp_desk/pnpm1:
+          Value: true
+        clamp_desk/pnpm2:
+          Value: true
+        clamp_desk/pnpm3:
+          Value: true
+        clamp_desk/pnpm4:
+          Value: true
+        clamp_desk/viseOn:
+          Value: true
+        claw_mount/base:
+          Value: true
+        claw_mount/camera:
+          Value: true
+        claw_mount/mount:
+          Value: true
+        cutter/base:
+          Value: true
+        cutter/cuttingBase:
+          Value: true
+        cutter/cuttingEdge:
+          Value: true
+        cutter/entryCenter:
+          Value: true
+        cutter/pickTray:
+          Value: true
+        cutter/pnpf:
+          Value: true
+        cutter/pnpf1:
+          Value: true
+        cutter/pnpf2:
+          Value: true
+        cutter/pnpf4:
+          Value: true
+        cutter/pnpm1:
+          Value: true
+        cutter/pnpm2:
+          Value: true
+        cutter/pnpm3:
+          Value: true
+        cutter/pnpm4:
+          Value: true
+        cutter/sliderHead:
+          Value: true
+        map:
+          Value: true
+        qbsoftclaw1_claw_finger_down_link:
+          Value: true
+        qbsoftclaw1_claw_finger_down_pad_100_link:
+          Value: true
+        qbsoftclaw1_claw_finger_up_link:
+          Value: true
+        qbsoftclaw1_claw_finger_up_pad_100_link:
+          Value: true
+        qbsoftclaw1_claw_wrist_flange_link:
+          Value: true
+        qbsoftclaw1_cube_link:
+          Value: true
+        qbsoftclaw1_end_effector_link:
+          Value: true
+        qbsoftclaw1_motor_1_link:
+          Value: true
+        qbsoftclaw1_motor_2_link:
+          Value: true
+        qbsoftclaw1_shaft_link:
+          Value: true
+        qbsoftclaw1_stiffness_preset_virtual_link:
+          Value: true
+        robot1/panda_link0:
+          Value: true
+        robot1/panda_link1:
+          Value: true
+        robot1/panda_link2:
+          Value: true
+        robot1/panda_link3:
+          Value: true
+        robot1/panda_link4:
+          Value: true
+        robot1/panda_link5:
+          Value: true
+        robot1/panda_link6:
+          Value: true
+        robot1/panda_link7:
+          Value: true
+        robot1/panda_link8:
+          Value: true
+        robot2/panda_link0:
+          Value: true
+        robot2/panda_link1:
+          Value: true
+        robot2/panda_link2:
+          Value: true
+        robot2/panda_link3:
+          Value: true
+        robot2/panda_link4:
+          Value: true
+        robot2/panda_link5:
+          Value: true
+        robot2/panda_link6:
+          Value: true
+        robot2/panda_link7:
+          Value: true
+        robot2/panda_link8:
+          Value: true
+        robot_desk1/base:
+          Value: true
+        robot_desk1/pnpf:
+          Value: true
+        robot_desk1/pnpf1:
+          Value: true
+        robot_desk1/pnpf2:
+          Value: true
+        robot_desk1/pnpf4:
+          Value: true
+        robot_desk1/pnpm1:
+          Value: true
+        robot_desk1/pnpm2:
+          Value: true
+        robot_desk1/pnpm3:
+          Value: true
+        robot_desk1/pnpm4:
+          Value: true
+        robot_desk1/robo:
+          Value: true
+        robot_desk2/base:
+          Value: true
+        robot_desk2/pnpf:
+          Value: true
+        robot_desk2/pnpf1:
+          Value: true
+        robot_desk2/pnpf2:
+          Value: true
+        robot_desk2/pnpf4:
+          Value: true
+        robot_desk2/pnpm1:
+          Value: true
+        robot_desk2/pnpm2:
+          Value: true
+        robot_desk2/pnpm3:
+          Value: true
+        robot_desk2/pnpm4:
+          Value: true
+        robot_desk2/robo:
+          Value: true
+        root_link:
+          Value: true
+        world:
+          Value: true
+      Marker Alpha: 1
+      Marker Scale: 0.20000000298023224
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        map:
+          cutter/base:
+            cutter/entryCenter:
+              cutter/cuttingBase:
+                {}
+            cutter/pickTray:
+              {}
+            cutter/pnpf:
+              {}
+            cutter/pnpf1:
+              {}
+            cutter/pnpf2:
+              {}
+            cutter/pnpf4:
+              {}
+            cutter/pnpm1:
+              {}
+            cutter/pnpm2:
+              {}
+            cutter/pnpm3:
+              {}
+            cutter/pnpm4:
+              {}
+            cutter/sliderHead:
+              cutter/cuttingEdge:
+                {}
+            robot_desk1/base:
+              clamp_desk/base:
+                camera_desk/base:
+                  camera_desk/pnpf:
+                    {}
+                  camera_desk/pnpf1:
+                    {}
+                  camera_desk/pnpf2:
+                    {}
+                  camera_desk/pnpf4:
+                    {}
+                  camera_desk/pnpm1:
+                    {}
+                  camera_desk/pnpm2:
+                    {}
+                  camera_desk/pnpm3:
+                    {}
+                  camera_desk/pnpm4:
+                    {}
+                  robot_desk2/base:
+                    robot_desk2/pnpf:
+                      {}
+                    robot_desk2/pnpf1:
+                      {}
+                    robot_desk2/pnpf2:
+                      {}
+                    robot_desk2/pnpf4:
+                      {}
+                    robot_desk2/pnpm1:
+                      {}
+                    robot_desk2/pnpm2:
+                      {}
+                    robot_desk2/pnpm3:
+                      {}
+                    robot_desk2/pnpm4:
+                      {}
+                    robot_desk2/robo:
+                      robot2/panda_link0:
+                        robot2/panda_link1:
+                          robot2/panda_link2:
+                            robot2/panda_link3:
+                              robot2/panda_link4:
+                                robot2/panda_link5:
+                                  robot2/panda_link6:
+                                    robot2/panda_link7:
+                                      robot2/panda_link8:
+                                        {}
+                clamp_desk/pnpf:
+                  {}
+                clamp_desk/pnpf1:
+                  {}
+                clamp_desk/pnpf2:
+                  {}
+                clamp_desk/pnpf4:
+                  {}
+                clamp_desk/pnpm1:
+                  {}
+                clamp_desk/pnpm2:
+                  {}
+                clamp_desk/pnpm3:
+                  {}
+                clamp_desk/pnpm4:
+                  {}
+                clamp_desk/viseOn:
+                  {}
+              robot_desk1/pnpf:
+                {}
+              robot_desk1/pnpf1:
+                {}
+              robot_desk1/pnpf2:
+                {}
+              robot_desk1/pnpf4:
+                {}
+              robot_desk1/pnpm1:
+                {}
+              robot_desk1/pnpm2:
+                {}
+              robot_desk1/pnpm3:
+                {}
+              robot_desk1/pnpm4:
+                {}
+              robot_desk1/robo:
+                robot1/panda_link0:
+                  robot1/panda_link1:
+                    robot1/panda_link2:
+                      robot1/panda_link3:
+                        robot1/panda_link4:
+                          robot1/panda_link5:
+                            robot1/panda_link6:
+                              robot1/panda_link7:
+                                robot1/panda_link8:
+                                  claw_mount/base:
+                                    claw_mount/camera:
+                                      {}
+                                    claw_mount/mount:
+                                      {}
+                                  world:
+                                    root_link:
+                                      qbsoftclaw1_claw_wrist_flange_link:
+                                        qbsoftclaw1_cube_link:
+                                          qbsoftclaw1_claw_finger_down_link:
+                                            qbsoftclaw1_claw_finger_down_pad_100_link:
+                                              {}
+                                          qbsoftclaw1_motor_1_link:
+                                            {}
+                                          qbsoftclaw1_motor_2_link:
+                                            {}
+                                          qbsoftclaw1_shaft_link:
+                                            qbsoftclaw1_claw_finger_up_link:
+                                              qbsoftclaw1_claw_finger_up_pad_100_link:
+                                                {}
+                                          qbsoftclaw1_stiffness_preset_virtual_link:
+                                            {}
+                                        qbsoftclaw1_end_effector_link:
+                                          {}
+      Update Interval: 0
+      Value: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pnpf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        viseOn:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: RobotModel
+      Robot Description: /clamp_desk/robot_description
+      TF Prefix: clamp_desk
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        panda_link0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: RobotModel
+      Robot Description: /robot1/robot_description
+      TF Prefix: robot1
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pnpf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: RobotModel
+      Robot Description: /camera_desk/robot_description
+      TF Prefix: camera_desk
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        panda_link0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        panda_link8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: RobotModel
+      Robot Description: /robot2/robot_description
+      TF Prefix: robot2
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pnpf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robo:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: RobotModel
+      Robot Description: /robot_desk2/robot_description
+      TF Prefix: robot_desk2
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        qbsoftclaw1_claw_finger_down_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbsoftclaw1_claw_finger_down_pad_100_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbsoftclaw1_claw_finger_up_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbsoftclaw1_claw_finger_up_pad_100_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbsoftclaw1_claw_wrist_flange_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbsoftclaw1_cube_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbsoftclaw1_end_effector_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbsoftclaw1_motor_1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbsoftclaw1_motor_2_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbsoftclaw1_shaft_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbsoftclaw1_stiffness_preset_virtual_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        root_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        world:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: RobotModel
+      Robot Description: /gripper1/robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: ""
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        mount:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: RobotModel
+      Robot Description: /claw_mount/robot_description
+      TF Prefix: claw_mount
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+  Enabled: true
+  Global Options:
+    Background Color: 200; 200; 200
+    Default Light: true
+    Fixed Frame: map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
+      Topic: /initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
+    - Class: rviz/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 0.8134990930557251
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Field of View: 0.7853981852531433
+      Focal Point:
+        X: -0.00395155418664217
+        Y: -0.32434704899787903
+        Z: 0.6973474025726318
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.4802025556564331
+      Target Frame: <Fixed Frame>
+      Yaw: 1.5651792287826538
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1136
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd0000000400000000000002f7000003d2fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d000003d2000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f000003d2fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d000003d2000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000007380000003efc0100000002fb0000000800540069006d0065010000000000000738000002eb00fffffffb0000000800540069006d0065010000000000000450000000000000000000000326000003d200000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: false
+  Width: 1848
+  X: 72
+  Y: 349

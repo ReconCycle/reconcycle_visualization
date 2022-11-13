@@ -51,7 +51,12 @@
   </include>
 
 
+  <include file="$(find test_rospkg)/launch/load_part.launch">
 
+    <arg name="tf_prefix" value="softhand_mount"/>
+    <arg name="urdf_name" value="softhand_mount"/>
+    
+  </include>
 
 
   <arg name="robot_model" default="$(find franka_description)/robots/panda_arm.urdf.xacro"/>
@@ -77,6 +82,8 @@
     <node name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
 
   </group>
+
+
   <group ns="gripper1">
     <param name="tf_prefix" value="gripper1" />
     <include file="$(find qb_move_description)/launch/display.launch">
@@ -89,6 +96,16 @@
     </include>
   </group>
 
+
+  <group ns="gripper2">
+    <param name="tf_prefix" value="gripper2" />
+    <include file="$(find qb_hand_description)/launch/display_qbhand.launch">
+
+      <arg name="use_rviz" value="false"/>
+     
+      
+    </include>
+  </group>
 
 
   <node name="map_pub" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 map cutter/base 100"/>
@@ -103,9 +120,16 @@
 
   <node name="robot1_desk1" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 robot_desk1/robo robot1/panda_link0 100"/>
 
-  <node name="robot1_gripper1" pkg="tf" type="static_transform_publisher" args="0 0 0 -1.57 0 0 robot1/panda_link8 claw_mount/base 100"/>
-  <node name="robot1_gripper2" pkg="tf" type="static_transform_publisher" args="0 0 -0.08 -1.57 0 0 robot1/panda_link8 world 100"/>
+  <node name="robot1_gripper1m" pkg="tf" type="static_transform_publisher" args="0 0 0 -1.57 0 0 robot1/panda_link8 claw_mount/base 100"/>
+  <node name="robot1_gripper1" pkg="tf" type="static_transform_publisher" args="0 0 -0.08 -1.57 0 0 robot1/panda_link8 world 100"/>
   
+
+  <node name="robot2_gripper2m" pkg="tf" type="static_transform_publisher" args="0 0 0 2.36 3.14 0 robot2/panda_link8 softhand_mount/base 100"/>
+  <node name="gripper2m_gripper2" pkg="tf" type="static_transform_publisher" args="0 0 0 3.14 0 0 softhand_mount/mount qbhand1_base_link  100"/>
+ 
+  
+
+
   <node name="robot2_desk2" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 robot_desk2/robo robot2/panda_link0 100"/>
 
 

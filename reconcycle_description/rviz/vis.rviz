@@ -8,11 +8,9 @@ Panels:
         - /Status1
         - /RobotModel1
         - /RobotModel2
-        - /TF1
         - /TF1/Frames1
         - /TF1/Tree1
-        - /RobotModel8
-        - /RobotModel9
+        - /RobotModel11
       Splitter Ratio: 0.5029411911964417
     Tree Height: 839
   - Class: rviz/Selection
@@ -269,6 +267,80 @@ Visualization Manager:
           Value: true
         map:
           Value: true
+        qbhand1_base_link:
+          Value: true
+        qbhand1_end_effector_link:
+          Value: true
+        qbhand1_index_distal_link:
+          Value: true
+        qbhand1_index_distal_virtual_link:
+          Value: true
+        qbhand1_index_knuckle_link:
+          Value: true
+        qbhand1_index_middle_link:
+          Value: true
+        qbhand1_index_middle_virtual_link:
+          Value: true
+        qbhand1_index_proximal_link:
+          Value: true
+        qbhand1_index_proximal_virtual_link:
+          Value: true
+        qbhand1_little_distal_link:
+          Value: true
+        qbhand1_little_distal_virtual_link:
+          Value: true
+        qbhand1_little_knuckle_link:
+          Value: true
+        qbhand1_little_middle_link:
+          Value: true
+        qbhand1_little_middle_virtual_link:
+          Value: true
+        qbhand1_little_proximal_link:
+          Value: true
+        qbhand1_little_proximal_virtual_link:
+          Value: true
+        qbhand1_middle_distal_link:
+          Value: true
+        qbhand1_middle_distal_virtual_link:
+          Value: true
+        qbhand1_middle_knuckle_link:
+          Value: true
+        qbhand1_middle_middle_link:
+          Value: true
+        qbhand1_middle_middle_virtual_link:
+          Value: true
+        qbhand1_middle_proximal_link:
+          Value: true
+        qbhand1_middle_proximal_virtual_link:
+          Value: true
+        qbhand1_palm_link:
+          Value: true
+        qbhand1_ring_distal_link:
+          Value: true
+        qbhand1_ring_distal_virtual_link:
+          Value: true
+        qbhand1_ring_knuckle_link:
+          Value: true
+        qbhand1_ring_middle_link:
+          Value: true
+        qbhand1_ring_middle_virtual_link:
+          Value: true
+        qbhand1_ring_proximal_link:
+          Value: true
+        qbhand1_ring_proximal_virtual_link:
+          Value: true
+        qbhand1_synergy_tendon_virtual_link:
+          Value: true
+        qbhand1_thumb_distal_link:
+          Value: true
+        qbhand1_thumb_distal_virtual_link:
+          Value: true
+        qbhand1_thumb_knuckle_link:
+          Value: true
+        qbhand1_thumb_proximal_link:
+          Value: true
+        qbhand1_thumb_proximal_virtual_link:
+          Value: true
         qbsoftclaw1_claw_finger_down_link:
           Value: true
         qbsoftclaw1_claw_finger_down_pad_100_link:
@@ -369,6 +441,10 @@ Visualization Manager:
           Value: true
         root_link:
           Value: true
+        softhand_mount/base:
+          Value: true
+        softhand_mount/mount:
+          Value: true
         world:
           Value: true
       Marker Alpha: 1
@@ -450,7 +526,52 @@ Visualization Manager:
                                   robot2/panda_link6:
                                     robot2/panda_link7:
                                       robot2/panda_link8:
-                                        {}
+                                        softhand_mount/base:
+                                          softhand_mount/mount:
+                                            qbhand1_base_link:
+                                              qbhand1_end_effector_link:
+                                                {}
+                                              qbhand1_palm_link:
+                                                qbhand1_index_knuckle_link:
+                                                  qbhand1_index_proximal_virtual_link:
+                                                    qbhand1_index_proximal_link:
+                                                      qbhand1_index_middle_virtual_link:
+                                                        qbhand1_index_middle_link:
+                                                          qbhand1_index_distal_virtual_link:
+                                                            qbhand1_index_distal_link:
+                                                              {}
+                                                qbhand1_little_knuckle_link:
+                                                  qbhand1_little_proximal_virtual_link:
+                                                    qbhand1_little_proximal_link:
+                                                      qbhand1_little_middle_virtual_link:
+                                                        qbhand1_little_middle_link:
+                                                          qbhand1_little_distal_virtual_link:
+                                                            qbhand1_little_distal_link:
+                                                              {}
+                                                qbhand1_middle_knuckle_link:
+                                                  qbhand1_middle_proximal_virtual_link:
+                                                    qbhand1_middle_proximal_link:
+                                                      qbhand1_middle_middle_virtual_link:
+                                                        qbhand1_middle_middle_link:
+                                                          qbhand1_middle_distal_virtual_link:
+                                                            qbhand1_middle_distal_link:
+                                                              {}
+                                                qbhand1_ring_knuckle_link:
+                                                  qbhand1_ring_proximal_virtual_link:
+                                                    qbhand1_ring_proximal_link:
+                                                      qbhand1_ring_middle_virtual_link:
+                                                        qbhand1_ring_middle_link:
+                                                          qbhand1_ring_distal_virtual_link:
+                                                            qbhand1_ring_distal_link:
+                                                              {}
+                                                qbhand1_synergy_tendon_virtual_link:
+                                                  {}
+                                                qbhand1_thumb_knuckle_link:
+                                                  qbhand1_thumb_proximal_virtual_link:
+                                                    qbhand1_thumb_proximal_link:
+                                                      qbhand1_thumb_distal_virtual_link:
+                                                        qbhand1_thumb_distal_link:
+                                                          {}
                 clamp_desk/pnpf:
                   {}
                 clamp_desk/pnpf1:
@@ -914,6 +1035,220 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: ""
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mount:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: RobotModel
+      Robot Description: /softhand_mount/robot_description
+      TF Prefix: softhand_mount
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        qbhand1_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_end_effector_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbhand1_index_distal_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_index_distal_virtual_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbhand1_index_knuckle_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_index_middle_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_index_middle_virtual_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbhand1_index_proximal_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_index_proximal_virtual_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbhand1_little_distal_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_little_distal_virtual_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbhand1_little_knuckle_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_little_middle_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_little_middle_virtual_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbhand1_little_proximal_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_little_proximal_virtual_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbhand1_middle_distal_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_middle_distal_virtual_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbhand1_middle_knuckle_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_middle_middle_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_middle_middle_virtual_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbhand1_middle_proximal_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_middle_proximal_virtual_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbhand1_palm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_ring_distal_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_ring_distal_virtual_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbhand1_ring_knuckle_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_ring_middle_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_ring_middle_virtual_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbhand1_ring_proximal_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_ring_proximal_virtual_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbhand1_synergy_tendon_virtual_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbhand1_thumb_distal_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_thumb_distal_virtual_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbhand1_thumb_knuckle_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_thumb_proximal_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbhand1_thumb_proximal_virtual_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        root_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: RobotModel
+      Robot Description: /gripper2/robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
   Enabled: true
   Global Options:
     Background Color: 200; 200; 200
@@ -942,7 +1277,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.8134990930557251
+      Distance: 2.7912423610687256
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -950,25 +1285,25 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -0.00395155418664217
-        Y: -0.32434704899787903
-        Z: 0.6973474025726318
+        X: -0.2996197044849396
+        Y: 0.24595636129379272
+        Z: 0.33510369062423706
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.4802025556564331
+      Pitch: 1.0447975397109985
       Target Frame: <Fixed Frame>
-      Yaw: 1.5651792287826538
+      Yaw: 4.003084659576416
     Saved: ~
 Window Geometry:
   Displays:
-    collapsed: false
+    collapsed: true
   Height: 1136
-  Hide Left Dock: false
+  Hide Left Dock: true
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd0000000400000000000002f7000003d2fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d000003d2000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f000003d2fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d000003d2000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000007380000003efc0100000002fb0000000800540069006d0065010000000000000738000002eb00fffffffb0000000800540069006d0065010000000000000450000000000000000000000326000003d200000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000002f7000003d2fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073000000003d000003d2000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f000003d2fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d000003d2000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000007380000003efc0100000002fb0000000800540069006d0065010000000000000738000002eb00fffffffb0000000800540069006d0065010000000000000450000000000000000000000623000003d200000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:

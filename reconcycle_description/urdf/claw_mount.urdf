@@ -1,0 +1,363 @@
+<?xml version="1.0" ?>
+<robot name="fifi" version="1.0">
+  <joint name="base_mount" type="fixed">
+    <origin xyz="-2.676672236193239e-16 0.0 0.017800000000000274" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+    <axis xyz="0 0 1"/>
+    <parent link="base"/>
+    <child link="mount"/>
+    <limit effort="1000" lower="-1.548" upper="1.548" velocity="0.5"/>
+  </joint>
+  <joint name="base_camera" type="fixed">
+    <origin xyz="-0.011499999999996884 -0.07499999999999143 0.02870900292595909" rpy="1.905318798742255e-16 -1.6653345369377368e-16 -2.7357238018191703e-32"/>
+    <axis xyz="0 0 1"/>
+    <parent link="base"/>
+    <child link="camera"/>
+    <limit effort="1000" lower="-1.548" upper="1.548" velocity="0.5"/>
+  </joint>
+  <link name="mount"/>
+  <link name="base">
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/FRONT_COVER_ALUMINUM_AWG_W_RGB_0.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/MASK_LENS_AWG_RGB_430.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/ADHESIVE_LENS_AWG_RGB_230.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/AWG_FOAM_FRONT_BEZEL_RIGHT_490.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/AWG_ADHESIVE_FRONT_BEZEL_1_180.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/AWG_STIFFENER_FRONT_BEZEL_1_180.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/AWG_ADHESIVE_FRONT_BEZEL_1_181.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/MODULE_CAMERA_DS5_AWG_RGB_60.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/20709-050E_RECE_ASSY_30.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/B2B_BRACKET_AWG_W_RGB_10.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/LABEL_CAMERA_DS5_AWG_360.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/ADHESIVE_LABEL_CAMERA_DS5_AWG_20.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/AWG_RGB_CAMERA_MERGED_50.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/AWG_RGB_CAMERA_50.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/AWG_RGB_CAMERA_BOARD_220.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/AWG_RGB_CAMERA_FLEX_SHEETMETAL_0.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/BRACKET_RGB_MODULE_AWG_W_RGB_460.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/HEATSINK_AWG_W_RGB_240.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/PASTE_THERMAL_IR_AWG_W_RGB_70.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/SCREW_M1-6_4L_40.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/SCREW_M1-6_4L_41.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/SCREW_M1-6_4L_42.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/SCREW_M1-6_4L_43.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/AWG_ASIC_FLEX_330.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/AWG_ASIC_BACKER_1_770.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/ID_50_PIN_20709-050EC_PAD_40.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/AWG_ASIC_BACKER_2_840.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/20708-050E_PLUG_ASSY_30.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/REAR_COVER_ALUMINUM_AWG_RGB_1210.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/MAGNET_90.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/MAGNET_91.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/SCREW_TORX_M2_X_5L_60.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/SCREW_TORX_M2_X_5L_61.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/AUX_COVER_ALUMINUM_AWG_W_RGB_610.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/PIN_STEEL_ZINC_PLATED_110.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/PIN_STEEL_ZINC_PLATED_111.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/BARCODE_AWG_80.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-2.7141741317048967e-16 -0.075 0.07280000000000027" rpy="5.1754001796080614e-17 -6.818526456665028e-17 -2.326374403664247e-47"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/claw_mount/Component440.stl"/>
+      </geometry>
+      <material name="color1">
+        <color rgba="0.7991027235984802 0.7991027235984802 0.7991027235984802 1"/>
+      </material>
+    </visual>
+  </link>
+  <link name="camera"/>
+</robot>

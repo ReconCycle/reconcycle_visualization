@@ -4,13 +4,19 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /TF1
         - /TF1/Frames1
+        - /qbVS1
         - /Vision pipeline-Basler1
-        - /Vision pipeline-Basler1/Status1
         - /Basler_markerArray1
         - /Realsense_MarkerArray1
         - /Vision pipeline-realsense1
+        - /Softclaw_adapter1
+        - /table_vision1
+        - /table_cutter1
+        - /table_vise1
+        - /table_rob11
+        - /table_rob11/Status1
+        - /table_rob21
       Splitter Ratio: 0.580722868
     Tree Height: 487
   - Class: rviz/Selection
@@ -31,7 +37,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: Vision pipeline-Basler
+    SyncSource: ""
 Toolbars:
   toolButtonStyle: 2
 Visualization Manager:
@@ -197,14 +203,6 @@ Visualization Manager:
       Frame Timeout: 1
       Frames:
         All Enabled: false
-        aruco_marker_frame:
-          Value: false
-        battery_0_realsense:
-          Value: true
-        battery_0_vision_table_zero:
-          Value: false
-        battery_1_vision_table_zero:
-          Value: false
         cutter:
           Value: false
         cutter/drop_battery:
@@ -221,26 +219,44 @@ Visualization Manager:
           Value: false
         cutter/realsense:
           Value: false
+        cutter/realsense2:
+          Value: true
         cutter/realsense_EE:
           Value: false
-        hca_back_0_vision_table_zero:
+        cutter_table/base:
           Value: true
-        hca_back_1_vision_table_zero:
+        cutter_table/cuttingBase:
           Value: true
-        hca_back_2_vision_table_zero:
-          Value: false
-        hca_side2_1_vision_table_zero:
-          Value: false
-        hca_side2_2_vision_table_zero:
-          Value: false
-        internals_1_realsense:
-          Value: false
-        obj_0:
-          Value: false
-        obj_1:
-          Value: false
-        obj_2:
-          Value: false
+        cutter_table/cuttingEdge:
+          Value: true
+        cutter_table/entryCenter:
+          Value: true
+        cutter_table/pickTray:
+          Value: true
+        cutter_table/pnpf:
+          Value: true
+        cutter_table/pnpf1:
+          Value: true
+        cutter_table/pnpf2:
+          Value: true
+        cutter_table/pnpf4:
+          Value: true
+        cutter_table/pnpm1:
+          Value: true
+        cutter_table/pnpm2:
+          Value: true
+        cutter_table/pnpm3:
+          Value: true
+        cutter_table/pnpm4:
+          Value: true
+        cutter_table/sliderHead:
+          Value: true
+        p2_claw_mount/base:
+          Value: true
+        p2_claw_mount/camera:
+          Value: true
+        p2_claw_mount/mount:
+          Value: true
         panda_1/panda_1_flange:
           Value: false
         panda_1/panda_1_link0:
@@ -311,87 +327,9 @@ Visualization Manager:
           Value: false
         panda_2_link8:
           Value: false
-        pcb_covered_0_vision_table_zero:
-          Value: false
-        pcb_covered_1_realsense:
-          Value: true
-        pcb_covered_1_vision_table_zero:
-          Value: false
-        plastic_clip_0_vision_table_zero:
-          Value: false
         qbhand1_base_link:
           Value: false
         qbhand1_fingers_drag:
-          Value: false
-        qbhand1_index_distal_link:
-          Value: false
-        qbhand1_index_distal_virtual_link:
-          Value: false
-        qbhand1_index_knuckle_link:
-          Value: false
-        qbhand1_index_middle_link:
-          Value: false
-        qbhand1_index_middle_virtual_link:
-          Value: false
-        qbhand1_index_proximal_link:
-          Value: false
-        qbhand1_index_proximal_virtual_link:
-          Value: false
-        qbhand1_little_distal_link:
-          Value: false
-        qbhand1_little_distal_virtual_link:
-          Value: false
-        qbhand1_little_knuckle_link:
-          Value: false
-        qbhand1_little_middle_link:
-          Value: false
-        qbhand1_little_middle_virtual_link:
-          Value: false
-        qbhand1_little_proximal_link:
-          Value: false
-        qbhand1_little_proximal_virtual_link:
-          Value: false
-        qbhand1_middle_distal_link:
-          Value: false
-        qbhand1_middle_distal_virtual_link:
-          Value: false
-        qbhand1_middle_knuckle_link:
-          Value: false
-        qbhand1_middle_middle_link:
-          Value: false
-        qbhand1_middle_middle_virtual_link:
-          Value: false
-        qbhand1_middle_proximal_link:
-          Value: false
-        qbhand1_middle_proximal_virtual_link:
-          Value: false
-        qbhand1_palm_link:
-          Value: false
-        qbhand1_ring_distal_link:
-          Value: false
-        qbhand1_ring_distal_virtual_link:
-          Value: false
-        qbhand1_ring_knuckle_link:
-          Value: false
-        qbhand1_ring_middle_link:
-          Value: false
-        qbhand1_ring_middle_virtual_link:
-          Value: false
-        qbhand1_ring_proximal_link:
-          Value: false
-        qbhand1_ring_proximal_virtual_link:
-          Value: false
-        qbhand1_tendon_virtual_link:
-          Value: false
-        qbhand1_thumb_distal_link:
-          Value: false
-        qbhand1_thumb_distal_virtual_link:
-          Value: false
-        qbhand1_thumb_knuckle_link:
-          Value: false
-        qbhand1_thumb_proximal_link:
-          Value: false
-        qbhand1_thumb_proximal_virtual_link:
           Value: false
         qbhand_base_link:
           Value: false
@@ -429,6 +367,46 @@ Visualization Manager:
           Value: false
         realsense_link:
           Value: false
+        rob_1_table/base:
+          Value: true
+        rob_1_table/pnpf:
+          Value: true
+        rob_1_table/pnpf1:
+          Value: true
+        rob_1_table/pnpf2:
+          Value: true
+        rob_1_table/pnpf4:
+          Value: true
+        rob_1_table/pnpm1:
+          Value: true
+        rob_1_table/pnpm2:
+          Value: true
+        rob_1_table/pnpm3:
+          Value: true
+        rob_1_table/pnpm4:
+          Value: true
+        rob_1_table/robo:
+          Value: true
+        rob_2_table/base:
+          Value: true
+        rob_2_table/pnpf:
+          Value: true
+        rob_2_table/pnpf1:
+          Value: true
+        rob_2_table/pnpf2:
+          Value: true
+        rob_2_table/pnpf4:
+          Value: true
+        rob_2_table/pnpm1:
+          Value: true
+        rob_2_table/pnpm2:
+          Value: true
+        rob_2_table/pnpm3:
+          Value: true
+        rob_2_table/pnpm4:
+          Value: true
+        rob_2_table/robo:
+          Value: true
         root_link:
           Value: false
         soft_hand_adaptor:
@@ -513,8 +491,42 @@ Visualization Manager:
           Value: false
         vise/via3:
           Value: false
-        vision_module:
-          Value: false
+        vise_table/base:
+          Value: true
+        vise_table/pnpf:
+          Value: true
+        vise_table/pnpf1:
+          Value: true
+        vise_table/pnpf2:
+          Value: true
+        vise_table/pnpf4:
+          Value: true
+        vise_table/pnpm1:
+          Value: true
+        vise_table/pnpm2:
+          Value: true
+        vise_table/pnpm3:
+          Value: true
+        vise_table/pnpm4:
+          Value: true
+        vision_table/base:
+          Value: true
+        vision_table/pnpf:
+          Value: true
+        vision_table/pnpf1:
+          Value: true
+        vision_table/pnpf2:
+          Value: true
+        vision_table/pnpf4:
+          Value: true
+        vision_table/pnpm1:
+          Value: true
+        vision_table/pnpm2:
+          Value: true
+        vision_table/pnpm3:
+          Value: true
+        vision_table/pnpm4:
+          Value: true
         vision_table/safepickuplim:
           Value: false
         vision_table_calib:
@@ -535,6 +547,28 @@ Visualization Manager:
               qbhand_palm_link:
                 {}
           table_rob_1:
+            cutter_table/base:
+              cutter_table/entryCenter:
+                cutter_table/cuttingBase:
+                  {}
+              cutter_table/pickTray:
+                {}
+              cutter_table/pnpf:
+                {}
+              cutter_table/pnpf1:
+                {}
+              cutter_table/pnpf2:
+                {}
+              cutter_table/pnpf4:
+                {}
+              cutter_table/pnpm1:
+                {}
+              cutter_table/pnpm2:
+                {}
+              cutter_table/pnpm3:
+                {}
+              cutter_table/pnpm4:
+                {}
             panda_1/panda_1_link0:
               panda_1/panda_1_link1:
                 panda_1/panda_1_link2:
@@ -550,47 +584,6 @@ Visualization Manager:
                                     qbhand1_base_link:
                                       qbhand1_fingers_drag:
                                         {}
-                                      qbhand1_palm_link:
-                                        qbhand1_index_knuckle_link:
-                                          qbhand1_index_proximal_virtual_link:
-                                            qbhand1_index_proximal_link:
-                                              qbhand1_index_middle_virtual_link:
-                                                qbhand1_index_middle_link:
-                                                  qbhand1_index_distal_virtual_link:
-                                                    qbhand1_index_distal_link:
-                                                      {}
-                                        qbhand1_little_knuckle_link:
-                                          qbhand1_little_proximal_virtual_link:
-                                            qbhand1_little_proximal_link:
-                                              qbhand1_little_middle_virtual_link:
-                                                qbhand1_little_middle_link:
-                                                  qbhand1_little_distal_virtual_link:
-                                                    qbhand1_little_distal_link:
-                                                      {}
-                                        qbhand1_middle_knuckle_link:
-                                          qbhand1_middle_proximal_virtual_link:
-                                            qbhand1_middle_proximal_link:
-                                              qbhand1_middle_middle_virtual_link:
-                                                qbhand1_middle_middle_link:
-                                                  qbhand1_middle_distal_virtual_link:
-                                                    qbhand1_middle_distal_link:
-                                                      {}
-                                        qbhand1_ring_knuckle_link:
-                                          qbhand1_ring_proximal_virtual_link:
-                                            qbhand1_ring_proximal_link:
-                                              qbhand1_ring_middle_virtual_link:
-                                                qbhand1_ring_middle_link:
-                                                  qbhand1_ring_distal_virtual_link:
-                                                    qbhand1_ring_distal_link:
-                                                      {}
-                                        qbhand1_tendon_virtual_link:
-                                          {}
-                                        qbhand1_thumb_knuckle_link:
-                                          qbhand1_thumb_proximal_virtual_link:
-                                            qbhand1_thumb_proximal_link:
-                                              qbhand1_thumb_distal_virtual_link:
-                                                qbhand1_thumb_distal_link:
-                                                  {}
                               panda_1_link8:
                                 panda_1_NE:
                                   panda_1_EE:
@@ -600,28 +593,46 @@ Visualization Manager:
                                       {}
               vision_table_calib:
                 vision_table_zero:
-                  battery_0_vision_table_zero:
-                    {}
-                  battery_1_vision_table_zero:
-                    {}
-                  hca_back_0_vision_table_zero:
-                    {}
-                  hca_back_1_vision_table_zero:
-                    {}
-                  hca_back_2_vision_table_zero:
-                    {}
-                  hca_side2_1_vision_table_zero:
-                    {}
-                  hca_side2_2_vision_table_zero:
-                    {}
-                  pcb_covered_0_vision_table_zero:
-                    {}
-                  pcb_covered_1_vision_table_zero:
-                    {}
-                  plastic_clip_0_vision_table_zero:
-                    {}
                   vision_table/safepickuplim:
                     {}
+            rob_1_table/base:
+              rob_1_table/pnpf:
+                {}
+              rob_1_table/pnpf1:
+                {}
+              rob_1_table/pnpf2:
+                {}
+              rob_1_table/pnpf4:
+                {}
+              rob_1_table/pnpm1:
+                {}
+              rob_1_table/pnpm2:
+                {}
+              rob_1_table/pnpm3:
+                {}
+              rob_1_table/pnpm4:
+                {}
+              rob_1_table/robo:
+                {}
+            rob_2_table/base:
+              rob_2_table/pnpf:
+                {}
+              rob_2_table/pnpf1:
+                {}
+              rob_2_table/pnpf2:
+                {}
+              rob_2_table/pnpf4:
+                {}
+              rob_2_table/pnpm1:
+                {}
+              rob_2_table/pnpm2:
+                {}
+              rob_2_table/pnpm3:
+                {}
+              rob_2_table/pnpm4:
+                {}
+              rob_2_table/robo:
+                {}
             table_fixture:
               table_fixture_pnp_connector_1:
                 {}
@@ -681,6 +692,8 @@ Visualization Manager:
                     {}
                   cutter/realsense:
                     {}
+                  cutter/realsense2:
+                    {}
                   cutter/realsense_EE:
                     {}
                 table_cutter_pnp_connector_1:
@@ -702,30 +715,30 @@ Visualization Manager:
                               panda_2/panda_2_link7:
                                 panda_2/panda_2_link8:
                                   panda_2/panda_2_flange:
+                                    p2_claw_mount/base:
+                                      p2_claw_mount/camera:
+                                        {}
+                                      p2_claw_mount/mount:
+                                        qbsoftclaw_claw_rc_wrist_flange_link:
+                                          qbsoftclaw_cube_link:
+                                            qbsoftclaw_claw_rc_finger_down_b_link:
+                                              {}
+                                            qbsoftclaw_motor_1_link:
+                                              {}
+                                            qbsoftclaw_motor_2_link:
+                                              {}
+                                            qbsoftclaw_shaft_link:
+                                              qbsoftclaw_claw_finger_up_link:
+                                                qbsoftclaw_claw_finger_up_pad_100_link:
+                                                  {}
+                                            qbsoftclaw_stiffness_preset_virtual_link:
+                                              {}
+                                          qbsoftclaw_end_effector_link:
+                                            {}
                                     panda_2/panda_2_tc_robot:
-                                      qbsoftclaw_claw_rc_wrist_flange_link:
-                                        qbsoftclaw_cube_link:
-                                          qbsoftclaw_claw_rc_finger_down_b_link:
-                                            {}
-                                          qbsoftclaw_motor_1_link:
-                                            {}
-                                          qbsoftclaw_motor_2_link:
-                                            {}
-                                          qbsoftclaw_shaft_link:
-                                            qbsoftclaw_claw_finger_up_link:
-                                              qbsoftclaw_claw_finger_up_pad_100_link:
-                                                {}
-                                          qbsoftclaw_stiffness_preset_virtual_link:
-                                            {}
-                                        qbsoftclaw_end_effector_link:
-                                          {}
+                                      {}
                                     panda_2/realsense:
-                                      battery_0_realsense:
-                                        {}
-                                      internals_1_realsense:
-                                        {}
-                                      pcb_covered_1_realsense:
-                                        {}
+                                      {}
                                   panda_2_link8:
                                     panda_2_NE:
                                       panda_2_EE:
@@ -749,13 +762,40 @@ Visualization Manager:
                 {}
               table_vision_pnp_connector_4:
                 {}
-          vision_module:
-            obj_0:
-              {}
-            obj_1:
-              {}
-            obj_2:
-              {}
+            vise_table/base:
+              vise_table/pnpf:
+                {}
+              vise_table/pnpf1:
+                {}
+              vise_table/pnpf2:
+                {}
+              vise_table/pnpf4:
+                {}
+              vise_table/pnpm1:
+                {}
+              vise_table/pnpm2:
+                {}
+              vise_table/pnpm3:
+                {}
+              vise_table/pnpm4:
+                {}
+            vision_table/base:
+              vision_table/pnpf:
+                {}
+              vision_table/pnpf1:
+                {}
+              vision_table/pnpf2:
+                {}
+              vision_table/pnpf4:
+                {}
+              vision_table/pnpm1:
+                {}
+              vision_table/pnpm2:
+                {}
+              vision_table/pnpm3:
+                {}
+              vision_table/pnpm4:
+                {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -931,169 +971,6 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        qbhand1_base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_index_distal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_index_distal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_index_knuckle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_index_middle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_index_middle_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_index_proximal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_index_proximal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_little_distal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_little_distal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_little_knuckle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_little_middle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_little_middle_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_little_proximal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_little_proximal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_middle_distal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_middle_distal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_middle_knuckle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_middle_middle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_middle_middle_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_middle_proximal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_middle_proximal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_palm_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_ring_distal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_ring_distal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_ring_knuckle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_ring_middle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_ring_middle_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_ring_proximal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_ring_proximal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_tendon_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_thumb_distal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_thumb_distal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_thumb_knuckle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        qbhand1_thumb_proximal_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        qbhand1_thumb_proximal_virtual_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        root_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
       Name: qbHand
       Robot Description: qbhand1/robot_description
       TF Prefix: ""
@@ -1195,7 +1072,7 @@ Visualization Manager:
       Marker Topic: /vision/basler/markers
       Name: Basler_markerArray
       Namespaces:
-        vision_table_zero: true
+        {}
       Queue Size: 3
       Value: true
     - Class: rviz/MarkerArray
@@ -1218,6 +1095,348 @@ Visualization Manager:
       Transport Hint: raw
       Unreliable: false
       Value: false
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        mount:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: Softclaw_adapter
+      Robot Description: /p2_claw_mount/robot_description
+      TF Prefix: p2_claw_mount
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pnpf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: table_vision
+      Robot Description: /vision_table/robot_description
+      TF Prefix: vision_table
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cuttingBase:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cuttingEdge:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        entryCenter:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pickTray:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        sliderHead:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: table_cutter
+      Robot Description: /cutter_table/robot_description
+      TF Prefix: cutter_table
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pnpf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        viseOn:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        viseOne:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        viseTw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        viseTwo:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: table_vise
+      Robot Description: /vise_table/robot_description
+      TF Prefix: vise_table
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pnpf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robo:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: table_rob1
+      Robot Description: /rob_1_table/robot_description
+      TF Prefix: rob_1_table
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pnpf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robo:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: table_rob2
+      Robot Description: /rob_2_table/robot_description
+      TF Prefix: rob_2_table
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
   Enabled: true
   Global Options:
     Background Color: 206; 225; 255
@@ -1243,25 +1462,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.86737657
+      Distance: 2.58575082
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.0215074457
-        Y: 0.4288387
-        Z: 0.657498002
+        X: 0.378591388
+        Y: 0.612681091
+        Z: 1.12471426
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.96539706
+      Pitch: 0.689796031
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 2.87540245
+      Yaw: 2.65040278
     Saved: ~
 Window Geometry:
   Displays:

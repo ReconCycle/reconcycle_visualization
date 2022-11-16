@@ -42,8 +42,10 @@
     <node name="panda_EE_fix" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 $(arg panda2_name)_EE $(arg panda2_prefix)panda_EE 100" />
     <node name="panda_2_to_realsense" pkg="tf" type="static_transform_publisher" args="-0.075 -0.0325 -0.025 -1.57079 3.14159 0  $(arg panda2_prefix)$(arg panda2_name)_flange $(arg panda2_prefix)realsense 100" />
   </group>
+  
 
-  <!-- manual calibration for vision @ EMO -->
+  
+<!-- manual calibration for vision @ EMO -->
   <!-- node name="panda_1_to_calib" pkg="tf" type="static_transform_publisher" args="0.2602 -0.6074 0 0 0 0 1 $(arg panda1_prefix)$(arg panda1_name)_link0 vision_table_calib 100" / -->
   <node name="panda_1_to_calib" pkg="tf" type="static_transform_publisher" args="0.329 0 0 0 0 1 0 $(arg panda1_prefix)$(arg panda1_name)_link0 vision_table_calib 100" />
 
@@ -142,5 +144,49 @@
     -->
     
   </group> 
+  
+  
+  <!-- Novo - dr. Rok - VSA ADAPTOR - Panda flange- to softclaw - adapter in between -->
+  <include file="$(find reconcycle_description)/launch/load_part.launch">
+    <arg name="tf_prefix" value="p2_claw_mount"/>
+    <arg name="urdf_name" value="claw_mount"/>
+  </include>
+  <node name="panda_ee_to_softclaw" pkg="tf" type="static_transform_publisher" args="0 0 0 1.570795 0 3.14159 $(arg panda2_prefix)$(arg panda2_name)_flange p2_claw_mount/base 100"/>
+  
+  <!-- Novo - dr. Rok - Vision table - with camera pillar -->
+  <include file="$(find reconcycle_description)/launch/load_part.launch">
+    <arg name="tf_prefix" value="vision_table"/>
+    <arg name="urdf_name" value="camera_desk"/>
+  </include>
+  <node name="table_1_to_vision_table" pkg="tf" type="static_transform_publisher" args="0.3 0.3 0.02 1.570795 0 0 table_rob_1 vision_table/base 100"/>
+  
+  <!-- Novo - dr. Rok - Cutter table -->
+  <include file="$(find reconcycle_description)/launch/load_part.launch">
+    <arg name="tf_prefix" value="cutter_table"/>
+    <arg name="urdf_name" value="cutter"/>
+  </include>
+  <node name="cutter_to_vision_table" pkg="tf" type="static_transform_publisher" args="0.3 0.9 0.02 1.570795 0 0 table_rob_1 cutter_table/base 100"/>
+  
+  <!-- Novo - dr. Rok - Vise table -->
+  <include file="$(find reconcycle_description)/launch/load_part.launch">
+    <arg name="tf_prefix" value="vise_table"/>
+    <arg name="urdf_name" value="vise_desk"/>
+  </include>
+  <node name="vise_to_vision_table" pkg="tf" type="static_transform_publisher" args="0.3 0.9 0.02 -1.570795 0 0 table_rob_1 vise_table/base 100"/>
+  
+  <!-- Novo - dr. Rok - Robot table 1 -->
+  <include file="$(find reconcycle_description)/launch/load_part.launch">
+    <arg name="tf_prefix" value="rob_1_table"/>
+    <arg name="urdf_name" value="robot_desk"/>
+  </include>
+  <node name="rob1table_to_vision_table" pkg="tf" type="static_transform_publisher" args="0.3 -0.3 0.02 1.570795 0 0 table_rob_1 rob_1_table/base 100"/>
+  
+  <!-- Novo - dr. Rok - Robot table 2 -->
+  <include file="$(find reconcycle_description)/launch/load_part.launch">
+    <arg name="tf_prefix" value="rob_2_table"/>
+    <arg name="urdf_name" value="robot_desk"/>
+  </include>
+  <node name="rob2table_to_vision_table" pkg="tf" type="static_transform_publisher" args="0.3 1.5 0.02 -1.570795 0 0 table_rob_1 rob_2_table/base 100"/>
+  
 
 </launch>

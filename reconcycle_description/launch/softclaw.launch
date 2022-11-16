@@ -1,5 +1,5 @@
 <launch>
 
-    <node name="vsa_to_tc" pkg="tf" type="static_transform_publisher" args="0.0 0.0 0 3.4034 0 3.14159 panda_2/panda_2_tc_robot  qbsoftclaw_claw_rc_wrist_flange_link 100" />
+    <node name="vsa_to_tc" pkg="tf" type="static_transform_publisher" args="0.0 0.0 -0.02 -1.570795 0 0 p2_claw_mount/mount  qbsoftclaw_claw_rc_wrist_flange_link 100" />
 
 </launch>

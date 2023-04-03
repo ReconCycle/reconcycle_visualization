@@ -56,32 +56,32 @@
     <child link="pnpf4"/>
     <limit effort="1000" lower="-1.548" upper="1.548" velocity="0.5"/>
   </joint>
-  <joint name="base_viseOn" type="prismatic">
-    <origin xyz="0.25120447066380447 0.28190952633304445 0.059959231122270806" rpy="8.951173136082008e-16 1.570796326794896 0.0"/>
-    <axis xyz="0 0 1"/>
-    <parent link="base"/>
-    <child link="viseOn"/>
-    <limit effort="1000" lower="-1.548" upper="1.548" velocity="0.5"/>
-  </joint>
   <joint name="base_viseOne" type="prismatic">
-    <origin xyz="0.35220447066381433 0.32190952633305603 0.05995923113227309" rpy="3.1415926535897696 1.5707963267948966 0.0"/>
+    <origin xyz="0.327000000000001 0.21999999999999914 0.10895923112226945" rpy="1.5707963267948966 1.5707963267948608 1.5707963267949052"/>
     <axis xyz="0 0 1"/>
     <parent link="base"/>
     <child link="viseOne"/>
     <limit effort="1000" lower="-1.548" upper="1.548" velocity="0.5"/>
   </joint>
-  <joint name="base_viseTw" type="prismatic">
-    <origin xyz="0.2812044706638224 0.3644095263330476 0.02095923113227434" rpy="3.141592653589793 1.5707963267948617 1.5755657659879256"/>
+  <joint name="base_viseOne1" type="prismatic">
+    <origin xyz="0.42900000000000027 0.2600000000000093 0.1089592311322698" rpy="3.1415926535897696 1.5707963267948966 0.0"/>
     <axis xyz="0 0 1"/>
     <parent link="base"/>
-    <child link="viseTw"/>
+    <child link="viseOne1"/>
     <limit effort="1000" lower="-1.548" upper="1.548" velocity="0.5"/>
   </joint>
   <joint name="base_viseTwo" type="prismatic">
-    <origin xyz="0.3212044706638124 0.2394095263330476 0.020959231122270352" rpy="1.0090602588783764 1.5707963267948308 2.5812047513500547"/>
+    <origin xyz="0.3580000000000007 0.3035000000000004 0.06995923113227184" rpy="3.1179377606468486 1.5707963267948615 1.5486480503553888"/>
     <axis xyz="0 0 1"/>
     <parent link="base"/>
     <child link="viseTwo"/>
+    <limit effort="1000" lower="-1.548" upper="1.548" velocity="0.5"/>
+  </joint>
+  <joint name="base_viseTwo1" type="prismatic">
+    <origin xyz="0.39800000000000074 0.17649999999999993 0.06995923113226832" rpy="0.018985060498840408 1.5707963267948615 1.5929446032344046"/>
+    <axis xyz="0 0 1"/>
+    <parent link="base"/>
+    <child link="viseTwo1"/>
     <limit effort="1000" lower="-1.548" upper="1.548" velocity="0.5"/>
   </joint>
   <link name="pnpm2"/>
@@ -5377,9 +5377,9 @@
   <link name="pnpf1"/>
   <link name="pnpf"/>
   <link name="pnpf4"/>
-  <link name="viseOn">
+  <link name="viseOne">
     <visual>
-      <origin xyz="0.9665332974402611 0.01809047366698929 0.04879552933623543" rpy="1.570796326794918 -9.436895709313829e-16 -1.5707963267948626"/>
+      <origin xyz="1.0155332974402627 0.07999999999999881 -0.026999999999961177" rpy="1.5707963267949183 -8.326672684688674e-16 -1.5707963267948974"/>
       <geometry>
         <mesh filename="package://reconcycle_description/meshes/vise_desk/SOLID48.stl"/>
       </geometry>
@@ -5388,7 +5388,7 @@
       </material>
     </visual>
     <visual>
-      <origin xyz="0.9665332974402611 0.01809047366698929 0.04879552933623543" rpy="1.570796326794918 -9.436895709313829e-16 -1.5707963267948626"/>
+      <origin xyz="1.0155332974402627 0.07999999999999881 -0.026999999999961177" rpy="1.5707963267949183 -8.326672684688674e-16 -1.5707963267948974"/>
       <geometry>
         <mesh filename="package://reconcycle_description/meshes/vise_desk/WJ200UM_01_10_24.stl"/>
       </geometry>
@@ -5397,7 +5397,7 @@
       </material>
     </visual>
     <visual>
-      <origin xyz="0.9665332974402611 0.01809047366698929 0.04879552933623543" rpy="1.570796326794918 -9.436895709313829e-16 -1.5707963267948626"/>
+      <origin xyz="1.0155332974402627 0.07999999999999881 -0.026999999999961177" rpy="1.5707963267949183 -8.326672684688674e-16 -1.5707963267948974"/>
       <geometry>
         <mesh filename="package://reconcycle_description/meshes/vise_desk/WJ200UM_01_10_25.stl"/>
       </geometry>
@@ -5406,7 +5406,7 @@
       </material>
     </visual>
     <visual>
-      <origin xyz="0.9665332974402611 0.01809047366698929 0.04879552933623543" rpy="1.570796326794918 -9.436895709313829e-16 -1.5707963267948626"/>
+      <origin xyz="1.0155332974402627 0.07999999999999881 -0.026999999999961177" rpy="1.5707963267949183 -8.326672684688674e-16 -1.5707963267948974"/>
       <geometry>
         <mesh filename="package://reconcycle_description/meshes/vise_desk/RCY-003-013-0041.stl"/>
       </geometry>
@@ -5414,46 +5414,8 @@
         <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
       </material>
     </visual>
-  </link>
-  <link name="viseOne">
     <visual>
-      <origin xyz="0.9665332974502634 0.02190952633302023 0.05220447066377486" rpy="-1.570796326794875 -2.375877272697835e-14 1.5707963267948617"/>
-      <geometry>
-        <mesh filename="package://reconcycle_description/meshes/vise_desk/SOLID47.stl"/>
-      </geometry>
-      <material name="color14">
-        <color rgba="0.5394794940948486 0.5088813304901123 0.41788506507873535 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="0.9665332974502634 0.02190952633302023 0.05220447066377486" rpy="-1.570796326794875 -2.375877272697835e-14 1.5707963267948617"/>
-      <geometry>
-        <mesh filename="package://reconcycle_description/meshes/vise_desk/WJ200UM_01_10_22.stl"/>
-      </geometry>
-      <material name="color15">
-        <color rgba="0.0423114113509655 0.0423114113509655 0.0423114113509655 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="0.9665332974502634 0.02190952633302023 0.05220447066377486" rpy="-1.570796326794875 -2.375877272697835e-14 1.5707963267948617"/>
-      <geometry>
-        <mesh filename="package://reconcycle_description/meshes/vise_desk/WJ200UM_01_10_23.stl"/>
-      </geometry>
-      <material name="color15">
-        <color rgba="0.0423114113509655 0.0423114113509655 0.0423114113509655 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="0.9665332974502634 0.02190952633302023 0.05220447066377486" rpy="-1.570796326794875 -2.375877272697835e-14 1.5707963267948617"/>
-      <geometry>
-        <mesh filename="package://reconcycle_description/meshes/vise_desk/RCY-003-013-0040.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="0.9665332974502634 0.02190952633302023 0.05220447066377486" rpy="-1.570796326794875 -2.375877272697835e-14 1.5707963267948617"/>
+      <origin xyz="1.0155332974402627 0.07999999999999881 -0.026999999999961177" rpy="1.5707963267949183 -8.326672684688674e-16 -1.5707963267948974"/>
       <geometry>
         <mesh filename="package://reconcycle_description/meshes/vise_desk/RCY-003-012-040.stl"/>
       </geometry>
@@ -5462,10 +5424,56 @@
       </material>
     </visual>
   </link>
-  <link name="viseTw"/>
+  <link name="viseOne1">
+    <visual>
+      <origin xyz="1.01553329745026 -0.040000000000028346 0.12899999999995934" rpy="-1.570796326794875 -2.375877272697835e-14 1.5707963267948617"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/vise_desk/SOLID47.stl"/>
+      </geometry>
+      <material name="color14">
+        <color rgba="0.5394794940948486 0.5088813304901123 0.41788506507873535 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="1.01553329745026 -0.040000000000028346 0.12899999999995934" rpy="-1.570796326794875 -2.375877272697835e-14 1.5707963267948617"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/vise_desk/WJ200UM_01_10_22.stl"/>
+      </geometry>
+      <material name="color15">
+        <color rgba="0.0423114113509655 0.0423114113509655 0.0423114113509655 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="1.01553329745026 -0.040000000000028346 0.12899999999995934" rpy="-1.570796326794875 -2.375877272697835e-14 1.5707963267948617"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/vise_desk/WJ200UM_01_10_23.stl"/>
+      </geometry>
+      <material name="color15">
+        <color rgba="0.0423114113509655 0.0423114113509655 0.0423114113509655 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="1.01553329745026 -0.040000000000028346 0.12899999999995934" rpy="-1.570796326794875 -2.375877272697835e-14 1.5707963267948617"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/vise_desk/RCY-003-013-0040.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="1.01553329745026 -0.040000000000028346 0.12899999999995934" rpy="-1.570796326794875 -2.375877272697835e-14 1.5707963267948617"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/vise_desk/link_viseOne1_graber0.stl"/>
+      </geometry>
+      <material name="color3">
+        <color rgba="0.4019777774810791 0.4564110338687897 0.5457244515419006 1"/>
+      </material>
+    </visual>
+  </link>
   <link name="viseTwo">
     <visual>
-      <origin xyz="0.9275332974402639 0.02120447066372139 0.06059047366695409" rpy="1.5707963267951224 1.5707963267948886 -1.5707963267948966"/>
+      <origin xyz="0.9765332974502619 -0.05799999999996158 0.0035000000000006896" rpy="-1.5707963267948966 -1.5707963267948875 1.5707963267949208"/>
       <geometry>
         <mesh filename="package://reconcycle_description/meshes/vise_desk/SOLID45.stl"/>
       </geometry>
@@ -5474,7 +5482,7 @@
       </material>
     </visual>
     <visual>
-      <origin xyz="0.9275332974402639 0.02120447066372139 0.06059047366695409" rpy="1.5707963267951224 1.5707963267948886 -1.5707963267948966"/>
+      <origin xyz="0.9765332974502619 -0.05799999999996158 0.0035000000000006896" rpy="-1.5707963267948966 -1.5707963267948875 1.5707963267949208"/>
       <geometry>
         <mesh filename="package://reconcycle_description/meshes/vise_desk/WJ200UM_01_10_20.stl"/>
       </geometry>
@@ -5483,7 +5491,7 @@
       </material>
     </visual>
     <visual>
-      <origin xyz="0.9275332974402639 0.02120447066372139 0.06059047366695409" rpy="1.5707963267951224 1.5707963267948886 -1.5707963267948966"/>
+      <origin xyz="0.9765332974502619 -0.05799999999996158 0.0035000000000006896" rpy="-1.5707963267948966 -1.5707963267948875 1.5707963267949208"/>
       <geometry>
         <mesh filename="package://reconcycle_description/meshes/vise_desk/WJ200UM_01_10_21.stl"/>
       </geometry>
@@ -5492,9 +5500,47 @@
       </material>
     </visual>
     <visual>
-      <origin xyz="0.9275332974402639 0.02120447066372139 0.06059047366695409" rpy="1.5707963267951224 1.5707963267948886 -1.5707963267948966"/>
+      <origin xyz="0.9765332974502619 -0.05799999999996158 0.0035000000000006896" rpy="-1.5707963267948966 -1.5707963267948875 1.5707963267949208"/>
       <geometry>
         <mesh filename="package://reconcycle_description/meshes/vise_desk/link_viseTwo_graber0.stl"/>
+      </geometry>
+      <material name="color3">
+        <color rgba="0.4019777774810791 0.4564110338687897 0.5457244515419006 1"/>
+      </material>
+    </visual>
+  </link>
+  <link name="viseTwo1">
+    <visual>
+      <origin xyz="0.976533297450263 0.09799999999996101 0.1234999999999995" rpy="1.5707963267949252 1.5707963267948886 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/vise_desk/SOLID46.stl"/>
+      </geometry>
+      <material name="color14">
+        <color rgba="0.5394794940948486 0.5088813304901123 0.41788506507873535 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.976533297450263 0.09799999999996101 0.1234999999999995" rpy="1.5707963267949252 1.5707963267948886 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/vise_desk/WJ200UM_01_10_2 (1)0.stl"/>
+      </geometry>
+      <material name="color15">
+        <color rgba="0.0423114113509655 0.0423114113509655 0.0423114113509655 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.976533297450263 0.09799999999996101 0.1234999999999995" rpy="1.5707963267949252 1.5707963267948886 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/vise_desk/WJ200UM_01_10_2 (1)1.stl"/>
+      </geometry>
+      <material name="color15">
+        <color rgba="0.0423114113509655 0.0423114113509655 0.0423114113509655 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.976533297450263 0.09799999999996101 0.1234999999999995" rpy="1.5707963267949252 1.5707963267948886 -1.5707963267948966"/>
+      <geometry>
+        <mesh filename="package://reconcycle_description/meshes/vise_desk/link_viseTwo1_graber0.stl"/>
       </geometry>
       <material name="color3">
         <color rgba="0.4019777774810791 0.4564110338687897 0.5457244515419006 1"/>

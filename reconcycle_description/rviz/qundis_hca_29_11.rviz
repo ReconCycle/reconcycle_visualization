@@ -1,0 +1,1552 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 87
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /TF1/Frames1
+        - /qbVS1
+        - /Vision pipeline-Basler1
+        - /Basler_markerArray1
+        - /Realsense_MarkerArray1
+        - /Vision pipeline-realsense1
+        - /Softclaw_adapter1
+        - /table_vision1
+        - /table_cutter1
+        - /table_vise1
+        - /table_rob11
+        - /table_rob21
+      Splitter Ratio: 0.580722868
+    Tree Height: 487
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Tool Properties
+    Expanded:
+      - /2D Pose Estimate1
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.588679016
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: Vision pipeline-Basler
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: false
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+      Name: Working Surfaces
+      Robot Description: table/robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: false
+      Visual Enabled: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 1
+      Frames:
+        All Enabled: false
+        TEST1:
+          Value: true
+        aruco_marker_frame:
+          Value: true
+        battery_0_realsense:
+          Value: true
+        battery_0_vision_table_zero:
+          Value: true
+        battery_1_realsense:
+          Value: true
+        battery_2_realsense:
+          Value: true
+        battery_3_realsense:
+          Value: true
+        battery_4_realsense:
+          Value: true
+        battery_5_realsense:
+          Value: true
+        battery_6_realsense:
+          Value: true
+        battery_7_realsense:
+          Value: true
+        cutter:
+          Value: false
+        cutter/drop_battery:
+          Value: false
+        cutter/place_sc:
+          Value: false
+        cutter/plate_inedge1:
+          Value: false
+        cutter/plate_inedge2:
+          Value: false
+        cutter/plate_outedge1:
+          Value: false
+        cutter/plate_outedge2:
+          Value: false
+        cutter/realsense:
+          Value: false
+        cutter/realsense2:
+          Value: true
+        cutter/realsense_EE:
+          Value: false
+        cutter_table/base:
+          Value: true
+        cutter_table/cuttingBase:
+          Value: true
+        cutter_table/cuttingEdge:
+          Value: true
+        cutter_table/entryCenter:
+          Value: true
+        cutter_table/pickTray:
+          Value: true
+        cutter_table/pnpf:
+          Value: true
+        cutter_table/pnpf1:
+          Value: true
+        cutter_table/pnpf2:
+          Value: true
+        cutter_table/pnpf4:
+          Value: true
+        cutter_table/pnpm1:
+          Value: true
+        cutter_table/pnpm2:
+          Value: true
+        cutter_table/pnpm3:
+          Value: true
+        cutter_table/pnpm4:
+          Value: true
+        cutter_table/sliderHead:
+          Value: true
+        hca_back_0_realsense:
+          Value: true
+        hca_back_0_vision_table_zero:
+          Value: true
+        hca_back_1_vision_table_zero:
+          Value: true
+        hca_back_4_realsense:
+          Value: true
+        hca_front_2_realsense:
+          Value: true
+        hca_front_3_realsense:
+          Value: true
+        hca_front_8_realsense:
+          Value: true
+        hca_side1_0_vision_table_zero:
+          Value: true
+        hca_side1_2_vision_table_zero:
+          Value: true
+        internals_1_vision_table_zero:
+          Value: true
+        obj_0:
+          Value: true
+        obj_1:
+          Value: true
+        obj_2:
+          Value: true
+        obj_3:
+          Value: true
+        obj_4:
+          Value: true
+        obj_5:
+          Value: true
+        obj_6:
+          Value: true
+        obj_7:
+          Value: true
+        obj_8:
+          Value: true
+        p2_claw_mount/base:
+          Value: true
+        p2_claw_mount/camera:
+          Value: true
+        p2_claw_mount/mount:
+          Value: true
+        panda_1/panda_1_flange:
+          Value: false
+        panda_1/panda_1_link0:
+          Value: false
+        panda_1/panda_1_link1:
+          Value: false
+        panda_1/panda_1_link2:
+          Value: false
+        panda_1/panda_1_link3:
+          Value: false
+        panda_1/panda_1_link4:
+          Value: false
+        panda_1/panda_1_link5:
+          Value: false
+        panda_1/panda_1_link6:
+          Value: false
+        panda_1/panda_1_link7:
+          Value: false
+        panda_1/panda_1_link8:
+          Value: false
+        panda_1/panda_1_tc_robot:
+          Value: false
+        panda_1/panda_EE:
+          Value: false
+        panda_1/panda_link8:
+          Value: false
+        panda_1_EE:
+          Value: false
+        panda_1_K:
+          Value: false
+        panda_1_NE:
+          Value: false
+        panda_1_link8:
+          Value: false
+        panda_2/panda_2_flange:
+          Value: false
+        panda_2/panda_2_link0:
+          Value: false
+        panda_2/panda_2_link1:
+          Value: false
+        panda_2/panda_2_link2:
+          Value: false
+        panda_2/panda_2_link3:
+          Value: false
+        panda_2/panda_2_link4:
+          Value: false
+        panda_2/panda_2_link5:
+          Value: false
+        panda_2/panda_2_link6:
+          Value: false
+        panda_2/panda_2_link7:
+          Value: false
+        panda_2/panda_2_link8:
+          Value: false
+        panda_2/panda_2_tc_robot:
+          Value: false
+        panda_2/panda_EE:
+          Value: false
+        panda_2/panda_link8:
+          Value: false
+        panda_2/realsense:
+          Value: false
+        panda_2_EE:
+          Value: false
+        panda_2_K:
+          Value: false
+        panda_2_NE:
+          Value: false
+        panda_2_link8:
+          Value: false
+        pcb_0_realsense:
+          Value: true
+        pcb_0_vision_table_zero:
+          Value: true
+        pcb_1_realsense:
+          Value: true
+        pcb_2_realsense:
+          Value: true
+        pcb_3_realsense:
+          Value: true
+        pcb_4_realsense:
+          Value: true
+        pcb_5_realsense:
+          Value: true
+        pcb_6_realsense:
+          Value: true
+        pcb_7_realsense:
+          Value: true
+        pcb_8_realsense:
+          Value: true
+        pcb_covered_0_vision_table_zero:
+          Value: true
+        pcb_covered_1_vision_table_zero:
+          Value: true
+        pcb_covered_2_realsense:
+          Value: true
+        pcb_covered_2_vision_table_zero:
+          Value: true
+        pcb_covered_5_realsense:
+          Value: true
+        pcb_covered_7_realsense:
+          Value: true
+        pcb_covered_8_realsense:
+          Value: true
+        qbhand1_base_link:
+          Value: false
+        qbhand1_fingers_drag:
+          Value: false
+        qbhand1_index_distal_link:
+          Value: true
+        qbhand1_index_distal_virtual_link:
+          Value: true
+        qbhand1_index_knuckle_link:
+          Value: true
+        qbhand1_index_middle_link:
+          Value: true
+        qbhand1_index_middle_virtual_link:
+          Value: true
+        qbhand1_index_proximal_link:
+          Value: true
+        qbhand1_index_proximal_virtual_link:
+          Value: true
+        qbhand1_little_distal_link:
+          Value: true
+        qbhand1_little_distal_virtual_link:
+          Value: true
+        qbhand1_little_knuckle_link:
+          Value: true
+        qbhand1_little_middle_link:
+          Value: true
+        qbhand1_little_middle_virtual_link:
+          Value: true
+        qbhand1_little_proximal_link:
+          Value: true
+        qbhand1_little_proximal_virtual_link:
+          Value: true
+        qbhand1_middle_distal_link:
+          Value: true
+        qbhand1_middle_distal_virtual_link:
+          Value: true
+        qbhand1_middle_knuckle_link:
+          Value: true
+        qbhand1_middle_middle_link:
+          Value: true
+        qbhand1_middle_middle_virtual_link:
+          Value: true
+        qbhand1_middle_proximal_link:
+          Value: true
+        qbhand1_middle_proximal_virtual_link:
+          Value: true
+        qbhand1_palm_link:
+          Value: true
+        qbhand1_ring_distal_link:
+          Value: true
+        qbhand1_ring_distal_virtual_link:
+          Value: true
+        qbhand1_ring_knuckle_link:
+          Value: true
+        qbhand1_ring_middle_link:
+          Value: true
+        qbhand1_ring_middle_virtual_link:
+          Value: true
+        qbhand1_ring_proximal_link:
+          Value: true
+        qbhand1_ring_proximal_virtual_link:
+          Value: true
+        qbhand1_tendon_virtual_link:
+          Value: true
+        qbhand1_thumb_distal_link:
+          Value: true
+        qbhand1_thumb_distal_virtual_link:
+          Value: true
+        qbhand1_thumb_knuckle_link:
+          Value: true
+        qbhand1_thumb_proximal_link:
+          Value: true
+        qbhand1_thumb_proximal_virtual_link:
+          Value: true
+        qbhand_base_link:
+          Value: false
+        qbhand_palm_link:
+          Value: false
+        qbsoftclaw_claw_finger_up_link:
+          Value: false
+        qbsoftclaw_claw_finger_up_pad_100_link:
+          Value: false
+        qbsoftclaw_claw_rc_finger_down_b_link:
+          Value: false
+        qbsoftclaw_claw_rc_wrist_flange_link:
+          Value: false
+        qbsoftclaw_cube_link:
+          Value: false
+        qbsoftclaw_end_effector_link:
+          Value: false
+        qbsoftclaw_motor_1_link:
+          Value: false
+        qbsoftclaw_motor_2_link:
+          Value: false
+        qbsoftclaw_shaft_link:
+          Value: false
+        qbsoftclaw_stiffness_preset_virtual_link:
+          Value: false
+        realsense_aligned_depth_to_color_frame:
+          Value: false
+        realsense_color_frame:
+          Value: false
+        realsense_color_optical_frame:
+          Value: false
+        realsense_depth_frame:
+          Value: false
+        realsense_depth_optical_frame:
+          Value: false
+        realsense_link:
+          Value: false
+        rob_1_table/base:
+          Value: true
+        rob_1_table/pnpf:
+          Value: true
+        rob_1_table/pnpf1:
+          Value: true
+        rob_1_table/pnpf2:
+          Value: true
+        rob_1_table/pnpf4:
+          Value: true
+        rob_1_table/pnpm1:
+          Value: true
+        rob_1_table/pnpm2:
+          Value: true
+        rob_1_table/pnpm3:
+          Value: true
+        rob_1_table/pnpm4:
+          Value: true
+        rob_1_table/robo:
+          Value: true
+        rob_2_table/base:
+          Value: true
+        rob_2_table/pnpf:
+          Value: true
+        rob_2_table/pnpf1:
+          Value: true
+        rob_2_table/pnpf2:
+          Value: true
+        rob_2_table/pnpf4:
+          Value: true
+        rob_2_table/pnpm1:
+          Value: true
+        rob_2_table/pnpm2:
+          Value: true
+        rob_2_table/pnpm3:
+          Value: true
+        rob_2_table/pnpm4:
+          Value: true
+        rob_2_table/robo:
+          Value: true
+        root_link:
+          Value: false
+        soft_hand_adaptor:
+          Value: false
+        table_cutter:
+          Value: false
+        table_cutter_pnp_connector_1:
+          Value: false
+        table_cutter_pnp_connector_2:
+          Value: false
+        table_cutter_pnp_connector_3:
+          Value: false
+        table_cutter_pnp_connector_4:
+          Value: false
+        table_fixture:
+          Value: false
+        table_fixture_pnp_connector_1:
+          Value: false
+        table_fixture_pnp_connector_2:
+          Value: false
+        table_fixture_pnp_connector_3:
+          Value: false
+        table_fixture_pnp_connector_4:
+          Value: false
+        table_rob_1:
+          Value: false
+        table_rob_1_pnp_connector_1:
+          Value: false
+        table_rob_1_pnp_connector_2:
+          Value: false
+        table_rob_1_pnp_connector_3:
+          Value: false
+        table_rob_1_pnp_connector_4:
+          Value: false
+        table_rob_2:
+          Value: false
+        table_rob_2_pnp_connector_1:
+          Value: false
+        table_rob_2_pnp_connector_2:
+          Value: false
+        table_rob_2_pnp_connector_3:
+          Value: false
+        table_rob_2_pnp_connector_4:
+          Value: false
+        table_vision:
+          Value: false
+        table_vision_pnp_connector_1:
+          Value: false
+        table_vision_pnp_connector_2:
+          Value: false
+        table_vision_pnp_connector_3:
+          Value: false
+        table_vision_pnp_connector_4:
+          Value: false
+        tc_robot_panda1:
+          Value: false
+        tc_robot_panda2:
+          Value: false
+        vise:
+          Value: false
+        vise/gapdetect_init:
+          Value: false
+        vise/hcaDropHand:
+          Value: false
+        vise/hcaDropHand2:
+          Value: false
+        vise/hcaDropToBin:
+          Value: false
+        vise/hcaPickupClaw:
+          Value: false
+        vise/lowerplane:
+          Value: false
+        vise/pinpush_init:
+          Value: false
+        vise/realsense:
+          Value: false
+        vise/softclaw_rotated:
+          Value: false
+        vise/via1:
+          Value: false
+        vise/via2:
+          Value: false
+        vise/via3:
+          Value: false
+        vise_table/base:
+          Value: true
+        vise_table/pnpf:
+          Value: true
+        vise_table/pnpf1:
+          Value: true
+        vise_table/pnpf2:
+          Value: true
+        vise_table/pnpf4:
+          Value: true
+        vise_table/pnpm1:
+          Value: true
+        vise_table/pnpm2:
+          Value: true
+        vise_table/pnpm3:
+          Value: true
+        vise_table/pnpm4:
+          Value: true
+        vision_table/base:
+          Value: true
+        vision_table/pnpf:
+          Value: true
+        vision_table/pnpf1:
+          Value: true
+        vision_table/pnpf2:
+          Value: true
+        vision_table/pnpf4:
+          Value: true
+        vision_table/pnpm1:
+          Value: true
+        vision_table/pnpm2:
+          Value: true
+        vision_table/pnpm3:
+          Value: true
+        vision_table/pnpm4:
+          Value: true
+        vision_table/safepickuplim:
+          Value: false
+        vision_table_calib:
+          Value: false
+        vision_table_zero:
+          Value: false
+        world:
+          Value: false
+      Marker Scale: 0.5
+      Name: TF
+      Show Arrows: false
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          root_link:
+            qbhand_base_link:
+              qbhand_palm_link:
+                {}
+          table_rob_1:
+            cutter_table/base:
+              cutter_table/entryCenter:
+                cutter_table/cuttingBase:
+                  {}
+              cutter_table/pickTray:
+                {}
+              cutter_table/pnpf:
+                {}
+              cutter_table/pnpf1:
+                {}
+              cutter_table/pnpf2:
+                {}
+              cutter_table/pnpf4:
+                {}
+              cutter_table/pnpm1:
+                {}
+              cutter_table/pnpm2:
+                {}
+              cutter_table/pnpm3:
+                {}
+              cutter_table/pnpm4:
+                {}
+            panda_1/panda_1_link0:
+              panda_1/panda_1_link1:
+                panda_1/panda_1_link2:
+                  panda_1/panda_1_link3:
+                    panda_1/panda_1_link4:
+                      panda_1/panda_1_link5:
+                        panda_1/panda_1_link6:
+                          panda_1/panda_1_link7:
+                            panda_1/panda_1_link8:
+                              panda_1/panda_1_flange:
+                                panda_1/panda_1_tc_robot:
+                                  soft_hand_adaptor:
+                                    qbhand1_base_link:
+                                      qbhand1_fingers_drag:
+                                        {}
+                                      qbhand1_palm_link:
+                                        qbhand1_index_knuckle_link:
+                                          qbhand1_index_proximal_virtual_link:
+                                            qbhand1_index_proximal_link:
+                                              qbhand1_index_middle_virtual_link:
+                                                qbhand1_index_middle_link:
+                                                  qbhand1_index_distal_virtual_link:
+                                                    qbhand1_index_distal_link:
+                                                      {}
+                                        qbhand1_little_knuckle_link:
+                                          qbhand1_little_proximal_virtual_link:
+                                            qbhand1_little_proximal_link:
+                                              qbhand1_little_middle_virtual_link:
+                                                qbhand1_little_middle_link:
+                                                  qbhand1_little_distal_virtual_link:
+                                                    qbhand1_little_distal_link:
+                                                      {}
+                                        qbhand1_middle_knuckle_link:
+                                          qbhand1_middle_proximal_virtual_link:
+                                            qbhand1_middle_proximal_link:
+                                              qbhand1_middle_middle_virtual_link:
+                                                qbhand1_middle_middle_link:
+                                                  qbhand1_middle_distal_virtual_link:
+                                                    qbhand1_middle_distal_link:
+                                                      {}
+                                        qbhand1_ring_knuckle_link:
+                                          qbhand1_ring_proximal_virtual_link:
+                                            qbhand1_ring_proximal_link:
+                                              qbhand1_ring_middle_virtual_link:
+                                                qbhand1_ring_middle_link:
+                                                  qbhand1_ring_distal_virtual_link:
+                                                    qbhand1_ring_distal_link:
+                                                      {}
+                                        qbhand1_tendon_virtual_link:
+                                          {}
+                                        qbhand1_thumb_knuckle_link:
+                                          qbhand1_thumb_proximal_virtual_link:
+                                            qbhand1_thumb_proximal_link:
+                                              qbhand1_thumb_distal_virtual_link:
+                                                qbhand1_thumb_distal_link:
+                                                  {}
+                              panda_1_link8:
+                                panda_1_NE:
+                                  panda_1_EE:
+                                    panda_1/panda_EE:
+                                      {}
+                                    panda_1_K:
+                                      {}
+              vision_table_calib:
+                vision_table_zero:
+                  battery_0_vision_table_zero:
+                    {}
+                  hca_back_0_vision_table_zero:
+                    {}
+                  hca_back_1_vision_table_zero:
+                    {}
+                  hca_side1_0_vision_table_zero:
+                    {}
+                  hca_side1_2_vision_table_zero:
+                    {}
+                  internals_1_vision_table_zero:
+                    {}
+                  obj_0:
+                    {}
+                  obj_1:
+                    {}
+                  obj_2:
+                    {}
+                  pcb_0_vision_table_zero:
+                    {}
+                  pcb_covered_0_vision_table_zero:
+                    {}
+                  pcb_covered_1_vision_table_zero:
+                    {}
+                  pcb_covered_2_vision_table_zero:
+                    {}
+                  vision_table/safepickuplim:
+                    {}
+            rob_1_table/base:
+              rob_1_table/pnpf:
+                {}
+              rob_1_table/pnpf1:
+                {}
+              rob_1_table/pnpf2:
+                {}
+              rob_1_table/pnpf4:
+                {}
+              rob_1_table/pnpm1:
+                {}
+              rob_1_table/pnpm2:
+                {}
+              rob_1_table/pnpm3:
+                {}
+              rob_1_table/pnpm4:
+                {}
+              rob_1_table/robo:
+                {}
+            rob_2_table/base:
+              rob_2_table/pnpf:
+                {}
+              rob_2_table/pnpf1:
+                {}
+              rob_2_table/pnpf2:
+                {}
+              rob_2_table/pnpf4:
+                {}
+              rob_2_table/pnpm1:
+                {}
+              rob_2_table/pnpm2:
+                {}
+              rob_2_table/pnpm3:
+                {}
+              rob_2_table/pnpm4:
+                {}
+              rob_2_table/robo:
+                {}
+            table_fixture:
+              table_fixture_pnp_connector_1:
+                {}
+              table_fixture_pnp_connector_2:
+                {}
+              table_fixture_pnp_connector_3:
+                {}
+              table_fixture_pnp_connector_4:
+                {}
+              vise:
+                vise/gapdetect_init:
+                  {}
+                vise/hcaDropHand:
+                  {}
+                vise/hcaDropHand2:
+                  {}
+                vise/hcaDropToBin:
+                  {}
+                vise/hcaPickupClaw:
+                  {}
+                vise/lowerplane:
+                  {}
+                vise/pinpush_init:
+                  {}
+                vise/realsense:
+                  {}
+                vise/softclaw_rotated:
+                  {}
+                vise/via1:
+                  {}
+                vise/via2:
+                  {}
+                vise/via3:
+                  {}
+            table_rob_1_pnp_connector_1:
+              {}
+            table_rob_1_pnp_connector_2:
+              {}
+            table_rob_1_pnp_connector_3:
+              {}
+            table_rob_1_pnp_connector_4:
+              {}
+            table_vision:
+              table_cutter:
+                cutter:
+                  cutter/drop_battery:
+                    {}
+                  cutter/place_sc:
+                    {}
+                  cutter/plate_inedge1:
+                    {}
+                  cutter/plate_inedge2:
+                    {}
+                  cutter/plate_outedge1:
+                    {}
+                  cutter/plate_outedge2:
+                    {}
+                  cutter/realsense:
+                    {}
+                  cutter/realsense2:
+                    {}
+                  cutter/realsense_EE:
+                    {}
+                table_cutter_pnp_connector_1:
+                  {}
+                table_cutter_pnp_connector_2:
+                  {}
+                table_cutter_pnp_connector_3:
+                  {}
+                table_cutter_pnp_connector_4:
+                  {}
+              table_rob_2:
+                panda_2/panda_2_link0:
+                  TEST1:
+                    {}
+                  panda_2/panda_2_link1:
+                    panda_2/panda_2_link2:
+                      panda_2/panda_2_link3:
+                        panda_2/panda_2_link4:
+                          panda_2/panda_2_link5:
+                            panda_2/panda_2_link6:
+                              panda_2/panda_2_link7:
+                                panda_2/panda_2_link8:
+                                  panda_2/panda_2_flange:
+                                    p2_claw_mount/base:
+                                      p2_claw_mount/camera:
+                                        {}
+                                      p2_claw_mount/mount:
+                                        qbsoftclaw_claw_rc_wrist_flange_link:
+                                          qbsoftclaw_cube_link:
+                                            qbsoftclaw_claw_rc_finger_down_b_link:
+                                              {}
+                                            qbsoftclaw_motor_1_link:
+                                              {}
+                                            qbsoftclaw_motor_2_link:
+                                              {}
+                                            qbsoftclaw_shaft_link:
+                                              qbsoftclaw_claw_finger_up_link:
+                                                qbsoftclaw_claw_finger_up_pad_100_link:
+                                                  {}
+                                            qbsoftclaw_stiffness_preset_virtual_link:
+                                              {}
+                                          qbsoftclaw_end_effector_link:
+                                            {}
+                                    panda_2/panda_2_tc_robot:
+                                      {}
+                                    panda_2/realsense:
+                                      battery_0_realsense:
+                                        {}
+                                      battery_1_realsense:
+                                        {}
+                                      battery_2_realsense:
+                                        {}
+                                      battery_3_realsense:
+                                        {}
+                                      battery_4_realsense:
+                                        {}
+                                      battery_5_realsense:
+                                        {}
+                                      battery_6_realsense:
+                                        {}
+                                      battery_7_realsense:
+                                        {}
+                                      hca_back_0_realsense:
+                                        {}
+                                      hca_back_4_realsense:
+                                        {}
+                                      hca_front_2_realsense:
+                                        {}
+                                      hca_front_3_realsense:
+                                        {}
+                                      hca_front_8_realsense:
+                                        {}
+                                      obj_3:
+                                        {}
+                                      obj_4:
+                                        {}
+                                      obj_5:
+                                        {}
+                                      obj_6:
+                                        {}
+                                      obj_7:
+                                        {}
+                                      obj_8:
+                                        {}
+                                      pcb_0_realsense:
+                                        {}
+                                      pcb_1_realsense:
+                                        {}
+                                      pcb_2_realsense:
+                                        {}
+                                      pcb_3_realsense:
+                                        {}
+                                      pcb_4_realsense:
+                                        {}
+                                      pcb_5_realsense:
+                                        {}
+                                      pcb_6_realsense:
+                                        {}
+                                      pcb_7_realsense:
+                                        {}
+                                      pcb_8_realsense:
+                                        {}
+                                      pcb_covered_2_realsense:
+                                        {}
+                                      pcb_covered_5_realsense:
+                                        {}
+                                      pcb_covered_7_realsense:
+                                        {}
+                                      pcb_covered_8_realsense:
+                                        {}
+                                  panda_2_link8:
+                                    panda_2_NE:
+                                      panda_2_EE:
+                                        panda_2/panda_EE:
+                                          {}
+                                        panda_2_K:
+                                          {}
+                table_rob_2_pnp_connector_1:
+                  {}
+                table_rob_2_pnp_connector_2:
+                  {}
+                table_rob_2_pnp_connector_3:
+                  {}
+                table_rob_2_pnp_connector_4:
+                  {}
+              table_vision_pnp_connector_1:
+                {}
+              table_vision_pnp_connector_2:
+                {}
+              table_vision_pnp_connector_3:
+                {}
+              table_vision_pnp_connector_4:
+                {}
+            vise_table/base:
+              vise_table/pnpf:
+                {}
+              vise_table/pnpf1:
+                {}
+              vise_table/pnpf2:
+                {}
+              vise_table/pnpf4:
+                {}
+              vise_table/pnpm1:
+                {}
+              vise_table/pnpm2:
+                {}
+              vise_table/pnpm3:
+                {}
+              vise_table/pnpm4:
+                {}
+            vision_table/base:
+              vision_table/pnpf:
+                {}
+              vision_table/pnpf1:
+                {}
+              vision_table/pnpf2:
+                {}
+              vision_table/pnpf4:
+                {}
+              vision_table/pnpm1:
+                {}
+              vision_table/pnpm2:
+                {}
+              vision_table/pnpm3:
+                {}
+              vision_table/pnpm4:
+                {}
+      Update Interval: 0
+      Value: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+      Name: Panda 1
+      Robot Description: panda_1/robot_description
+      TF Prefix: panda_1
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+      Name: Panda 2
+      Robot Description: panda_2/robot_description
+      TF Prefix: panda_2
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        soft_hand_adaptor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: Adaptor
+      Robot Description: adaptor/adaptor_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+      Name: qbHand
+      Robot Description: qbhand1/robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        qbsoftclaw_claw_finger_up_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbsoftclaw_claw_finger_up_pad_100_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbsoftclaw_claw_rc_finger_down_b_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbsoftclaw_claw_rc_wrist_flange_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbsoftclaw_cube_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbsoftclaw_end_effector_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbsoftclaw_motor_1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbsoftclaw_motor_2_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        qbsoftclaw_shaft_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        qbsoftclaw_stiffness_preset_virtual_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        root_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        world:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: qbVS
+      Robot Description: qbsoftclaw/robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /realsense_aruco/marker
+      Name: Vision markers
+      Namespaces:
+        {}
+      Queue Size: 20
+      Value: true
+    - Class: rviz/Image
+      Enabled: true
+      Image Topic: /vision/basler/colour
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Vision pipeline-Basler
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /vision/basler/markers
+      Name: Basler_markerArray
+      Namespaces:
+        vision_table_zero: true
+      Queue Size: 3
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: false
+      Marker Topic: /vision/realsense/markers
+      Name: Realsense_MarkerArray
+      Namespaces:
+        {}
+      Queue Size: 3
+      Value: false
+    - Class: rviz/Image
+      Enabled: false
+      Image Topic: /vision/realsense/colour
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Vision pipeline-realsense
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: false
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        mount:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: Softclaw_adapter
+      Robot Description: /p2_claw_mount/robot_description
+      TF Prefix: p2_claw_mount
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pnpf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: table_vision
+      Robot Description: /vision_table/robot_description
+      TF Prefix: vision_table
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cuttingBase:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cuttingEdge:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        entryCenter:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pickTray:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        sliderHead:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: table_cutter
+      Robot Description: /cutter_table/robot_description
+      TF Prefix: cutter_table
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pnpf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        viseOn:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        viseOne:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        viseTw:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        viseTwo:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: table_vise
+      Robot Description: /vise_table/robot_description
+      TF Prefix: vise_table
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pnpf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robo:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: table_rob1
+      Robot Description: /rob_1_table/robot_description
+      TF Prefix: rob_1_table
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pnpf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpf4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pnpm4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        robo:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: table_rob2
+      Robot Description: /rob_2_table/robot_description
+      TF Prefix: rob_2_table
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+  Enabled: true
+  Global Options:
+    Background Color: 206; 225; 255
+    Default Light: true
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+      Topic: /initialpose
+    - Class: rviz/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 2.58575082
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.0599999987
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 0.378591388
+        Y: 0.612681091
+        Z: 1.12471426
+      Focal Shape Fixed Size: false
+      Focal Shape Size: 0.0500000007
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.00999999978
+      Pitch: 0.684796035
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 2.65040278
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1110
+  Hide Left Dock: false
+  Hide Right Dock: true
+  QMainWindow State: 000000ff00000000fd0000000400000000000001d600000402fc020000000afb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003a00000278000000c600fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000002c0056006900730069006f006e00200070006900700065006c0069006e0065002d004200610073006c0065007201000002b8000001840000001600fffffffb000000320056006900730069006f006e00200070006900700065006c0069006e0065002d007200650061006c00730065006e00730065000000036d000000cf0000001600ffffff0000000100000110000002e6fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730000000044000002e60000009e00fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000006400000004cfc0100000002fb0000000800540069006d00650000000000000006400000024400fffffffb0000000800540069006d00650100000000000004500000000000000000000005a40000040200000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: true
+  Vision pipeline-Basler:
+    collapsed: false
+  Vision pipeline-realsense:
+    collapsed: false
+  Width: 1920
+  X: 1920
+  Y: 0

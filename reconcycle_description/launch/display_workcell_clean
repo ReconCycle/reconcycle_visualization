@@ -1,0 +1,87 @@
+<launch>
+  <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}] [${node}]: ${message}" />
+  <param name="/use_sim_time" value="false" />
+
+  <!-- General arguments-->
+  <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/smokedet.rviz" />
+  <arg name="table_layout" default="$(find reconcycle_description)/layouts/smokedet_layout.xacro" />
+  <arg name="panda_model" default="$(find reconcycle_description)/urdf/reconcycle_panda.xacro" />
+  <arg name="rviz" default="true" />
+  <arg name="robot_gazebo" default="false"/>
+  <arg name="robot_absent" default="false"/>
+
+  <!-- ReconCycle tables -->
+  <group ns='table'>
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg table_layout)" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  </group>
+  
+  <include file="$(find reconcycle_description)/launch/display_panda1.launch" >
+  </include>
+  
+  <include file="$(find reconcycle_description)/launch/display_panda2.launch" >
+  </include>
+
+  
+<!-- manual calibration for vision @ EMO -->
+  <!-- node name="panda_1_to_calib" pkg="tf" type="static_transform_publisher" args="0.2602 -0.6074 0 0 0 0 1 $(arg panda1_prefix)$(arg panda1_name)_link0 vision_table_calib 100" / -->
+  <node name="panda_1_to_calib" pkg="tf" type="static_transform_publisher" args="0.329 0 0 0 0 1 0 $(arg panda1_prefix)$(arg panda1_name)_link0 vision_table_calib 100" />
+
+
+  <!-- Tool holder and tools
+  <include file="$(find reconcycle_description)/launch/display_tools.launch" /> -->
+
+  <!-- RVIZ GUI -->
+  <node if="$(arg rviz)" name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+  
+  <group ns='visiontable_tfs'>
+    <node name="visiontable_tfs1" pkg="tf" type="static_transform_publisher" args="-0.9 0.3 0.02 -1.5708 0 0 table_rob_1 vision_table_zero 100"/>
+    <!--
+    <node name="visiontable_tfs1" pkg="tf" type="static_transform_publisher" args="0.22 0.3 0 0 0 3.14159 vision_table_zero vision_table/safepickuplim 100"/>
+    <node name="calib_to_zero" pkg="tf" type="static_transform_publisher" args="-0.57 -0.3 0 0 0 0 vision_table_calib vision_table_zero 200"/>
+    <node name="calib_to_zero" pkg="tf" type="static_transform_publisher" args="-0.57 -0.3 0 0.7071 0.7071 0 0 vision_table_calib vision_table_zero 100"/>
+    -->
+  </group> 
+  
+  
+  <!-- Novo - dr. Rok - VSA ADAPTOR - Panda flange- to softclaw - adapter in between -->
+  <include file="$(find reconcycle_description)/launch/load_part.launch">
+    <arg name="tf_prefix" value="p2_claw_mount"/>
+    <arg name="urdf_name" value="claw_mount"/>
+  </include>
+  <node name="panda_ee_to_softclaw" pkg="tf" type="static_transform_publisher" args="0 0 0 1.570795 0 3.14159 $(arg panda2_prefix)$(arg panda2_name)_flange p2_claw_mount/base 100"/>
+  
+  <!-- Novo - dr. Rok - Vision table - with camera pillar -->
+  <include file="$(find reconcycle_description)/launch/load_part.launch">
+    <arg name="tf_prefix" value="vision_table"/>
+    <arg name="urdf_name" value="camera_desk"/>
+  </include>
+  <node name="table_1_to_vision_table" pkg="tf" type="static_transform_publisher" args="-0.3 -0.3 0.02 1.570795 0 0 table_rob_1 vision_table/base 100"/>
+
+  <!-- Novo - dr. Rok - Robot table 1 -->
+  <include file="$(find reconcycle_description)/launch/load_part.launch">
+    <arg name="tf_prefix" value="rob_1_table"/>
+    <arg name="urdf_name" value="robot_desk"/>
+  </include>
+  <node name="rob1table_to_vision_table" pkg="tf" type="static_transform_publisher" args="0.3 -0.3 0.02 1.570795 0 0 table_rob_1 rob_1_table/base 100"/>
+  
+  <!-- Novo - dr. Rok - Robot table 2 -->
+  <include file="$(find reconcycle_description)/launch/load_part.launch">
+    <arg name="tf_prefix" value="rob_2_table"/>
+    <arg name="urdf_name" value="robot_desk"/>
+  </include>
+  <node name="rob2table_to_vision_table" pkg="tf" type="static_transform_publisher" args="-0.9 0.9 0.02 -1.570795 0 0 table_rob_1 rob_2_table/base 100"/>
+
+
+  <!-- Table CNC -->
+  <node name="cnc_table_base_to_machine_home" pkg="tf" type="static_transform_publisher" args="-0.2 -0.1 0.2 3.14159 0 0 table_cnc cnc_machine_home 100"/>
+
+  <node name="basler_vision_table_tfpub" pkg="tf" type="static_transform_publisher" args="0.291 0.322 1.34 0 0 3.14 vision_table_zero basler_cam 100"/>
+  
+  <!-- Aruco markers -->
+  <node name="aruco_tfpub_1" pkg="tf" type="static_transform_publisher" args="-0.25 -0.25 0.02 0 0 0 table_vision aruco_1 100"/>
+  <node name="aruco_tfpub_2" pkg="tf" type="static_transform_publisher" args="-0.25 0.25 0.02 0 0 0 table_vision aruco_2 100"/>
+  <node name="aruco_tfpub_3" pkg="tf" type="static_transform_publisher" args="0.25 -0.25 0.02 0 0 0 table_vision aruco_3 100"/>
+  <node name="aruco_tfpub_4" pkg="tf" type="static_transform_publisher" args="0.25 0.25 0.02 0 0 0 table_vision aruco_4 100"/>
+
+</launch>

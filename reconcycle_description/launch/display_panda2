@@ -1,0 +1,41 @@
+<launch>
+
+  <!-- temporary solution - a bit ugly as franka_control doesnt support tf_prefix -->
+  <arg name='panda2_prefix' value='panda_2/' /> <!-- or empty -->
+  <arg name='panda2_name' value='panda_2' /> <!-- or panda -->
+
+  <!-- Panda 2 -->
+  <group ns='panda_2'>
+    <!-- <param name="robot_description" command="$(find xacro)/xacro '$(arg panda_model)' robot_name:='panda' connected_to:=''" /> -->
+    <node name="table_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0.02 1.570796 0 0 table_rob_2 $(arg panda2_prefix)$(arg panda2_name)_link0 100" />
+    <node name="flange_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0.01 -0.785 3.14159 0 $(arg panda2_prefix)$(arg panda2_name)_link8 $(arg panda2_prefix)$(arg panda2_name)_flange 50" />
+    <node name="tc_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 -0.1305262 0.9914449 $(arg panda2_prefix)$(arg panda2_name)_flange $(arg panda2_prefix)$(arg panda2_name)_tc_robot 50" />
+    <node name="panda_link8_fix" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 $(arg panda2_prefix)$(arg panda2_name)_link8 $(arg panda2_name)_link8 100" /> 
+    <node name="panda_EE_fix" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 $(arg panda2_name)_EE $(arg panda2_prefix)panda_EE 100" />
+    
+    <!--
+    <node name="panda_2_to_realsense" pkg="tf" type="static_transform_publisher" args="-0.08 -0.0325 -0.020 -1.57079 3.14159 0  $(arg panda2_prefix)$(arg panda2_name)_flange $(arg panda2_prefix)realsense 100" />
+    -->
+    <node name="panda_2_to_realsense" pkg="tf" type="static_transform_publisher" args="-0.08 -0.0325 -0.017 -1.57079 3.14159 0  $(arg panda2_prefix)$(arg panda2_name)_flange $(arg panda2_prefix)realsense 100" />
+    
+  </group>
+  
+
+  <group ns='panda_2'>
+    <node name="panda_2_to_table" pkg="tf" type="static_transform_publisher" args="0 0 0.02 0 0 0 table_rob_2 panda_2/world 100"/>
+  </group> -->
+
+  <!-- VSA -->
+  <include file="$(find reconcycle_description)/launch/softclaw.launch" >
+  </include>
+
+  <!-- Screwdriver 
+  <include file="$(find reconcycle_description)/launch/display_screwdriver.launch" >
+  </include> -->
+  
+  <!-- Schunk PZH-20 threejaw gripper mounted on panda_1 --> 
+  <include file="$(find reconcycle_description)/launch/schunk_pzh20.launch">
+    <arg name="connected_to" value="$(arg panda1_prefix)$(arg panda1_name)_tc_robot" />
+  </include>
+
+</launch>

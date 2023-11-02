@@ -5,9 +5,8 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Working Surfaces1
-        - /TF1
         - /TF1/Frames1
-        - /table_vision1
+        - /TF1/Frames1/panda_1/panda_1_link01
         - /Vision pipeline-realsense-top1
         - /P1_MotionPlanning1/Scene Geometry1
         - /P2_MotionPlanning1/Planned Path1
@@ -15,7 +14,7 @@ Panels:
         - /schunk1
         - /cube_array1
       Splitter Ratio: 0.5930787324905396
-    Tree Height: 690
+    Tree Height: 417
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -168,137 +167,69 @@ Visualization Manager:
       Frame Timeout: 1
       Frames:
         All Enabled: false
+        aruco_1:
+          Value: true
+        aruco_2:
+          Value: true
+        aruco_3:
+          Value: true
+        aruco_4:
+          Value: true
         basler_cam:
           Value: false
-        battery_1_vision_table_zero:
-          Value: true
-        battery_2_panda_2/realsense:
-          Value: false
-        battery_2_vision_table_zero:
-          Value: false
-        battery_3_panda_2/realsense:
-          Value: true
-        battery_3_vision_table_zero:
-          Value: true
-        battery_4_panda_2/realsense:
-          Value: true
-        battery_4_vision_table_zero:
-          Value: true
-        battery_5_panda_2/realsense:
-          Value: true
-        battery_5_vision_table_zero:
-          Value: true
-        battery_6_panda_2/realsense:
+        body_default/rs:
           Value: true
         cnc_machine_home:
           Value: false
-        cube_black:
+        head_default/rs:
           Value: true
-        cube_black_aruco:
-          Value: false
-        cube_black_aruco_2:
-          Value: false
-        cube_orange:
+        l_ankle_default/rs:
           Value: true
-        cube_orange_aruco:
-          Value: false
-        cube_orange_aruco_2:
-          Value: false
-        cube_red:
+        l_elbow_default/rs:
           Value: true
-        cube_red_aruco:
-          Value: false
-        cube_red_aruco_2:
-          Value: false
-        cube_violet:
+        l_hip_default/rs:
           Value: true
-        cube_violet_aruco:
+        l_knee_default/rs:
           Value: true
-        cube_violet_aruco_2:
+        l_p_hip_default/rs:
           Value: true
-        firealarm_back_3_panda_2/realsense:
+        l_p_shoulder_default/rs:
           Value: true
-        firealarm_back_4_panda_2/realsense:
+        l_shoulder_default/rs:
           Value: true
-        firealarm_back_5_panda_2/realsense:
+        l_wrist_default/rs:
           Value: true
-        firealarm_back_6_panda_2/realsense:
+        l_y_hip_default/rs:
           Value: true
-        firealarm_back_7_panda_2/realsense:
+        l_y_shoulder_default/rs:
           Value: true
-        firealarm_back_8_panda_2/realsense:
+        marker/0:
           Value: true
-        firealarm_front_0_panda_2/realsense:
+        marker/1:
           Value: true
-        firealarm_front_1_panda_2/realsense:
-          Value: false
-        firealarm_front_3_panda_2/realsense:
+        marker/2:
           Value: true
-        firealarm_front_4_panda_2/realsense:
+        marker/3:
           Value: true
-        firealarm_front_4_vision_table_zero:
+        marker/4:
           Value: true
-        firealarm_front_7_panda_2/realsense:
+        marker/5:
           Value: true
-        hca_back_2_vision_table_zero:
+        marker/6:
           Value: true
-        hca_back_3_vision_table_zero:
+        marker/7:
           Value: true
-        hca_back_4_vision_table_zero:
+        marker/8:
           Value: true
-        hca_back_5_panda_2/realsense:
-          Value: false
-        hca_back_5_vision_table_zero:
+        marker/9:
           Value: true
-        hca_back_6_panda_2/realsense:
+        markerVis/1:
           Value: true
-        hca_back_6_vision_table_zero:
+        markerVis/5:
           Value: true
-        hca_back_7_panda_2/realsense:
+        markerVis/6:
           Value: true
-        hca_back_7_vision_table_zero:
-          Value: true
-        hca_front_0_panda_2/realsense:
-          Value: true
-        hca_front_0_vision_table_zero:
-          Value: true
-        hca_front_1_panda_2/realsense:
-          Value: true
-        hca_front_1_vision_table_zero:
-          Value: true
-        hca_front_2_panda_2/realsense:
-          Value: true
-        hca_front_2_vision_table_zero:
-          Value: true
-        hca_front_3_panda_2/realsense:
-          Value: true
-        hca_front_3_vision_table_zero:
-          Value: true
-        hca_front_4_panda_2/realsense:
-          Value: true
-        hca_front_4_vision_table_zero:
-          Value: true
-        hca_front_5_panda_2/realsense:
-          Value: true
-        hca_front_5_vision_table_zero:
-          Value: true
-        hca_front_6_panda_2/realsense:
-          Value: true
-        hca_front_6_vision_table_zero:
-          Value: true
-        hca_front_7_panda_2/realsense:
-          Value: true
-        hca_front_7_vision_table_zero:
-          Value: true
-        hca_front_8_panda_2/realsense:
-          Value: true
-        hca_side2_1_panda_2/realsense:
-          Value: true
-        hca_side2_6_vision_table_zero:
-          Value: true
-        internals_5_panda_2/realsense:
-          Value: true
-        internals_6_panda_2/realsense:
+        markerVis/7:
           Value: true
         p2_claw_mount/base:
           Value: false
@@ -306,10 +237,26 @@ Visualization Manager:
           Value: false
         p2_claw_mount/mount:
           Value: false
+        p_head_default/rs:
+          Value: true
         panda_1/panda_1_flange:
           Value: false
         panda_1/panda_1_link0:
           Value: false
+        panda_1/panda_1_link1:
+          Value: true
+        panda_1/panda_1_link2:
+          Value: true
+        panda_1/panda_1_link3:
+          Value: true
+        panda_1/panda_1_link4:
+          Value: true
+        panda_1/panda_1_link5:
+          Value: true
+        panda_1/panda_1_link6:
+          Value: true
+        panda_1/panda_1_link7:
+          Value: true
         panda_1/panda_1_link8:
           Value: false
         panda_1/panda_1_tc_robot:
@@ -318,6 +265,12 @@ Visualization Manager:
           Value: false
         panda_1_EE:
           Value: false
+        panda_1_K:
+          Value: true
+        panda_1_NE:
+          Value: true
+        panda_1_link0:
+          Value: true
         panda_1_link8:
           Value: false
         panda_2/panda_2_flange:
@@ -352,19 +305,11 @@ Visualization Manager:
           Value: false
         panda_2_NE:
           Value: false
+        panda_2_link0:
+          Value: true
         panda_2_link8:
           Value: false
-        pcb_4_vision_table_zero:
-          Value: true
-        pcb_5_vision_table_zero:
-          Value: true
-        pcb_6_vision_table_zero:
-          Value: true
-        pcb_covered_4_vision_table_zero:
-          Value: true
-        pcb_covered_5_vision_table_zero:
-          Value: true
-        pcb_covered_6_vision_table_zero:
+        panda_tangent:
           Value: true
         qbhand1_base_link:
           Value: false
@@ -376,26 +321,56 @@ Visualization Manager:
           Value: false
         qbhand_palm_link:
           Value: false
-        qbsoftclaw_claw_finger_up_link:
-          Value: false
-        qbsoftclaw_claw_finger_up_pad_100_link:
-          Value: false
-        qbsoftclaw_claw_rc_finger_down_b_link:
-          Value: false
+        qbmove1_base_flange_link:
+          Value: true
+        qbmove1_cube_link:
+          Value: true
+        qbmove1_motor_1_link:
+          Value: true
+        qbmove1_motor_2_link:
+          Value: true
+        qbmove1_shaft_link:
+          Value: true
+        qbmove1_stiffness_preset_virtual_link:
+          Value: true
+        qbmove3_base_flange_link:
+          Value: true
+        qbmove3_cube_link:
+          Value: true
+        qbmove3_deflection_virtual_link:
+          Value: true
+        qbmove3_motor_1_link:
+          Value: true
+        qbmove3_motor_2_link:
+          Value: true
+        qbmove3_shaft_link:
+          Value: true
+        qbmove3_stiffness_preset_virtual_link:
+          Value: true
         qbsoftclaw_claw_rc_wrist_flange_link:
           Value: false
-        qbsoftclaw_cube_link:
-          Value: false
-        qbsoftclaw_end_effector_link:
-          Value: false
-        qbsoftclaw_motor_1_link:
-          Value: false
-        qbsoftclaw_motor_2_link:
-          Value: false
-        qbsoftclaw_shaft_link:
-          Value: false
-        qbsoftclaw_stiffness_preset_virtual_link:
-          Value: false
+        r_ankle_default/rs:
+          Value: true
+        r_elbow_default/rs:
+          Value: true
+        r_head_default/rs:
+          Value: true
+        r_hip_default/rs:
+          Value: true
+        r_knee_default/rs:
+          Value: true
+        r_p_hip_default/rs:
+          Value: true
+        r_p_shoulder_default/rs:
+          Value: true
+        r_shoulder_default/rs:
+          Value: true
+        r_wrist_default/rs:
+          Value: true
+        r_y_hip_default/rs:
+          Value: true
+        r_y_shoulder_default/rs:
+          Value: true
         realsense_aligned_depth_to_color_frame:
           Value: false
         realsense_color_frame:
@@ -462,6 +437,8 @@ Visualization Manager:
           Value: false
         root_link:
           Value: false
+        rs_top:
+          Value: true
         schunk_pzh20:
           Value: false
         schunk_pzh20_adapter:
@@ -512,6 +489,8 @@ Visualization Manager:
           Value: false
         tc_robot_panda2:
           Value: false
+        torso_default/rs:
+          Value: true
         vision_table/base:
           Value: false
         vision_table/pnpf:
@@ -534,8 +513,12 @@ Visualization Manager:
           Value: false
         vision_table_zero:
           Value: false
+        waist_default/rs:
+          Value: true
         world:
           Value: false
+        y_head_default/rs:
+          Value: true
       Marker Alpha: 1
       Marker Scale: 0.5
       Name: TF
@@ -543,23 +526,6 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        panda_1/panda_1_link8:
-          panda_1/panda_1_flange:
-            panda_1/panda_1_tc_robot:
-              schunk_pzh20_adapter:
-                schunk_pzh20:
-                  {}
-              soft_hand_adaptor:
-                qbhand1_base_link:
-                  qbhand1_fingers_drag:
-                    {}
-          panda_1_link8:
-            {}
-          tc_robot_panda1:
-            {}
-        panda_1_EE:
-          panda_1/panda_EE:
-            {}
         realsense_link:
           realsense_aligned_depth_to_color_frame:
             realsense_color_optical_frame:
@@ -578,33 +544,152 @@ Visualization Manager:
           realsense_top_depth_frame:
             realsense_top_depth_optical_frame:
               {}
+        root_link:
+          qbhand_base_link:
+            qbhand_end_effector_link:
+              {}
+            qbhand_palm_link:
+              {}
+          qbmove1_base_flange_link:
+            qbmove1_cube_link:
+              qbmove1_motor_1_link:
+                {}
+              qbmove1_motor_2_link:
+                {}
+              qbmove1_shaft_link:
+                {}
+              qbmove1_stiffness_preset_virtual_link:
+                {}
+          qbmove3_base_flange_link:
+            qbmove3_cube_link:
+              qbmove3_deflection_virtual_link:
+                {}
+              qbmove3_motor_1_link:
+                {}
+              qbmove3_motor_2_link:
+                {}
+              qbmove3_shaft_link:
+                {}
+              qbmove3_stiffness_preset_virtual_link:
+                {}
         world:
-          cube_black:
+          marker/0:
             {}
-          cube_black_aruco_2:
+          marker/1:
             {}
-          cube_orange:
+          marker/2:
             {}
-          cube_orange_aruco_2:
+          marker/3:
             {}
-          cube_red:
+          marker/4:
             {}
-          cube_red_aruco_2:
+          marker/5:
             {}
-          cube_violet:
+          marker/6:
             {}
-          cube_violet_aruco_2:
+          marker/7:
             {}
-          root_link:
-            qbhand_base_link:
-              qbhand_end_effector_link:
-                {}
-              qbhand_palm_link:
-                {}
+          marker/8:
+            {}
+          marker/9:
+            {}
+          rs_top:
+            body_default/rs:
+              {}
+            head_default/rs:
+              {}
+            l_ankle_default/rs:
+              {}
+            l_elbow_default/rs:
+              {}
+            l_hip_default/rs:
+              {}
+            l_knee_default/rs:
+              {}
+            l_p_hip_default/rs:
+              {}
+            l_p_shoulder_default/rs:
+              {}
+            l_shoulder_default/rs:
+              {}
+            l_wrist_default/rs:
+              {}
+            l_y_hip_default/rs:
+              {}
+            l_y_shoulder_default/rs:
+              {}
+            markerVis/1:
+              {}
+            markerVis/5:
+              {}
+            markerVis/6:
+              {}
+            markerVis/7:
+              {}
+            p_head_default/rs:
+              {}
+            r_ankle_default/rs:
+              {}
+            r_elbow_default/rs:
+              {}
+            r_head_default/rs:
+              {}
+            r_hip_default/rs:
+              {}
+            r_knee_default/rs:
+              {}
+            r_p_hip_default/rs:
+              {}
+            r_p_shoulder_default/rs:
+              {}
+            r_shoulder_default/rs:
+              {}
+            r_wrist_default/rs:
+              {}
+            r_y_hip_default/rs:
+              {}
+            r_y_shoulder_default/rs:
+              {}
+            torso_default/rs:
+              {}
+            waist_default/rs:
+              {}
+            y_head_default/rs:
+              {}
           table_rob_1:
             panda_1/panda_1_link0:
+              panda_1/panda_1_link1:
+                panda_1/panda_1_link2:
+                  panda_1/panda_1_link3:
+                    panda_1/panda_1_link4:
+                      panda_1/panda_1_link5:
+                        panda_1/panda_1_link6:
+                          panda_1/panda_1_link7:
+                            panda_1/panda_1_link8:
+                              panda_1/panda_1_flange:
+                                panda_1/panda_1_tc_robot:
+                                  schunk_pzh20_adapter:
+                                    schunk_pzh20:
+                                      {}
+                                  soft_hand_adaptor:
+                                    qbhand1_base_link:
+                                      qbhand1_fingers_drag:
+                                        {}
+                              panda_1_link8:
+                                panda_1_NE:
+                                  panda_1_EE:
+                                    panda_1/panda_EE:
+                                      {}
+                                    panda_1_K:
+                                      {}
+                              tc_robot_panda1:
+                                {}
+              panda_tangent:
+                {}
               vision_table_calib:
                 {}
+            panda_1_link0:
+              {}
             rob_1_table/base:
               rob_1_table/pnpf:
                 {}
@@ -678,94 +763,11 @@ Visualization Manager:
                                       {}
                                     p2_claw_mount/mount:
                                       qbsoftclaw_claw_rc_wrist_flange_link:
-                                        qbsoftclaw_cube_link:
-                                          qbsoftclaw_claw_rc_finger_down_b_link:
-                                            {}
-                                          qbsoftclaw_motor_1_link:
-                                            {}
-                                          qbsoftclaw_motor_2_link:
-                                            {}
-                                          qbsoftclaw_shaft_link:
-                                            qbsoftclaw_claw_finger_up_link:
-                                              qbsoftclaw_claw_finger_up_pad_100_link:
-                                                {}
-                                          qbsoftclaw_stiffness_preset_virtual_link:
-                                            {}
-                                        qbsoftclaw_end_effector_link:
-                                          {}
+                                        {}
                                   panda_2/panda_2_tc_robot:
                                     {}
                                   panda_2/realsense:
-                                    battery_2_panda_2/realsense:
-                                      {}
-                                    battery_3_panda_2/realsense:
-                                      {}
-                                    battery_4_panda_2/realsense:
-                                      {}
-                                    battery_5_panda_2/realsense:
-                                      {}
-                                    battery_6_panda_2/realsense:
-                                      {}
-                                    cube_black_aruco:
-                                      {}
-                                    cube_orange_aruco:
-                                      {}
-                                    cube_red_aruco:
-                                      {}
-                                    cube_violet_aruco:
-                                      {}
-                                    firealarm_back_3_panda_2/realsense:
-                                      {}
-                                    firealarm_back_4_panda_2/realsense:
-                                      {}
-                                    firealarm_back_5_panda_2/realsense:
-                                      {}
-                                    firealarm_back_6_panda_2/realsense:
-                                      {}
-                                    firealarm_back_7_panda_2/realsense:
-                                      {}
-                                    firealarm_back_8_panda_2/realsense:
-                                      {}
-                                    firealarm_front_0_panda_2/realsense:
-                                      {}
-                                    firealarm_front_1_panda_2/realsense:
-                                      {}
-                                    firealarm_front_3_panda_2/realsense:
-                                      {}
-                                    firealarm_front_4_panda_2/realsense:
-                                      {}
-                                    firealarm_front_7_panda_2/realsense:
-                                      {}
-                                    hca_back_5_panda_2/realsense:
-                                      {}
-                                    hca_back_6_panda_2/realsense:
-                                      {}
-                                    hca_back_7_panda_2/realsense:
-                                      {}
-                                    hca_front_0_panda_2/realsense:
-                                      {}
-                                    hca_front_1_panda_2/realsense:
-                                      {}
-                                    hca_front_2_panda_2/realsense:
-                                      {}
-                                    hca_front_3_panda_2/realsense:
-                                      {}
-                                    hca_front_4_panda_2/realsense:
-                                      {}
-                                    hca_front_5_panda_2/realsense:
-                                      {}
-                                    hca_front_6_panda_2/realsense:
-                                      {}
-                                    hca_front_7_panda_2/realsense:
-                                      {}
-                                    hca_front_8_panda_2/realsense:
-                                      {}
-                                    hca_side2_1_panda_2/realsense:
-                                      {}
-                                    internals_5_panda_2/realsense:
-                                      {}
-                                    internals_6_panda_2/realsense:
-                                      {}
+                                    {}
                                 panda_2_link8:
                                   panda_2_NE:
                                     panda_2_EE:
@@ -775,6 +777,8 @@ Visualization Manager:
                                         {}
                                 tc_robot_panda2:
                                   {}
+              panda_2_link0:
+                {}
               table_rob_2_pnp_connector_1:
                 {}
               table_rob_2_pnp_connector_2:
@@ -784,6 +788,14 @@ Visualization Manager:
               table_rob_2_pnp_connector_4:
                 {}
             table_vision:
+              aruco_1:
+                {}
+              aruco_2:
+                {}
+              aruco_3:
+                {}
+              aruco_4:
+                {}
               table_vision_pnp_connector_1:
                 {}
               table_vision_pnp_connector_2:
@@ -811,60 +823,6 @@ Visualization Manager:
                 {}
             vision_table_zero:
               basler_cam:
-                {}
-              battery_1_vision_table_zero:
-                {}
-              battery_2_vision_table_zero:
-                {}
-              battery_3_vision_table_zero:
-                {}
-              battery_4_vision_table_zero:
-                {}
-              battery_5_vision_table_zero:
-                {}
-              firealarm_front_4_vision_table_zero:
-                {}
-              hca_back_2_vision_table_zero:
-                {}
-              hca_back_3_vision_table_zero:
-                {}
-              hca_back_4_vision_table_zero:
-                {}
-              hca_back_5_vision_table_zero:
-                {}
-              hca_back_6_vision_table_zero:
-                {}
-              hca_back_7_vision_table_zero:
-                {}
-              hca_front_0_vision_table_zero:
-                {}
-              hca_front_1_vision_table_zero:
-                {}
-              hca_front_2_vision_table_zero:
-                {}
-              hca_front_3_vision_table_zero:
-                {}
-              hca_front_4_vision_table_zero:
-                {}
-              hca_front_5_vision_table_zero:
-                {}
-              hca_front_6_vision_table_zero:
-                {}
-              hca_front_7_vision_table_zero:
-                {}
-              hca_side2_6_vision_table_zero:
-                {}
-              pcb_4_vision_table_zero:
-                {}
-              pcb_5_vision_table_zero:
-                {}
-              pcb_6_vision_table_zero:
-                {}
-              pcb_covered_4_vision_table_zero:
-                {}
-              pcb_covered_5_vision_table_zero:
-                {}
-              pcb_covered_6_vision_table_zero:
                 {}
       Update Interval: 0
       Value: true
@@ -1326,7 +1284,7 @@ Visualization Manager:
       Marker Topic: /vision/realsense/markers
       Name: Realsense_MarkerArray
       Namespaces:
-        panda_2/realsense: true
+        {}
       Queue Size: 3
       Value: true
     - Class: rviz/MarkerArray
@@ -1334,7 +1292,7 @@ Visualization Manager:
       Marker Topic: /vision/basler/markers
       Name: Basler_markerArray
       Namespaces:
-        vision_table_zero: true
+        {}
       Queue Size: 3
       Value: true
     - Class: rviz/Image
@@ -1584,11 +1542,38 @@ Visualization Manager:
       Marker Topic: /cube_markers
       Name: cube_array
       Namespaces:
-        cube_black: true
-        cube_orange: true
-        cube_red: true
-        cube_violet: true
+        {}
       Queue Size: 100
+      Value: true
+    - Alpha: 1
+      Arrow Width: 0.5
+      Class: rviz/WrenchStamped
+      Enabled: true
+      Force Arrow Scale: 0.30000001192092896
+      Force Color: 204; 51; 51
+      Hide Small Values: true
+      History Length: 1
+      Name: panda_1_FT
+      Queue Size: 10
+      Topic: /panda_1/franka_state_controller/F_ext
+      Torque Arrow Scale: 1.2000000476837158
+      Torque Color: 204; 204; 51
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Arrow Width: 0.5
+      Class: rviz/WrenchStamped
+      Enabled: true
+      Force Arrow Scale: 0.30000001192092896
+      Force Color: 204; 51; 51
+      Hide Small Values: true
+      History Length: 1
+      Name: panda_2_FT
+      Queue Size: 10
+      Topic: /panda_2/franka_state_controller/F_ext
+      Torque Arrow Scale: 1.2000000476837158
+      Torque Color: 204; 204; 51
+      Unreliable: false
       Value: true
   Enabled: true
   Global Options:
@@ -1618,7 +1603,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.682469606399536
+      Distance: 2.666757583618164
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -1626,17 +1611,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -0.5768969655036926
-        Y: 0.21101030707359314
-        Z: 0.863841712474823
+        X: -0.3167397379875183
+        Y: 0.189699187874794
+        Z: 0.8717743158340454
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.784796416759491
+      Pitch: 0.5647965669631958
       Target Frame: <Fixed Frame>
-      Yaw: 1.8844925165176392
+      Yaw: 0.15630902349948883
     Saved: ~
 Window Geometry:
   Displays:
@@ -1652,7 +1637,7 @@ Window Geometry:
     collapsed: false
   P2_MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000034800000419fc0200000014fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003b00000344000000c700fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000002c0056006900730069006f006e00200070006900700065006c0069006e0065002d004200610073006c006500720000000108000000f30000001600fffffffb000000320056006900730069006f006e00200070006900700065006c0069006e0065002d007200650061006c00730065006e007300650000000201000000a30000001600fffffffb0000003a0056006900730069006f006e00200070006900700065006c0069006e0065002d007200650061006c00730065006e00730065002d0074006f00700100000385000000cf0000001600fffffffb0000003a0056006900730069006f006e00200070006900700065006c0069006e0065002d007200650061006c00730065006e00730065002d0074006f00700000000353000000e80000000000000000fb000000320056006900730069006f006e00200070006900700065006c0069006e0065002d007200650061006c00730065006e0073006500000002fb0000009c0000000000000000fb0000002c0056006900730069006f006e00200070006900700065006c0069006e0065002d004200610073006c00650072000000037f000000bc0000000000000000fb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb0000002200500031005f004d006f00740069006f006e0050006c0061006e006e0069006e006700000002df000001750000016900fffffffb0000004a00500031005f004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb0000002200500032005f004d006f00740069006f006e0050006c0061006e006e0069006e006700000002df000001750000016900fffffffb0000004a00500032005f004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff00000016000000160000000100000110000002e6fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730000000044000002e6000000a000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000006400000004cfc0100000002fb0000000800540069006d00650000000000000006400000035c00fffffffb0000000800540069006d00650100000000000004500000000000000000000004320000041900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000002ab00000419fc0200000014fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003b00000233000000c700fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000002c0056006900730069006f006e00200070006900700065006c0069006e0065002d004200610073006c006500720000000108000000f30000001600fffffffb000000320056006900730069006f006e00200070006900700065006c0069006e0065002d007200650061006c00730065006e007300650000000201000000a30000001600fffffffb0000003a0056006900730069006f006e00200070006900700065006c0069006e0065002d007200650061006c00730065006e00730065002d0074006f00700100000274000001e00000001600fffffffb0000003a0056006900730069006f006e00200070006900700065006c0069006e0065002d007200650061006c00730065006e00730065002d0074006f00700000000353000000e80000000000000000fb000000320056006900730069006f006e00200070006900700065006c0069006e0065002d007200650061006c00730065006e0073006500000002fb0000009c0000000000000000fb0000002c0056006900730069006f006e00200070006900700065006c0069006e0065002d004200610073006c00650072000000037f000000bc0000000000000000fb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb0000002200500031005f004d006f00740069006f006e0050006c0061006e006e0069006e006700000002df000001750000016900fffffffb0000004a00500031005f004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb0000002200500032005f004d006f00740069006f006e0050006c0061006e006e0069006e006700000002df000001750000016900fffffffb0000004a00500032005f004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff00000016000000160000000100000110000002e6fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730000000044000002e6000000a000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000006400000004cfc0100000002fb0000000800540069006d00650000000000000006400000035c00fffffffb0000000800540069006d00650100000000000004500000000000000000000004cf0000041900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:

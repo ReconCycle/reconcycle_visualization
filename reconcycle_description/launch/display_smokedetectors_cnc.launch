@@ -35,16 +35,17 @@
   <!-- Panda 2 -->
   <group ns='panda_2'>
     <!-- <param name="robot_description" command="$(find xacro)/xacro '$(arg panda_model)' robot_name:='panda' connected_to:=''" /> -->
-    <node name="table_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0.02 1.570796 0 0 table_rob_2 $(arg panda2_prefix)$(arg panda2_name)_link0 100" />
-    <node name="flange_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0.01 -0.785 3.14159 0 $(arg panda2_prefix)$(arg panda2_name)_link8 $(arg panda2_prefix)$(arg panda2_name)_flange 50" />
-    <node name="tc_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 -0.1305262 0.9914449 $(arg panda2_prefix)$(arg panda2_name)_flange $(arg panda2_prefix)$(arg panda2_name)_tc_robot 50" />
-    <node name="panda_link8_fix" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 $(arg panda2_prefix)$(arg panda2_name)_link8 $(arg panda2_name)_link8 100" /> 
+    <node name="table_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0.02 1.570796 0 0 table_rob_2 $(arg panda2_name)_link0 100" />
+    <node name="flange_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0.01 -0.785 3.14159 0 $(arg panda2_name)_link8 $(arg panda2_name)_flange 50" />
+    <node name="tc_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 -0.1305262 0.9914449 $(arg panda2_name)_flange $(arg panda2_name)_tc_robot 50" />
     <node name="panda_EE_fix" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 $(arg panda2_name)_EE $(arg panda2_prefix)panda_EE 100" />
     
     <!--
     <node name="panda_2_to_realsense" pkg="tf" type="static_transform_publisher" args="-0.08 -0.0325 -0.020 -1.57079 3.14159 0  $(arg panda2_prefix)$(arg panda2_name)_flange $(arg panda2_prefix)realsense 100" />
     -->
-    <node name="panda_2_to_realsense" pkg="tf" type="static_transform_publisher" args="-0.08 -0.0325 -0.017 -1.57079 3.14159 0  $(arg panda2_prefix)$(arg panda2_name)_flange $(arg panda2_prefix)realsense 100" />
+    <node name="panda_2_to_realsense" pkg="tf" type="static_transform_publisher" args="-0.08 -0.0325 -0.017 -1.57079 3.14159 0  $(arg panda2_name)_flange $(arg panda2_prefix)realsense 100" />
+    
+    <!-- New franka_control does not support robot_ns. So here we hardcode republishing of tfs from panda_2_link0 to /panda_2/panda_2_link0 -->
     
   </group>
   
@@ -110,7 +111,7 @@
     <arg name="tf_prefix" value="p2_claw_mount"/>
     <arg name="urdf_name" value="claw_mount"/>
   </include>
-  <node name="panda_ee_to_softclaw" pkg="tf" type="static_transform_publisher" args="0 0 0 1.570795 0 3.14159 $(arg panda2_prefix)$(arg panda2_name)_flange p2_claw_mount/base 100"/>
+  <node name="panda_ee_to_softclaw" pkg="tf" type="static_transform_publisher" args="0 0 0 1.570795 0 3.14159 $(arg panda2_name)_flange p2_claw_mount/base 100"/>
   
   <!-- Novo - dr. Rok - Vision table - with camera pillar -->
   <include file="$(find reconcycle_description)/launch/load_part.launch">

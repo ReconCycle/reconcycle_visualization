@@ -25,10 +25,9 @@
   <!-- Panda 1 -->
   <group ns='panda_1'>
     <!-- <param name="robot_description" command="$(find xacro)/xacro '$(arg panda_model)' robot_name:='panda' connected_to:=''" /> -->
-    <node name="table_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0.02 1.570796 0 0 table_rob_1 $(arg panda1_prefix)$(arg panda1_name)_link0 100" />
-    <node name="panda_link8_fix" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 $(arg panda1_prefix)$(arg panda1_name)_link8 $(arg panda1_name)_link8 50" /> 
+    <node name="table_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0.02 1.570796 0 0 table_rob_1 $(arg panda1_name)_link0 100" />
     <node name="panda_EE_fix" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 $(arg panda1_name)_EE $(arg panda1_prefix)panda_EE 100" />
-    <node name="flange_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0.01 -0.785 3.14159 0 $(arg panda1_prefix)$(arg panda1_name)_link8 $(arg panda1_prefix)$(arg panda1_name)_flange 50" />
+    <node name="flange_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0.01 -0.785 3.14159 0 $(arg panda1_name)_link8 $(arg panda1_name)_flange 50" />
     <node name="tc_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 $(arg panda1_prefix)$(arg panda1_name)_flange $(arg panda1_prefix)$(arg panda1_name)_tc_robot 50" />
   </group>
 

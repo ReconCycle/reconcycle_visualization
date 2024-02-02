@@ -1,0 +1,91 @@
+<launch>
+  <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}] [${node}]: ${message}" />
+  <param name="/use_sim_time" value="false" />
+
+  <!-- General arguments-->
+  <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/smokedet.rviz" />
+  <arg name="table_layout" default="$(find reconcycle_description)/layouts/smokedet_layout.xacro" />
+  <arg name="panda_model" default="$(find reconcycle_description)/urdf/reconcycle_panda.xacro" />
+  <arg name="rviz" default="true" />
+  <arg name="robot_gazebo" default="false"/>
+  <arg name="robot_absent" default="false"/>
+
+  <!-- Robot cell -->
+  <node name="world_to_cell_base" pkg="tf2_ros" type="static_transform_publisher" args="0 0 0 0 0 0 robot_cell/robot_cell_base world 100" />
+  <include file="$(find robot_cell_description)/launch/load_urdf.launch" />
+  
+  <!-- tf_prefix is not supported anymore -->
+  <arg name='panda1_prefix' value='panda_1/' /> <!-- or empty -->
+  <arg name='panda2_prefix' value='panda_2/' /> <!-- or empty -->
+  <arg name='panda1_name' value='panda_1' /> <!-- or panda -->
+  <arg name='panda2_name' value='panda_2' /> <!-- or panda -->
+
+  <!-- Panda 1 -->
+  <group ns='panda_1'>
+    <!-- <param name="robot_description" command="$(find xacro)/xacro '$(arg panda_model)' robot_name:='panda' connected_to:=''" /> -->
+    <node name="table_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 robot_cell/module_robot1_robo $(arg panda1_name)_link0 100" />
+    <node name="panda_EE_fix" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 $(arg panda1_name)_EE $(arg panda1_prefix)panda_EE 100" />
+    <node name="flange_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0.01 -0.785 3.14159 0 $(arg panda1_name)_link8 $(arg panda1_name)_flange 50" />
+    <node name="tc_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 $(arg panda1_prefix)$(arg panda1_name)_flange $(arg panda1_prefix)$(arg panda1_name)_tc_robot 50" />
+  </group>
+
+  <!-- Panda 2 -->
+  <group ns='panda_2'>
+    <!-- <param name="robot_description" command="$(find xacro)/xacro '$(arg panda_model)' robot_name:='panda' connected_to:=''" /> -->
+    <node name="table_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 robot_cell/module_robot2_robo $(arg panda2_name)_link0 100" />
+    <node name="flange_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0.01 -0.785 3.14159 0 $(arg panda2_name)_link8 $(arg panda2_name)_flange 50" />
+    <node name="tc_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 -0.1305262 0.9914449 $(arg panda2_name)_flange $(arg panda2_name)_tc_robot 50" />
+    <node name="panda_EE_fix" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 $(arg panda2_name)_EE $(arg panda2_prefix)panda_EE 100" />
+    
+    <node name="panda_2_to_realsense" pkg="tf" type="static_transform_publisher" args="-0.08 -0.0325 -0.017 -1.57079 3.14159 0  $(arg panda2_name)_flange $(arg panda2_prefix)realsense 100" />
+
+  </group>
+  
+<!-- manual calibration for vision @ EMO -->
+  <node name="panda_1_to_calib" pkg="tf" type="static_transform_publisher" args="0.329 0 0 0 0 1 0 $(arg panda1_prefix)$(arg panda1_name)_link0 vision_table_calib 100" />
+
+  <!-- Softhand -->
+  <include file="$(find reconcycle_description)/launch/display_qbhand.launch" >
+    <arg name="robot_gazebo" default="$(arg robot_gazebo)" />
+    <arg name="robot_absent" default="$(arg robot_absent)" />
+  </include>
+  
+  <!-- VSA -->
+  <include file="$(find reconcycle_description)/launch/softclaw.launch" >
+  </include>
+
+  <!-- Screwdriver 
+  <include file="$(find reconcycle_description)/launch/display_screwdriver.launch" >
+  </include> -->
+
+  <!-- tc_robot_tool --> 
+  <include file="$(find reconcycle_description)/launch/display_tc.launch" >
+    <arg name="robot_gazebo" default="$(arg robot_gazebo)" />
+  </include>
+
+  <include file="$(find reconcycle_description)/launch/softhand_adaptor.launch">
+    <arg name="connected_to" value="$(arg panda1_prefix)$(arg panda1_name)_tc_robot" />
+  </include>
+  
+  <!-- Schunk PZH-20 threejaw gripper mounted on panda_1 --> 
+  <include file="$(find reconcycle_description)/launch/schunk_pzh20.launch">
+    <arg name="connected_to" value="$(arg panda1_prefix)$(arg panda1_name)_tc_robot" />
+  </include>
+
+  <!-- RVIZ GUI -->
+  <node if="$(arg rviz)" name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+  
+  <group ns='visiontable_tfs'>
+    <node name="visiontable_tfs1" pkg="tf" type="static_transform_publisher" args="-0.9 0.3 0.02 -1.5708 0 0 table_rob_1 vision_table_zero 100"/>
+    <node name="visiontable_tfs_femtobolt" pkg="tf" type="static_transform_publisher" args="0.38 0.23 1.24 0 0.7071 0 0.7071 vision_table_zero camera_link 100"/>
+  </group> 
+  
+
+  <!-- Table CNC -->
+  <node name="cnc_table_base_to_machine_home" pkg="tf" type="static_transform_publisher" args="-0.19 -0.09 0.19 3.14159 0 0 table_cnc cnc_machine_home 100"/>
+  <node name="cnc_machine_home_to_hekatron_chuck" pkg="tf" type="static_transform_publisher" args="-0.049 -0.154 -0.111 3.14159 0 0 cnc_machine_home cnc_chuck_hekatron 100"/>
+  <node name="cnc_machine_home_to_fumonic_chuck" pkg="tf" type="static_transform_publisher" args="-0.31 -0.154 -0.111 3.14159 0 0 cnc_machine_home cnc_chuck_fumonic 100"/>
+
+  <node name="basler_vision_table_tfpub" pkg="tf" type="static_transform_publisher" args="0.265 0.275 1.34 0 0 3.14 vision_table_zero basler_cam 100"/>
+
+</launch>

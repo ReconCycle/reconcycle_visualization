@@ -3,7 +3,7 @@
   <param name="/use_sim_time" value="false" />
 
   <!-- General arguments-->
-  <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/smokedet.rviz" />
+  <arg name="rvizconfig" default="$(find reconcycle_description)/rviz/smokedet_legacy.rviz" />
   <arg name="table_layout" default="$(find reconcycle_description)/layouts/smokedet_layout.xacro" />
   <arg name="panda_model" default="$(find reconcycle_description)/urdf/reconcycle_panda.xacro" />
   <arg name="rviz" default="true" />
@@ -61,36 +61,36 @@
   </group> -->
 
   <!-- Softhand -->
-  <include file="$(find reconcycle_description)/launch/display_qbhand.launch" >
+  <include file="$(find reconcycle_description)/launch/qbHand.xml" >
     <arg name="robot_gazebo" default="$(arg robot_gazebo)" />
     <arg name="robot_absent" default="$(arg robot_absent)" />
   </include>
   
-  <!-- VSA -->
-  <include file="$(find reconcycle_description)/launch/softclaw.launch" >
+  <!-- VS -->
+  <include file="$(find reconcycle_description)/launch/qbVS.xml" >
   </include>
 
   <!-- Screwdriver 
-  <include file="$(find reconcycle_description)/launch/display_screwdriver.launch" >
+  <include file="$(find reconcycle_description)/launch/screwdriver.xml" >
   </include> -->
 
 
   <!-- tc_robot_tool --> 
-  <include file="$(find reconcycle_description)/launch/display_tc.launch" >
+  <include file="$(find reconcycle_description)/launch/tc_robot_side.xml" >
     <arg name="robot_gazebo" default="$(arg robot_gazebo)" />
   </include>
 
-  <include file="$(find reconcycle_description)/launch/softhand_adaptor.launch">
+  <include file="$(find reconcycle_description)/launch/qbHand_adaptor.xml">
     <arg name="connected_to" value="$(arg panda1_prefix)$(arg panda1_name)_tc_robot" />
   </include>
   
   <!-- Schunk PZH-20 threejaw gripper mounted on panda_1 --> 
-  <include file="$(find reconcycle_description)/launch/schunk_pzh20.launch">
+  <include file="$(find reconcycle_description)/launch/schunk_pzh20.xml">
     <arg name="connected_to" value="$(arg panda1_prefix)$(arg panda1_name)_tc_robot" />
   </include>
 
   <!-- Tool holder and tools
-  <include file="$(find reconcycle_description)/launch/display_tools.launch" /> -->
+  <include file="$(find reconcycle_description)/launch/toolpost.xml" /> -->
 
   <!-- RVIZ GUI -->
   <node if="$(arg rviz)" name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
@@ -134,6 +134,11 @@
   </include>
   <node name="rob2table_to_vision_table" pkg="tf" type="static_transform_publisher" args="-0.9 0.9 0.02 -1.570795 0 0 table_rob_1 rob_2_table/base 100"/>
 
+  <include file="$(find reconcycle_description)/launch/load_part.launch">
+    <arg name="tf_prefix" value="cnc_table"/>
+    <arg name="urdf_name" value="cnc"/>
+  </include>
+  <node name="cnc_table_to_table_cnc" pkg="tf" type="static_transform_publisher" args="+0.3 -0.3 0.02 1.570795 0 0 table_cnc cnc_table/base 100"/>
 
   <!-- Table CNC -->
   <node name="cnc_table_base_to_machine_home" pkg="tf" type="static_transform_publisher" args="-0.19 -0.09 0.19 3.14159 0 0 table_cnc cnc_machine_home 100"/>

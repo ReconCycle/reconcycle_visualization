@@ -49,8 +49,8 @@
     <arg name="robot_absent" default="$(arg robot_absent)" />
   </include>
   
-  <!-- VSA -->
-  <include file="$(find reconcycle_description)/launch/qbVSA.xml" >
+  <!-- VS -->
+  <include file="$(find reconcycle_description)/launch/qbVS.xml" >
   </include>
 
   <!-- Screwdriver 

@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<robot name="fifi" version="1.0">
+  <joint name="base_mount" type="fixed">
+    <origin xyz="0.0 -0.047 -0.047" rpy="1.5707963267948966 -0.0 0.0"/>
+    <axis xyz="1 0 0"/>
+    <parent link="base"/>
+    <child link="mount"/>
+    <limit effort="1000" lower="-1.548" upper="1.548" velocity="0.5"/>
+  </joint>
+  <link name="base">
+    <visual>
+      <origin xyz="-0.052 -0.0 -0.0" rpy="0.0 -0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://reconcycle_softhand_mount/meshes/Component10.stl"/>
+      </geometry>
+      <material name="color0">
+        <color rgba="0.7991027235984802 0.7991027235984802 0.7991027235984802 1"/>
+      </material>
+    </visual>
+  </link>
+  <link name="mount"/>
+</robot>

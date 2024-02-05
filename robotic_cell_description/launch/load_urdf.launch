@@ -1,0 +1,23 @@
+<launch>
+  <arg name="tf_prefix" default="robot_cell" />
+  <arg name="urdf_name" default="robot_cell" />
+  <arg name="show_joint_gui" default="false" />
+  <arg name="urdf_path" default="$(find robot_cell_description)/urdf/$(arg urdf_name).urdf.xacro" />
+  
+  <group ns="$(arg tf_prefix)">
+    <!-- Launch your robot using the generated URDF -->
+    <param name="robot_description" command="$(find xacro)/xacro $(arg urdf_path)" />
+    <param name="tf_prefix" value="$(arg tf_prefix)" />
+    
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+    <group if="$(arg show_joint_gui)">
+      <node name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+    </group>
+    <group unless="$(arg show_joint_gui)">
+      <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    </group>
+
+  </group>
+
+</launch>

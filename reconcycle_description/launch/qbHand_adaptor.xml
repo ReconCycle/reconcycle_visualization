@@ -11,7 +11,7 @@
     <!-- from robot tc to softhand adaptor -->
     <node name="soft_hand_adaptor_to_tc" pkg="tf" type="static_transform_publisher" args="-0.1897 -0.00434 -0.09 1.57 0 1.57 $(arg connected_to) soft_hand_adaptor 100"/>
     
-    <!-- from adaaptor to root frame of the qbhand -->
+    <!-- from adaptor to root frame of the qbhand -->
     <!-- if more qbhands are present in the cell, change this to qbhand*N*_base_link and remove root_link -->
     <!-- <node name="softhand_to_adaptor" pkg="tf" type="static_transform_publisher" args="0.0045 0.0144 0.14 3.14 3.14 0 soft_hand_adaptor root_link 100"/> -->
     <node name="softhand_to_adaptor" pkg="tf" type="static_transform_publisher" args="0.0045 0.0144 0.14 3.14 3.14 0 soft_hand_adaptor qbhand1_base_link 100"/>

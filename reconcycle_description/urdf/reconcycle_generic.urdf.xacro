@@ -19,7 +19,7 @@
     <joint name="${this_robot_name + 'module_pose'}" type="fixed">
         <origin xyz="${yaml_data_dictionary[current_name]['x']} ${yaml_data_dictionary[current_name]['y']} ${yaml_data_dictionary[current_name]['z']}" rpy="${yaml_data_dictionary[current_name]['er']} ${yaml_data_dictionary[current_name]['ep']} ${yaml_data_dictionary[current_name]['ey']}" />
         <axis xyz="1 0 0"/>
-        <parent link="${yaml_data_dictionary[current_name]['parrent']}"/>
+        <parent link="${yaml_data_dictionary[current_name]['parent']}"/>
         <child link="${this_robot_name + 'base'}"/>
     </joint>
 
@@ -50,7 +50,7 @@
 
   <xacro:property name="list_of_active_elements_names" value="${active_config['active_description_elements']}"/>
 
-  <link name="robot_cell_base">
+  <link name="reconcycle_base">
 
   </link>
 

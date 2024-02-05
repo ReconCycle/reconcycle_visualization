@@ -6,15 +6,13 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /Working Surfaces1
+        - /TF1
         - /TF1/Frames1
-        - /Panda 11
-        - /Panda 11/Status1
-        - /Panda 21
-        - /Panda 21/Status1
+        - /TF1/Frames1/reconcycle_generic/module_cnc_cnctable1
+        - /qbHand adaptor1/Links1
         - /P1_MotionPlanning1/Scene Geometry1
         - /P2_MotionPlanning1/Planned Path1
-      Splitter Ratio: 0.31755197048187256
+      Splitter Ratio: 0.6695957779884338
     Tree Height: 765
   - Class: rviz/Selection
     Name: Selection
@@ -93,7 +91,19 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        module_cnc_clamp1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        module_cnc_clamp2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         module_cnc_cncbase:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        module_cnc_cnctable:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -226,23 +236,269 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        robot_cell_base:
+        reconcycle_base:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-      Name: Working Surfaces
-      Robot Description: robot_cell/robot_description
-      TF Prefix: robot_cell
+      Name: Modules
+      Robot Description: reconcycle_generic/robot_description
+      TF Prefix: reconcycle_generic
       Update Interval: 0
       Value: true
       Visual Enabled: true
     - Class: rviz/TF
-      Enabled: false
+      Enabled: true
       Filter (blacklist): ""
       Filter (whitelist): ""
       Frame Timeout: 1
       Frames:
         All Enabled: false
+        basler_cam:
+          Value: false
+        camera_link:
+          Value: false
+        p2_claw_mount/mount:
+          Value: false
+        panda_1/panda_1_flange:
+          Value: false
+        panda_1/panda_1_link8:
+          Value: false
+        panda_1/panda_1_tc_robot:
+          Value: false
+        panda_1/panda_EE:
+          Value: false
+        panda_1_EE:
+          Value: false
+        panda_1_K:
+          Value: false
+        panda_1_NE:
+          Value: false
+        panda_1_flange:
+          Value: false
+        panda_1_link0:
+          Value: false
+        panda_1_link0_sc:
+          Value: false
+        panda_1_link1:
+          Value: false
+        panda_1_link1_sc:
+          Value: false
+        panda_1_link2:
+          Value: false
+        panda_1_link2_sc:
+          Value: false
+        panda_1_link3:
+          Value: false
+        panda_1_link3_sc:
+          Value: false
+        panda_1_link4:
+          Value: false
+        panda_1_link4_sc:
+          Value: false
+        panda_1_link5:
+          Value: false
+        panda_1_link5_sc:
+          Value: false
+        panda_1_link6:
+          Value: false
+        panda_1_link6_sc:
+          Value: false
+        panda_1_link7:
+          Value: false
+        panda_1_link7_sc:
+          Value: false
+        panda_1_link8:
+          Value: false
+        panda_2/panda_2_link8:
+          Value: false
+        panda_2/panda_EE:
+          Value: false
+        panda_2/realsense:
+          Value: false
+        panda_2_EE:
+          Value: false
+        panda_2_K:
+          Value: false
+        panda_2_NE:
+          Value: false
+        panda_2_flange:
+          Value: false
+        panda_2_link0:
+          Value: false
+        panda_2_link0_sc:
+          Value: false
+        panda_2_link1:
+          Value: false
+        panda_2_link1_sc:
+          Value: false
+        panda_2_link2:
+          Value: false
+        panda_2_link2_sc:
+          Value: false
+        panda_2_link3:
+          Value: false
+        panda_2_link3_sc:
+          Value: false
+        panda_2_link4:
+          Value: false
+        panda_2_link4_sc:
+          Value: false
+        panda_2_link5:
+          Value: false
+        panda_2_link5_sc:
+          Value: false
+        panda_2_link6:
+          Value: false
+        panda_2_link6_sc:
+          Value: false
+        panda_2_link7:
+          Value: false
+        panda_2_link7_sc:
+          Value: false
+        panda_2_link8:
+          Value: false
+        panda_2_tc_robot:
+          Value: false
+        qbhand1_base_link:
+          Value: false
+        qbhand1_fingers_drag:
+          Value: false
+        qbhand_base_link:
+          Value: false
+        qbhand_end_effector_link:
+          Value: false
+        qbhand_palm_link:
+          Value: false
+        qbmove2_base_flange_link:
+          Value: false
+        qbmove2_cube_link:
+          Value: false
+        qbmove2_motor_1_link:
+          Value: false
+        qbmove2_motor_2_link:
+          Value: false
+        qbmove2_shaft_link:
+          Value: false
+        qbmove2_stiffness_preset_virtual_link:
+          Value: false
+        qbsoftclaw_claw_rc_wrist_flange_link:
+          Value: false
+        realsense_color_frame:
+          Value: false
+        realsense_color_optical_frame:
+          Value: false
+        realsense_link:
+          Value: false
+        reconcycle_generic/module_camera_desk_base:
+          Value: false
+        reconcycle_generic/module_camera_desk_pnpf:
+          Value: false
+        reconcycle_generic/module_camera_desk_pnpf1:
+          Value: false
+        reconcycle_generic/module_camera_desk_pnpf2:
+          Value: false
+        reconcycle_generic/module_camera_desk_pnpf4:
+          Value: false
+        reconcycle_generic/module_camera_desk_pnpm1:
+          Value: false
+        reconcycle_generic/module_camera_desk_pnpm2:
+          Value: false
+        reconcycle_generic/module_camera_desk_pnpm3:
+          Value: false
+        reconcycle_generic/module_camera_desk_pnpm4:
+          Value: false
+        reconcycle_generic/module_cnc_base:
+          Value: true
+        reconcycle_generic/module_cnc_clamp1:
+          Value: true
+        reconcycle_generic/module_cnc_clamp2:
+          Value: true
+        reconcycle_generic/module_cnc_cncbase:
+          Value: true
+        reconcycle_generic/module_cnc_cnctable:
+          Value: true
+        reconcycle_generic/module_cnc_pnpf:
+          Value: false
+        reconcycle_generic/module_cnc_pnpf1:
+          Value: false
+        reconcycle_generic/module_cnc_pnpf2:
+          Value: false
+        reconcycle_generic/module_cnc_pnpf4:
+          Value: false
+        reconcycle_generic/module_cnc_pnpm1:
+          Value: false
+        reconcycle_generic/module_cnc_pnpm2:
+          Value: false
+        reconcycle_generic/module_cnc_pnpm3:
+          Value: false
+        reconcycle_generic/module_cnc_pnpm4:
+          Value: false
+        reconcycle_generic/module_cnc_xAxis:
+          Value: false
+        reconcycle_generic/module_cnc_yAxis:
+          Value: false
+        reconcycle_generic/module_cnc_zAxis:
+          Value: false
+        reconcycle_generic/module_robot1_base:
+          Value: false
+        reconcycle_generic/module_robot1_pnpf:
+          Value: false
+        reconcycle_generic/module_robot1_pnpf1:
+          Value: false
+        reconcycle_generic/module_robot1_pnpf2:
+          Value: false
+        reconcycle_generic/module_robot1_pnpf4:
+          Value: false
+        reconcycle_generic/module_robot1_pnpm1:
+          Value: false
+        reconcycle_generic/module_robot1_pnpm2:
+          Value: false
+        reconcycle_generic/module_robot1_pnpm3:
+          Value: false
+        reconcycle_generic/module_robot1_pnpm4:
+          Value: false
+        reconcycle_generic/module_robot1_robo:
+          Value: false
+        reconcycle_generic/module_robot2_base:
+          Value: false
+        reconcycle_generic/module_robot2_pnpf:
+          Value: false
+        reconcycle_generic/module_robot2_pnpf1:
+          Value: false
+        reconcycle_generic/module_robot2_pnpf2:
+          Value: false
+        reconcycle_generic/module_robot2_pnpf4:
+          Value: false
+        reconcycle_generic/module_robot2_pnpm1:
+          Value: false
+        reconcycle_generic/module_robot2_pnpm2:
+          Value: false
+        reconcycle_generic/module_robot2_pnpm3:
+          Value: false
+        reconcycle_generic/module_robot2_pnpm4:
+          Value: false
+        reconcycle_generic/module_robot2_robo:
+          Value: false
+        reconcycle_generic/reconcycle_base:
+          Value: false
+        root_link:
+          Value: false
+        schunk_pzh20:
+          Value: false
+        schunk_pzh20_adapter:
+          Value: false
+        soft_hand_adaptor:
+          Value: false
+        table_rob_1:
+          Value: false
+        tc_robot_panda1:
+          Value: false
+        tc_robot_panda2:
+          Value: false
+        vision_table_zero:
+          Value: false
+        world:
+          Value: false
       Marker Alpha: 1
       Marker Scale: 0.5
       Name: TF
@@ -250,9 +506,200 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        {}
+        p2_claw_mount/mount:
+          qbsoftclaw_claw_rc_wrist_flange_link:
+            {}
+        panda_1/panda_1_flange:
+          panda_1/panda_1_tc_robot:
+            schunk_pzh20_adapter:
+              schunk_pzh20:
+                {}
+            soft_hand_adaptor:
+              qbhand1_base_link:
+                qbhand1_fingers_drag:
+                  {}
+        panda_1/panda_1_link8:
+          tc_robot_panda1:
+            {}
+        panda_2/panda_2_link8:
+          tc_robot_panda2:
+            {}
+        realsense_link:
+          realsense_color_frame:
+            realsense_color_optical_frame:
+              {}
+        root_link:
+          qbhand_base_link:
+            qbhand_end_effector_link:
+              {}
+            qbhand_palm_link:
+              {}
+          qbmove2_base_flange_link:
+            qbmove2_cube_link:
+              qbmove2_motor_1_link:
+                {}
+              qbmove2_motor_2_link:
+                {}
+              qbmove2_shaft_link:
+                {}
+              qbmove2_stiffness_preset_virtual_link:
+                {}
+        table_rob_1:
+          vision_table_zero:
+            basler_cam:
+              {}
+            camera_link:
+              {}
+        world:
+          reconcycle_generic/reconcycle_base:
+            reconcycle_generic/module_cnc_base:
+              reconcycle_generic/module_cnc_cnctable:
+                reconcycle_generic/module_cnc_cncbase:
+                  reconcycle_generic/module_cnc_clamp1:
+                    {}
+                  reconcycle_generic/module_cnc_clamp2:
+                    {}
+                  reconcycle_generic/module_cnc_xAxis:
+                    reconcycle_generic/module_cnc_yAxis:
+                      reconcycle_generic/module_cnc_zAxis:
+                        {}
+              reconcycle_generic/module_cnc_pnpf:
+                reconcycle_generic/module_robot2_base:
+                  reconcycle_generic/module_robot2_pnpf:
+                    {}
+                  reconcycle_generic/module_robot2_pnpf1:
+                    {}
+                  reconcycle_generic/module_robot2_pnpf2:
+                    {}
+                  reconcycle_generic/module_robot2_pnpf4:
+                    {}
+                  reconcycle_generic/module_robot2_pnpm1:
+                    {}
+                  reconcycle_generic/module_robot2_pnpm2:
+                    {}
+                  reconcycle_generic/module_robot2_pnpm3:
+                    {}
+                  reconcycle_generic/module_robot2_pnpm4:
+                    {}
+                  reconcycle_generic/module_robot2_robo:
+                    panda_2_link0:
+                      panda_2_link0_sc:
+                        {}
+                      panda_2_link1:
+                        panda_2_link1_sc:
+                          {}
+                        panda_2_link2:
+                          panda_2_link2_sc:
+                            {}
+                          panda_2_link3:
+                            panda_2_link3_sc:
+                              {}
+                            panda_2_link4:
+                              panda_2_link4_sc:
+                                {}
+                              panda_2_link5:
+                                panda_2_link5_sc:
+                                  {}
+                                panda_2_link6:
+                                  panda_2_link6_sc:
+                                    {}
+                                  panda_2_link7:
+                                    panda_2_link7_sc:
+                                      {}
+                                    panda_2_link8:
+                                      panda_2_NE:
+                                        panda_2_EE:
+                                          panda_2/panda_EE:
+                                            {}
+                                          panda_2_K:
+                                            {}
+                                      panda_2_flange:
+                                        panda_2/realsense:
+                                          {}
+                                        panda_2_tc_robot:
+                                          {}
+              reconcycle_generic/module_cnc_pnpf1:
+                {}
+              reconcycle_generic/module_cnc_pnpf2:
+                reconcycle_generic/module_robot1_base:
+                  reconcycle_generic/module_robot1_pnpf:
+                    {}
+                  reconcycle_generic/module_robot1_pnpf1:
+                    reconcycle_generic/module_camera_desk_base:
+                      reconcycle_generic/module_camera_desk_pnpf:
+                        {}
+                      reconcycle_generic/module_camera_desk_pnpf1:
+                        {}
+                      reconcycle_generic/module_camera_desk_pnpf2:
+                        {}
+                      reconcycle_generic/module_camera_desk_pnpf4:
+                        {}
+                      reconcycle_generic/module_camera_desk_pnpm1:
+                        {}
+                      reconcycle_generic/module_camera_desk_pnpm2:
+                        {}
+                      reconcycle_generic/module_camera_desk_pnpm3:
+                        {}
+                      reconcycle_generic/module_camera_desk_pnpm4:
+                        {}
+                  reconcycle_generic/module_robot1_pnpf2:
+                    {}
+                  reconcycle_generic/module_robot1_pnpf4:
+                    {}
+                  reconcycle_generic/module_robot1_pnpm1:
+                    {}
+                  reconcycle_generic/module_robot1_pnpm2:
+                    {}
+                  reconcycle_generic/module_robot1_pnpm3:
+                    {}
+                  reconcycle_generic/module_robot1_pnpm4:
+                    {}
+                  reconcycle_generic/module_robot1_robo:
+                    panda_1_link0:
+                      panda_1_link0_sc:
+                        {}
+                      panda_1_link1:
+                        panda_1_link1_sc:
+                          {}
+                        panda_1_link2:
+                          panda_1_link2_sc:
+                            {}
+                          panda_1_link3:
+                            panda_1_link3_sc:
+                              {}
+                            panda_1_link4:
+                              panda_1_link4_sc:
+                                {}
+                              panda_1_link5:
+                                panda_1_link5_sc:
+                                  {}
+                                panda_1_link6:
+                                  panda_1_link6_sc:
+                                    {}
+                                  panda_1_link7:
+                                    panda_1_link7_sc:
+                                      {}
+                                    panda_1_link8:
+                                      panda_1_NE:
+                                        panda_1_EE:
+                                          panda_1/panda_EE:
+                                            {}
+                                          panda_1_K:
+                                            {}
+                                      panda_1_flange:
+                                        {}
+              reconcycle_generic/module_cnc_pnpf4:
+                {}
+              reconcycle_generic/module_cnc_pnpm1:
+                {}
+              reconcycle_generic/module_cnc_pnpm2:
+                {}
+              reconcycle_generic/module_cnc_pnpm3:
+                {}
+              reconcycle_generic/module_cnc_pnpm4:
+                {}
       Update Interval: 0
-      Value: false
+      Value: true
     - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
@@ -463,8 +910,8 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-      Name: Adaptor
-      Robot Description: adaptor/adaptor_description
+      Name: qbHand
+      Robot Description: qbhand1/robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: false
@@ -479,8 +926,8 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-      Name: qbHand
-      Robot Description: qbhand1/robot_description
+      Name: qbHand adaptor
+      Robot Description: adaptor/adaptor_description
       TF Prefix: ""
       Update Interval: 0
       Value: false
@@ -511,65 +958,9 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-      Name: Softclaw_adapter
+      Name: qbVS adaptor
       Robot Description: /p2_claw_mount/robot_description
       TF Prefix: p2_claw_mount
-      Update Interval: 0
-      Value: false
-      Visual Enabled: true
-    - Alpha: 0.5
-      Class: rviz/RobotModel
-      Collision Enabled: false
-      Enabled: false
-      Links:
-        All Links Enabled: true
-        Expand Joint Details: false
-        Expand Link Details: false
-        Expand Tree: false
-        Link Tree Style: Links in Alphabetic Order
-      Name: table_vision
-      Robot Description: /vision_table/robot_description
-      TF Prefix: vision_table
-      Update Interval: 0
-      Value: false
-      Visual Enabled: true
-    - Class: rviz/Marker
-      Enabled: false
-      Marker Topic: /realsense_aruco/marker
-      Name: Vision markers
-      Namespaces:
-        {}
-      Queue Size: 20
-      Value: false
-    - Alpha: 0.5
-      Class: rviz/RobotModel
-      Collision Enabled: false
-      Enabled: false
-      Links:
-        All Links Enabled: true
-        Expand Joint Details: false
-        Expand Link Details: false
-        Expand Tree: false
-        Link Tree Style: Links in Alphabetic Order
-      Name: table_rob1
-      Robot Description: /rob_1_table/robot_description
-      TF Prefix: rob_1_table
-      Update Interval: 0
-      Value: false
-      Visual Enabled: true
-    - Alpha: 0.5
-      Class: rviz/RobotModel
-      Collision Enabled: false
-      Enabled: false
-      Links:
-        All Links Enabled: true
-        Expand Joint Details: false
-        Expand Link Details: false
-        Expand Tree: false
-        Link Tree Style: Links in Alphabetic Order
-      Name: table_rob2
-      Robot Description: /rob_2_table/robot_description
-      TF Prefix: rob_2_table
       Update Interval: 0
       Value: false
       Visual Enabled: true
@@ -595,7 +986,7 @@ Visualization Manager:
       Max Value: 1
       Median window: 5
       Min Value: 0
-      Name: Vision pipeline-realsense
+      Name: Vision pipeline - realsense
       Normalize Range: true
       Queue Size: 2
       Transport Hint: raw
@@ -607,22 +998,10 @@ Visualization Manager:
       Max Value: 1
       Median window: 5
       Min Value: 0
-      Name: Vision pipeline-Basler
+      Name: Vision pipeline - basler
       Normalize Range: true
       Queue Size: 2
       Transport Hint: raw
-      Unreliable: false
-      Value: false
-    - Class: rviz/Image
-      Enabled: false
-      Image Topic: /realsense/color/image_raw
-      Max Value: 1
-      Median window: 5
-      Min Value: 0
-      Name: Vision pipeline-realsense-top
-      Normalize Range: true
-      Queue Size: 2
-      Transport Hint: compressed
       Unreliable: false
       Value: false
     - Acceleration_Scaling_Factor: 0.1
@@ -799,8 +1178,8 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-      Name: schunk_adapter
-      Robot Description: schunk/adapter_description
+      Name: "Tool: 3 jaw chuck"
+      Robot Description: schunk/robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: false
@@ -815,50 +1194,42 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-      Name: schunk
-      Robot Description: schunk/robot_description
+      Name: "Tool: 3 jaw adaptor"
+      Robot Description: schunk/adapter_description
       TF Prefix: ""
       Update Interval: 0
       Value: false
       Visual Enabled: true
-    - Class: rviz/MarkerArray
-      Enabled: false
-      Marker Topic: /cube_markers
-      Name: cube_array
-      Namespaces:
-        {}
-      Queue Size: 100
-      Value: false
     - Alpha: 1
       Arrow Width: 0.5
       Class: rviz/WrenchStamped
-      Enabled: false
-      Force Arrow Scale: 0.30000001192092896
+      Enabled: true
+      Force Arrow Scale: 0.10000000149011612
       Force Color: 204; 51; 51
       Hide Small Values: true
       History Length: 1
       Name: panda_1_FT
       Queue Size: 10
       Topic: /panda_1/franka_state_controller/F_ext
-      Torque Arrow Scale: 1.2000000476837158
+      Torque Arrow Scale: 0.10000000149011612
       Torque Color: 204; 204; 51
       Unreliable: false
-      Value: false
+      Value: true
     - Alpha: 1
       Arrow Width: 0.5
       Class: rviz/WrenchStamped
-      Enabled: false
-      Force Arrow Scale: 0.30000001192092896
+      Enabled: true
+      Force Arrow Scale: 0.10000000149011612
       Force Color: 204; 51; 51
       Hide Small Values: true
       History Length: 1
       Name: panda_2_FT
       Queue Size: 10
       Topic: /panda_2/franka_state_controller/F_ext
-      Torque Arrow Scale: 1.2000000476837158
+      Torque Arrow Scale: 0.10000000149011612
       Torque Color: 204; 204; 51
       Unreliable: false
-      Value: false
+      Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
@@ -875,7 +1246,7 @@ Visualization Manager:
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Min Color: 0; 0; 0
-      Name: PointCloud2
+      Name: PointCloud (Femto Bolt)
       Position Transformer: XYZ
       Queue Size: 10
       Selectable: false
@@ -891,8 +1262,8 @@ Visualization Manager:
   Global Options:
     Background Color: 206; 225; 255
     Default Light: true
-    Fixed Frame: robot_cell/robot_cell_base
-    Frame Rate: 1
+    Fixed Frame: reconcycle_generic/reconcycle_base
+    Frame Rate: 20
   Name: root
   Tools:
     - Class: rviz/Interact
@@ -915,7 +1286,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 4.511255741119385
+      Distance: 2.019011974334717
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -923,17 +1294,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
-      Focal Shape Fixed Size: false
+        X: 1.047262191772461
+        Y: 0.8435966372489929
+        Z: 1.1321057081222534
+      Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.1153980493545532
+      Pitch: 0.9453178644180298
       Target Frame: <Fixed Frame>
-      Yaw: 4.608565330505371
+      Yaw: 0.22039483487606049
     Saved:
       - Class: rviz/Orbit
         Distance: 10
@@ -969,7 +1340,7 @@ Window Geometry:
     collapsed: false
   P2_MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000036400000419fc0200000014fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003b00000419000000c700fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000002c0056006900730069006f006e00200070006900700065006c0069006e0065002d004200610073006c006500720000000108000000f30000001600fffffffb000000320056006900730069006f006e00200070006900700065006c0069006e0065002d007200650061006c00730065006e007300650000000201000000a30000001600fffffffb0000003a0056006900730069006f006e00200070006900700065006c0069006e0065002d007200650061006c00730065006e00730065002d0074006f00700000000353000000e80000001600fffffffb000000320056006900730069006f006e00200070006900700065006c0069006e0065002d007200650061006c00730065006e0073006500000002fb0000009c0000000000000000fb0000002c0056006900730069006f006e00200070006900700065006c0069006e0065002d004200610073006c00650072000000037f000000bc0000000000000000fb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb0000002200500031005f004d006f00740069006f006e0050006c0061006e006e0069006e006700000002df000001750000016900fffffffb0000004a00500031005f004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb0000002200500032005f004d006f00740069006f006e0050006c0061006e006e0069006e006700000002df000001750000016900fffffffb0000004a00500032005f004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb0000000a0049006d006100670065000000043e00000016000000000000000000000001000001cc00000419fc0200000004fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000003a0056006900730069006f006e00200070006900700065006c0069006e0065002d007200650061006c00730065006e00730065002d0074006f0070000000003b000002910000000000000000fb0000000a00560069006500770073010000003b00000419000000a000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000006400000004cfc0100000002fb0000000800540069006d00650000000000000006400000035c00fffffffb0000000800540069006d00650100000000000004500000000000000000000002440000041900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000004000000000000023b00000419fc0200000014fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003b00000419000000c700fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb000000300056006900730069006f006e00200070006900700065006c0069006e00650020002d0020006200610073006c006500720000000108000000f30000001600fffffffb000000360056006900730069006f006e00200070006900700065006c0069006e00650020002d0020007200650061006c00730065006e007300650000000201000000a30000001600fffffffb0000003a0056006900730069006f006e00200070006900700065006c0069006e0065002d007200650061006c00730065006e00730065002d0074006f00700000000353000000e80000000000000000fb000000320056006900730069006f006e00200070006900700065006c0069006e0065002d007200650061006c00730065006e0073006500000002fb0000009c0000000000000000fb0000002c0056006900730069006f006e00200070006900700065006c0069006e0065002d004200610073006c00650072000000037f000000bc0000000000000000fb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb0000002200500031005f004d006f00740069006f006e0050006c0061006e006e0069006e006700000002df000001750000016900fffffffb0000004a00500031005f004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb0000002200500032005f004d006f00740069006f006e0050006c0061006e006e0069006e006700000002df000001750000016900fffffffb0000004a00500032005f004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb0000000a0049006d006100670065000000043e00000016000000000000000000000001000001cc00000419fc0200000004fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000003a0056006900730069006f006e00200070006900700065006c0069006e0065002d007200650061006c00730065006e00730065002d0074006f0070000000003b000002910000000000000000fb0000000a00560069006500770073000000003b00000419000000a000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000006400000004cfc0100000002fb0000000800540069006d00650000000000000006400000035c00fffffffb0000000800540069006d006501000000000000045000000000000000000000053f0000041900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -978,11 +1349,9 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: false
-  Vision pipeline-Basler:
+  Vision pipeline - basler:
     collapsed: false
-  Vision pipeline-realsense:
-    collapsed: false
-  Vision pipeline-realsense-top:
+  Vision pipeline - realsense:
     collapsed: false
   Width: 1920
   X: 1920

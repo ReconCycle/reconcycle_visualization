@@ -1,5 +1,8 @@
 <?xml version='1.0'?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="schunk_pzh20_adapter">
+    <material name="darkgray">
+        <color rgba="0.5 0.5 0.5 0.8"/>
+    </material>
     <xacro:arg name="schunk_adapter_id" default="schunk_pzh20_adapter"/>
     <link name="$(arg schunk_adapter_id)">
         <visual>
@@ -7,6 +10,7 @@
             <geometry>
                 <mesh filename="package://reconcycle_description/meshes/grippers/schunk_to_tc_adapter.stl" scale="0.001 0.001 0.001"/>
             </geometry>
+            <material name="darkgray"/>
         </visual>
         <collision>
             <origin rpy="0 0 0" xyz="0.0 0.0 0"/>

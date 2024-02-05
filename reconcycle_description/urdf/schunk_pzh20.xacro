@@ -1,5 +1,8 @@
 <?xml version='1.0'?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="schunk_pzh20_gripper">
+    <material name="white">
+        <color rgba="1 1 1 1"/>
+    </material>
     <xacro:arg name="schunk_gripper_id" default="schunk_pzh20"/>
     <link name="$(arg schunk_gripper_id)">
         <visual>
@@ -7,6 +10,7 @@
             <geometry>
                 <mesh filename="package://reconcycle_description/meshes/grippers/schunk_pzh20.stl" scale="0.001 0.001 0.001"/>
             </geometry>
+            <material name="white"/>
         </visual>
         <collision>
             <origin rpy="0 0 0" xyz="0.0 0.0 0"/>

@@ -12,7 +12,7 @@
   <node if="$(arg rviz)" name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
   
   <!-- Robot cell -->
-  <node name="world_to_cell_base" pkg="tf2_ros" type="static_transform_publisher" args="0 0 0 0 0 0 world reconcycle_generic/reconcycle_base" />
+  <node name="world_to_cell_base" pkg="tf2_ros" type="static_transform_publisher" args="0 0 0 0 0 0 1 world reconcycle_generic/reconcycle_base" />
   <include file="$(find reconcycle_description)/launch/load_urdf.launch" />
   
   <!-- tf_prefix is not supported anymore -->
@@ -23,31 +23,43 @@
 
   <!-- Panda 1 -->
   <group ns='panda_1'>
-    <node name="table_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 reconcycle_generic/module_robot1_robo $(arg panda1_name)_link0 100" />
+    <node name="table_to_panda" pkg="tf" type="static_transform_publisher" args="0.3 0.3 0 0 0 0 reconcycle_generic/module_robot1_base $(arg panda1_name)_link0 100" />
     <node name="panda_EE_fix" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 $(arg panda1_name)_EE $(arg panda1_prefix)panda_EE 100" />
     <node name="flange_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0.01 -0.785 3.14159 0 $(arg panda1_name)_link8 $(arg panda1_name)_flange 50" />
-    <node name="tc_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 $(arg panda1_prefix)$(arg panda1_name)_flange $(arg panda1_prefix)$(arg panda1_name)_tc_robot 50" />
+    <node name="tc_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 $(arg panda1_name)_flange $(arg panda1_name)_tc_robot 50" />
   </group>
+  
+  
 
   <!-- Panda 2 -->
   <group ns='panda_2'>
-    <node name="table_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 reconcycle_generic/module_robot2_robo $(arg panda2_name)_link0 100" />
+    <node name="table_to_panda" pkg="tf" type="static_transform_publisher" args="0.3 0.3 0 0 0 0 reconcycle_generic/module_robot2_base $(arg panda2_name)_link0 100" />
     <node name="flange_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0.01 -0.785 3.14159 0 $(arg panda2_name)_link8 $(arg panda2_name)_flange 50" />
-    <node name="tc_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 -0.1305262 0.9914449 $(arg panda2_name)_flange $(arg panda2_name)_tc_robot 50" />
+    <node name="tc_to_panda" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0.9914449 $(arg panda2_name)_flange $(arg panda2_name)_tc_robot 50" />
     <node name="panda_EE_fix" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 $(arg panda2_name)_EE $(arg panda2_prefix)panda_EE 100" />
     <node name="panda_2_to_realsense" pkg="tf" type="static_transform_publisher" args="-0.08 -0.0325 -0.017 -1.57079 3.14159 0  $(arg panda2_name)_flange $(arg panda2_prefix)realsense 100" />
 
   </group>
   
+  
+    
+  <!-- VSA ADAPTOR - Panda flange- to softclaw - adapter in between -->
+  <include file="$(find reconcycle_description)/launch/load_part.launch">
+    <arg name="tf_prefix" value="p2_claw_mount"/>
+    <arg name="urdf_name" value="claw_mount"/>
+  </include>
+  <node name="panda_ee_to_softclaw_mount" pkg="tf" type="static_transform_publisher" args="0 0 0 1.570795 0 3.14159 $(arg panda2_name)_flange p2_claw_mount/base 100"/>
+  <node name="panda_ee_to_softclaw" pkg="tf" type="static_transform_publisher" args="0 0 0.0 0 0 0 p2_claw_mount/mount root_link 100"/>
 
-  <!-- Softhand -->
+
+  <!-- Softhand 
   <include file="$(find reconcycle_description)/launch/qbHand_adaptor.xml">
     <arg name="connected_to" value="$(arg panda1_prefix)$(arg panda1_name)_tc_robot" />
   </include>
   <include file="$(find reconcycle_description)/launch/qbHand.xml" >
     <arg name="robot_gazebo" default="$(arg robot_gazebo)" />
     <arg name="robot_absent" default="$(arg robot_absent)" />
-  </include>
+  </include> -->
   
   <!-- VS -->
   <include file="$(find reconcycle_description)/launch/qbVS.xml" >
@@ -57,27 +69,40 @@
   <include file="$(find reconcycle_description)/launch/screwdriver.xml" >
   </include> -->
 
-  <!-- tc_robot_tool --> 
-  <include file="$(find reconcycle_description)/launch/tc_robot_side.xml" >
+  <!-- tc_robot_tool -> THIS IS IN CONFLICT WITH TC IN PANDA GROUPS --> 
+  <!--include file="$(find reconcycle_description)/launch/tc_robot_side.xml" >
     <arg name="robot_gazebo" default="$(arg robot_gazebo)" />
-  </include>
+    <arg name="namespace" value="False" />
+  </include-->
   
   <!-- Schunk PZH-20 --> 
   <include file="$(find reconcycle_description)/launch/schunk_pzh20.xml">
-    <arg name="connected_to" value="$(arg panda1_prefix)$(arg panda1_name)_tc_robot" />
+    <arg name="connected_to" value="$(arg panda1_name)_tc_robot" />
   </include>
 
   <!-- Manual calibration -->
   <group ns='manual_calibration'>
-    <node name="p1_to_vision" pkg="tf" type="static_transform_publisher" args="-0.9 0.3 0.02 -1.5708 0 0 table_rob_1 vision_table_zero 100"/>
+    <node name="p1_to_vision" pkg="tf" type="static_transform_publisher" args="-1.2 0.6 0 -1.5708 0 0 table_rob_1 vision_table_zero 100"/>
     <node name="table_to_femto_bolt" pkg="tf" type="static_transform_publisher" args="0.38 0.23 1.24 0 0.7071 0 0.7071 vision_table_zero camera_link 100"/>
     <node name="table_to_basler" pkg="tf" type="static_transform_publisher" args="0.265 0.275 1.34 0 0 3.14 vision_table_zero basler_cam 100"/>
-  </group>   
+  </group>
+  
+<!-- CHECK THIS -->
+<node name="realsense_space_to_realsense_camera" pkg="tf" type="static_transform_publisher" args="0 0 0.0 0 0 0 $(arg panda2_name)/realsense realsense_link 100"/>
+  
+  <!-- This is maping to attach old legacy tables TFs to new visualization -->
+  <group ns='table_legacy'>
+
+    <node name="module_robot1_base_to_table_rob_1" pkg="tf" type="static_transform_publisher" args="0.0 0.0 0.0 -1.5708 0 0 reconcycle_generic/module_robot1_base table_rob_1 100"/>
+    <node name="module_robot2_base_to_table_rob_2" pkg="tf" type="static_transform_publisher" args="0.0 0.0 0.0 0 0 0 reconcycle_generic/module_robot2_base table_rob_2 100"/>
+    <node name="module_camera_desk_base_to_table_vision" pkg="tf" type="static_transform_publisher" args="0.0 0.0 0.0 0 0 0  reconcycle_generic/module_camera_desk_base table_vision 100"/>
+    <node name="module_cnc_cnctable_to_table_cnc" pkg="tf" type="static_transform_publisher" args="0 0 -0.02 -1.5708 0 0 reconcycle_generic/module_cnc_cnctable table_cnc 100"/>
+    
+  </group>
+  
 
   <!-- Table CNC -->
   <group ns='cnc_legacy'>
-    <node name="mapping" pkg="tf" type="static_transform_publisher" args="0 0 -0.02 -1.5708 0 0 reconcycle_generic/module_cnc_cnctable table_cnc 100"/>
-    <!--<node name="mapping" pkg="tf" type="static_transform_publisher" args="0 0.6 0 3.14159 0 0 reconcycle_generic/module_robot1_base table_cnc 100"/>-->
     
     <node name="cnc_table_base_to_machine_home" pkg="tf" type="static_transform_publisher" args="-0.19 -0.09 0.19 3.14159 0 0 table_cnc cnc_machine_home 100"/>
     <node name="cnc_machine_home_to_hekatron_chuck" pkg="tf" type="static_transform_publisher" args="-0.049 -0.154 -0.111 3.14159 0 0 cnc_machine_home cnc_chuck_hekatron 100"/>

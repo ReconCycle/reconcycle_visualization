@@ -1,6 +1,0 @@
-<launch>
-  
-  <!-- Table CNC -->
-  <node name="cnc_table_base_to_machine_home" pkg="tf" type="static_transform_publisher" args="-0.2 -0.1 0.2 3.14159 0 0 table_cnc cnc_machine_home 100"/>
-
-</launch>

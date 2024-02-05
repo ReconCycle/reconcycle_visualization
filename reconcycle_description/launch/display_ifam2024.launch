@@ -12,7 +12,7 @@
 
   <!-- Robot cell -->
   <node name="world_to_cell_base" pkg="tf2_ros" type="static_transform_publisher" args="0 0 0 0 0 0 robot_cell/robot_cell_base world 100" />
-  <include file="$(find robotic_cell_description)/launch/load_urdf.launch" />
+  <include file="$(find reconcycle_description)/launch/load_urdf.launch" />
   
   <!-- tf_prefix is not supported anymore -->
   <arg name='panda1_prefix' value='panda_1/' /> <!-- or empty -->

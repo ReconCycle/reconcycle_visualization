@@ -1,8 +1,8 @@
 <launch>
-  <arg name="tf_prefix" default="robot_cell" />
-  <arg name="urdf_name" default="robot_cell" />
+  <arg name="tf_prefix" default="reconcycle_generic" />
+  <arg name="urdf_name" default="reconcycle_generic" />
   <arg name="show_joint_gui" default="false" />
-  <arg name="urdf_path" default="$(find robot_cell_description)/urdf/$(arg urdf_name).urdf.xacro" />
+  <arg name="urdf_path" default="$(find reconcycle_description)/urdf/$(arg urdf_name).urdf.xacro" />
   
   <group ns="$(arg tf_prefix)">
     <!-- Launch your robot using the generated URDF -->

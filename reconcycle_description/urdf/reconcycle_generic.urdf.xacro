@@ -2,7 +2,7 @@
 
 
 
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot_cell">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="reconcycle_generic">
 
   <xacro:macro name="loop_code" params="current_i names_vector yaml_data_dictionary"  >
 
@@ -45,7 +45,7 @@
 
   <!-- ACTUAL PROGRAM-->
 
-  <xacro:property name="yaml_file" value="$(find robot_cell_description)/config/active_config.yaml" />
+  <xacro:property name="yaml_file" value="$(find reconcycle_description)/config/active_config.yaml" />
   <xacro:property name="active_config" value="${xacro.load_yaml(yaml_file)}"/>
 
   <xacro:property name="list_of_active_elements_names" value="${active_config['active_description_elements']}"/>
@@ -58,7 +58,6 @@
   <xacro:loop current_i="${len(list_of_active_elements_names)}" names_vector = "${list_of_active_elements_names}" yaml_data_dictionary="${active_config}"/>
 
  
-
 
 </robot>
 

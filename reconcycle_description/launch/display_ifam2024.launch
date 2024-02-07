@@ -69,11 +69,10 @@
   <include file="$(find reconcycle_description)/launch/screwdriver.xml" >
   </include> -->
 
-  <!-- tc_robot_tool -> THIS IS IN CONFLICT WITH TC IN PANDA GROUPS --> 
-  <!--include file="$(find reconcycle_description)/launch/tc_robot_side.xml" >
-    <arg name="robot_gazebo" default="$(arg robot_gazebo)" />
-    <arg name="namespace" value="False" />
-  </include-->
+  <!-- tc_robot_tool --> 
+  <include file="$(find reconcycle_description)/launch/tc_ifam_fixed.xml" >
+    <arg name="connected_to" value="$(arg panda1_name)_tc_robot" />
+  </include>
   
   <!-- Schunk PZH-20 --> 
   <include file="$(find reconcycle_description)/launch/schunk_pzh20.xml">

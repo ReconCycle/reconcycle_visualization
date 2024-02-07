@@ -1,0 +1,20 @@
+<launch>
+
+  <arg name="connected_to" default="none"/>
+    
+  <arg name="tc_robot_side_model" default="$(find reconcycle_description)/urdf/tc_robot_side.xacro"/>
+
+
+  <arg name="group" default="tc_robot_side" />
+  <group ns='$(arg group)'>
+    <param name="robot_description" command="$(find xacro)/xacro $(arg tc_robot_side_model)"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+<!--  todo: tc mora biti zavrten se okoli z osi    -->
+    <node name="robot_to_tc_r_side" pkg="tf" type="static_transform_publisher" args="0 0 0 0 3.14 0 $(arg connected_to) tc_base_robot  100" />
+    
+  </group> 
+
+
+
+
+</launch>

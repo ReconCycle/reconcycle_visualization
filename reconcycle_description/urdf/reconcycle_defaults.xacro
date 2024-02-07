@@ -19,7 +19,7 @@
         <!-- The tool changer -->
         <link name="${tc_id}">
             <visual>
-                <origin rpy="$0 0 0" xyz=" 0 0 0 "/>
+                <origin rpy="0 0 0" xyz=" 0 0 0 "/>
                 <geometry>
                     <mesh filename="package://reconcycle_description/meshes/tc_tool_side.obj" scale="0.001 0.001 0.001"/>
                 </geometry>

@@ -40,10 +40,12 @@
     <node name="panda_EE_fix" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 $(arg panda2_name)_EE $(arg panda2_prefix)panda_EE 100" />
     
     <!--
-    <node name="panda_2_to_realsense" pkg="tf" type="static_transform_publisher" args="-0.08 -0.0325 -0.020 -1.57079 3.14159 0  $(arg panda2_prefix)$(arg panda2_name)_flange $(arg panda2_prefix)realsense 100" />
-    -->
     <node name="panda_2_to_realsense" pkg="tf" type="static_transform_publisher" args="-0.08 -0.0325 -0.017 -1.57079 3.14159 0  $(arg panda2_name)_flange $(arg panda2_prefix)realsense 100" />
-    
+    -->
+    <include file="$(find reconcycle_description)/launch/realsense_camera_pose.launch">
+
+
+
     <!-- New franka_control does not support robot_ns. So here we hardcode republishing of tfs from panda_2_link0 to /panda_2/panda_2_link0 -->
     
   </group>

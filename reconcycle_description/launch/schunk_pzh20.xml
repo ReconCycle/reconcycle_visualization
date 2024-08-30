@@ -4,7 +4,7 @@
   
   <arg name="schunk_pzh_gripper" default="$(find reconcycle_description)/urdf/schunk_pzh20.xacro" />
   
-  <node name="schunk_pzh_gripper_tf" pkg="tf" type="static_transform_publisher" args="0 0 -0.10 0 0 3.14159 $(arg connected_to) schunk_pzh20_base 100"/>
+  <node name="schunk_pzh_gripper_tf" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 3.14159 $(arg connected_to) schunk_pzh20_tc_base 100"/>
 
   <group ns="schunk">
     <param name="robot_description" command="$(find xacro)/xacro $(arg schunk_pzh_gripper)" />

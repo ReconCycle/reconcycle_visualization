@@ -5,12 +5,12 @@
 <xacro:property name="joint_14_name" value="${robot_prefix}base_cnctable" />
 <xacro:property name="joint_13_name" value="${robot_prefix}cncbase_clamp2" />
 <xacro:property name="joint_12_name" value="${robot_prefix}cncbase_clamp1" />
-<xacro:property name="joint_11_name" value="${robot_prefix}yAxis_zAxis" />
-<xacro:property name="joint_10_name" value="${robot_prefix}xAxis_yAxis" />
-<xacro:property name="joint_9_name" value="${robot_prefix}cncbase_xAxis" />
+<xacro:property name="joint_11_name" value="${robot_prefix}xAxis_zAxis" />
+<xacro:property name="joint_10_name" value="${robot_prefix}yAxis_xAxis" />
+<xacro:property name="joint_9_name" value="${robot_prefix}cncbase_yAxis" />
 <xacro:property name="joint_8_name" value="${robot_prefix}cnctable_cncbase" />
 <xacro:property name="joint_7_name" value="${robot_prefix}base_pnpf4" />
-<xacro:property name="joint_6_name" value="${robot_prefix}base_pnpf" />
+<xacro:property name="joint_6_name" value="${robot_prefix}base_pnpf3" />
 <xacro:property name="joint_5_name" value="${robot_prefix}base_pnpf1" />
 <xacro:property name="joint_4_name" value="${robot_prefix}base_pnpf2" />
 <xacro:property name="joint_3_name" value="${robot_prefix}base_pnpm4" />
@@ -20,12 +20,12 @@
 <xacro:property name="link_15_name" value="${robot_prefix}clamp2" />
 <xacro:property name="link_14_name" value="${robot_prefix}clamp1" />
 <xacro:property name="link_13_name" value="${robot_prefix}zAxis" />
-<xacro:property name="link_12_name" value="${robot_prefix}yAxis" />
-<xacro:property name="link_11_name" value="${robot_prefix}xAxis" />
+<xacro:property name="link_12_name" value="${robot_prefix}xAxis" />
+<xacro:property name="link_11_name" value="${robot_prefix}yAxis" />
 <xacro:property name="link_10_name" value="${robot_prefix}cnctable" />
 <xacro:property name="link_9_name" value="${robot_prefix}cncbase" />
 <xacro:property name="link_8_name" value="${robot_prefix}pnpf4" />
-<xacro:property name="link_7_name" value="${robot_prefix}pnpf" />
+<xacro:property name="link_7_name" value="${robot_prefix}pnpf3" />
 <xacro:property name="link_6_name" value="${robot_prefix}pnpf1" />
 <xacro:property name="link_5_name" value="${robot_prefix}pnpf2" />
 <xacro:property name="link_4_name" value="${robot_prefix}pnpm4" />
@@ -3421,7 +3421,7 @@
     <visual>
       <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
       <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/GANTRY_PLATE_10.stl"/>
+        <mesh filename="package://reconcycle_module_cnc/meshes/X_AXIS_PLATE0.stl"/>
       </geometry>
       <material name="color2">
         <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
@@ -3430,169 +3430,7 @@
     <visual>
       <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
       <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/GANTRY_PLATE_11.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
-      <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER0.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
-      <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER1.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
-      <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER2.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
-      <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER3.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
-      <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER4.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
-      <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER5.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
-      <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/GANTRY_PLATE_12.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
-      <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/GANTRY_PLATE_13.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
-      <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER6.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
-      <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER7.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
-      <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER8.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
-      <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER9.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
-      <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER10.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
-      <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER11.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
-      <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/GANTRY_PLATE0.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
-      <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/GANTRY_PLATE1.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
-      <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/GANTRY_BEAM0.stl"/>
-      </geometry>
-      <material name="color2">
-        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
-      </material>
-    </visual>
-    <visual>
-      <origin xyz="-0.18999999999999528 -0.09000000000024277 -1.0065740663179756" rpy="3.4627959541725374e-13 3.837072379090334e-16 3.1415926535897754"/>
-      <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/MOTOR2.stl"/>
+        <mesh filename="package://reconcycle_module_cnc/meshes/MOTOR3.stl"/>
       </geometry>
       <material name="color2">
         <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
@@ -3603,7 +3441,7 @@
     <visual>
       <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
       <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/X_AXIS_PLATE0.stl"/>
+        <mesh filename="package://reconcycle_module_cnc/meshes/GANTRY_PLATE_10.stl"/>
       </geometry>
       <material name="color2">
         <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
@@ -3612,7 +3450,169 @@
     <visual>
       <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
       <geometry>
-        <mesh filename="package://reconcycle_module_cnc/meshes/MOTOR3.stl"/>
+        <mesh filename="package://reconcycle_module_cnc/meshes/GANTRY_PLATE_11.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
+      <geometry>
+        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER0.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
+      <geometry>
+        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER1.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
+      <geometry>
+        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER2.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
+      <geometry>
+        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER3.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
+      <geometry>
+        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER4.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
+      <geometry>
+        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER5.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
+      <geometry>
+        <mesh filename="package://reconcycle_module_cnc/meshes/GANTRY_PLATE_12.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
+      <geometry>
+        <mesh filename="package://reconcycle_module_cnc/meshes/GANTRY_PLATE_13.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
+      <geometry>
+        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER6.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
+      <geometry>
+        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER7.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
+      <geometry>
+        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER8.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
+      <geometry>
+        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER9.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
+      <geometry>
+        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER10.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
+      <geometry>
+        <mesh filename="package://reconcycle_module_cnc/meshes/ROLLER11.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
+      <geometry>
+        <mesh filename="package://reconcycle_module_cnc/meshes/GANTRY_PLATE0.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
+      <geometry>
+        <mesh filename="package://reconcycle_module_cnc/meshes/GANTRY_PLATE1.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
+      <geometry>
+        <mesh filename="package://reconcycle_module_cnc/meshes/GANTRY_BEAM0.stl"/>
+      </geometry>
+      <material name="color2">
+        <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.0900000000000277 0.18999999999999534 -1.0065740663180127" rpy="-1.3435099971722419e-14 -5.100087019399163e-16 1.5707963267948752"/>
+      <geometry>
+        <mesh filename="package://reconcycle_module_cnc/meshes/MOTOR2.stl"/>
       </geometry>
       <material name="color2">
         <color rgba="0.35153260827064514 0.35153260827064514 0.35153260827064514 1"/>
